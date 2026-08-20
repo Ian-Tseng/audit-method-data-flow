@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "skill_name": "audit-method-data-flow",
+  "algorithm": "sha256",
+  "text_normalization": "utf8-lf-v1",
+  "skill_normalization": "canonical-frontmatter-v1-without-github-metadata",
+  "files": [
+    {
+      "path": "CITATION.cff",
+      "sha256": "f7f1ae7a57c5064e16f98aad0cd06482a7e4cb843d77cfd977fd9cbdfda0279d"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "f36e4e8795a747e3fc05393800891a07d4d93487fb031dbe1b895e5a29c8eb04"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "01096a03b6658d7c7e6b6ecfa6aa63d629d0d21604154f7804c1814039814741"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "4987ed86e4a838f07de1f1902d59d18c7cf8f623d83642fde33c64a8a842f652"
+    },
+    {
+      "path": "references/claim-chain-clarity.md",
+      "sha256": "36791b71be444b7a498a278ae98496b996056334feefddbf30e2f948c15b07f7"
+    },
+    {
+      "path": "references/figure-table-clarity.md",
+      "sha256": "ecb929bb5162070a457d1a9f98278e7d61b5a5f1b06d5f7243b3bcb5b05d3ecf"
+    },
+    {
+      "path": "references/package-version.json",
+      "sha256": "8462bbe1856270b9d3af89c298067f4e2d9d20e70da74f0d9937c38c939ec500"
+    },
+    {
+      "path": "references/paper-terminology-contract.md",
+      "sha256": "dfd374de5259ddeda732286579497a390c7d60eea8382a199f3d5c3228bd8ad4"
+    },
+    {
+      "path": "scripts/package_integrity.py",
+      "sha256": "96630dd562b62742758bae88dc70bfa87dd222657188b4fc41aa9a7f01739e35"
+    }
+  ]
+}

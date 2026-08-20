@@ -1,0 +1,29 @@
+{
+  "accepted_map_id": "component-map-566974b51f2c",
+  "action": "conflict_detected",
+  "candidate_map_id": "component-map-4d20983caa11",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [
+      {
+        "component_id": "release-package",
+        "element_id": "package-integrity",
+        "fields": [
+          "target"
+        ]
+      }
+    ],
+    "contract_changes": [],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": []
+  },
+  "integrity": {
+    "canonical_payload_sha256": "c4041baed5e339db2382f3fcf10d69a09aecb4a7cbed22bd18c7b0f3e764a889"
+  },
+  "recorded_at_utc": "2026-08-20T07:41:25.651105Z",
+  "scan_id": "20260820T074125651105Z-679b283a",
+  "schema_version": "1.0"
+}
