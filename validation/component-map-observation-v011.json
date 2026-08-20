@@ -172,7 +172,7 @@
       ]
     }
   ],
-  "strongest_safe_claim": "The local v0.1.1 release candidate is structurally consistent across release identity, package integrity, declared scholarly audit contracts, consent-gated update maintenance, content-free quality handoff, and a repository-bound thin managed-repair caller pinned to analyzer workflow a8b137b33535b585b4ebbb5f92852a79148db071.",
+  "strongest_safe_claim": "The local v0.1.1 release candidate is structurally consistent across release identity, package integrity, declared scholarly audit contracts, consent-gated update maintenance, content-free quality handoff, and a repository-bound thin managed-repair caller pinned to analyzer workflow f15311473e33d15f0ab9eee5a4bfca385ff4c5db.",
   "claim_boundary": "This does not establish scientific validity, protected GitHub environments, hosted canary, agent execution, draft publication, public CI success, immutable publication, managed client installation, client discovery, runtime invocation, deterministic host routing, or any public issue submission.",
   "unresolved_uncertainties": [
     "A first public PR CI run exposed platform-dependent directory evidence identity; the repaired PR rerun and exact-main CI have not yet passed.",
