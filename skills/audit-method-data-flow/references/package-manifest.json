@@ -2,12 +2,11 @@
   "schema_version": 1,
   "skill_name": "audit-method-data-flow",
   "algorithm": "sha256",
-  "text_normalization": "utf8-lf-v1",
   "skill_normalization": "canonical-frontmatter-v1-without-github-metadata",
   "files": [
     {
       "path": "CITATION.cff",
-      "sha256": "f7f1ae7a57c5064e16f98aad0cd06482a7e4cb843d77cfd977fd9cbdfda0279d"
+      "sha256": "688cfe413d8f5779b95bb3ffcd970c7cd5f1ea519611edaeca03082dac52b365"
     },
     {
       "path": "LICENSE",
@@ -15,7 +14,7 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "01096a03b6658d7c7e6b6ecfa6aa63d629d0d21604154f7804c1814039814741"
+      "sha256": "e76b9a1a864429be74c5e5b05b59e4bf81ed19759f7bee82fdbb6c9be6f45b68"
     },
     {
       "path": "agents/openai.yaml",
@@ -31,15 +30,31 @@
     },
     {
       "path": "references/package-version.json",
-      "sha256": "8462bbe1856270b9d3af89c298067f4e2d9d20e70da74f0d9937c38c939ec500"
+      "sha256": "f372299b78ba018678f25393fd808dda03aa1b4ab5c03c795f309d0cc382834b"
     },
     {
       "path": "references/paper-terminology-contract.md",
       "sha256": "dfd374de5259ddeda732286579497a390c7d60eea8382a199f3d5c3228bd8ad4"
     },
     {
+      "path": "references/skill-outcome-receipt.schema.json",
+      "sha256": "3e4a4e8187eb94472454558f4c57ead56d764ed9921cbad27e8bc66846b29d96"
+    },
+    {
+      "path": "scripts/_internal/safe_process.py",
+      "sha256": "a2042ec7d6c52523ffe6f053c15660632697454c366bf0d709f4b00eb92a0a13"
+    },
+    {
       "path": "scripts/package_integrity.py",
-      "sha256": "96630dd562b62742758bae88dc70bfa87dd222657188b4fc41aa9a7f01739e35"
+      "sha256": "8812ac452a214ec94abc11300a5d47277c87f67c4f4e3cc7707440c6d2d539c2"
+    },
+    {
+      "path": "scripts/skill_outcome.py",
+      "sha256": "950a47cd43bd25fbde5fd42203b947206df2b2113535818f2136b35ca9878e40"
+    },
+    {
+      "path": "scripts/update_policy.py",
+      "sha256": "f1a236faed2b8fe9deee1ff9fe9660a32562964974108bd202e050d1129ae022"
     }
   ]
 }
