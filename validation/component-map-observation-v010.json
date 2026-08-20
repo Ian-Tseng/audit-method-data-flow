@@ -8,7 +8,16 @@
     "PUBLISHING.md",
     "SOURCE.md",
     ".github/workflows/validate.yml",
-    "skills/audit-method-data-flow",
+    "skills/audit-method-data-flow/CITATION.cff",
+    "skills/audit-method-data-flow/LICENSE",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/agents/openai.yaml",
+    "skills/audit-method-data-flow/references/claim-chain-clarity.md",
+    "skills/audit-method-data-flow/references/figure-table-clarity.md",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "skills/audit-method-data-flow/references/package-version.json",
+    "skills/audit-method-data-flow/references/paper-terminology-contract.md",
+    "skills/audit-method-data-flow/scripts/package_integrity.py",
     "tests/test_package_contract.py",
     "tests/test_skill_contract.py",
     "tests/test_validation_contract.py",
@@ -124,7 +133,7 @@
             {"source": "tests/test_validation_contract.py", "locator": "whole-file"},
             {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/boundaries"}
           ],
-          "safe_interpretation": "The public lifecycle is documented but remains untested until PR/main CI, immutable release, managed installs, and available-client activation checks complete.",
+          "safe_interpretation": "The public lifecycle is documented but is not yet supported until the repaired PR/main CI, immutable release, managed installs, and available-client activation checks complete.",
           "required_repair": "Complete the documented external release and consumer smoke gates without broadening their evidence scope."
         }
       ]
@@ -133,7 +142,7 @@
   "strongest_safe_claim": "The local v0.1.0 release candidate is structurally consistent across release identity, package integrity, and its declared scholarly audit contracts.",
   "claim_boundary": "This does not establish scientific validity, public CI success, immutable publication, managed client installation, client discovery, or runtime invocation.",
   "unresolved_uncertainties": [
-    "Public PR and exact-main CI have not run.",
+    "A first public PR CI run exposed platform-dependent directory evidence identity; the repaired PR rerun and exact-main CI have not yet passed.",
     "The v0.1.0 tag and immutable GitHub release do not yet exist.",
     "Public Codex and Claude Code consumer installation and activation have not yet been observed."
   ]

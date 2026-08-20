@@ -6,13 +6,13 @@ receipts, and derived reports.
 - [`component-map/accepted-map.json`](component-map/accepted-map.json) is the
   accepted component-to-evidence structure for the v0.1.0 candidate.
 - [`release-candidate-test-receipt.json`](release-candidate-test-receipt.json)
-  records the local 26-test, package-manifest, and official-validator results
+  records the local 27-test, package-manifest, and official-validator results
   and their explicit boundaries.
 - [`release-scan-v010-input.json`](release-scan-v010-input.json) is the reviewed
   claim/evidence/binding input.
-- [`history/20260820T080220562615Z-cb1a1688.json`](history/20260820T080220562615Z-cb1a1688.json)
+- [`history/20260820T082347373282Z-206f1163.json`](history/20260820T082347373282Z-206f1163.json)
   is the append-only semantic audit authority for that evidence state.
-- [`reports/20260820T080220562615Z-cb1a1688.md`](reports/20260820T080220562615Z-cb1a1688.md)
+- [`reports/20260820T082347373282Z-206f1163.md`](reports/20260820T082347373282Z-206f1163.md)
   is its deterministic human-readable view.
 
 Earlier records and maps are immutable historical states. They may contain

@@ -84,6 +84,19 @@ class ValidationContractTests(unittest.TestCase):
                 self.fail(f"unsupported current source kind: {item}")
             self.assertEqual(actual, item["sha256"], item["source"])
 
+    def test_package_evidence_uses_cross_platform_file_granularity(self):
+        accepted = json.loads(ACCEPTED_MAP.read_text(encoding="utf-8"))
+        package_sources = [
+            item
+            for item in accepted["source_snapshot"]
+            if item["source"].startswith("skills/audit-method-data-flow")
+        ]
+        self.assertTrue(package_sources)
+        self.assertTrue(
+            all(item["kind"] == "file" for item in package_sources),
+            "package evidence must not depend on platform-specific Path ordering",
+        )
+
     def test_current_record_integrity_map_binding_and_evidence_match(self):
         record_path, _ = current_evidence_paths()
         record = json.loads(record_path.read_text(encoding="utf-8"))

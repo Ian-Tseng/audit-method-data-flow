@@ -1,0 +1,72 @@
+{
+  "accepted_map_id": "component-map-1f35a3f6acb1",
+  "action": "drift_detected",
+  "candidate_map_id": "component-map-daea9079aad6",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [
+      "scope"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "exists",
+          "kind",
+          "sha256",
+          "source"
+        ],
+        "source": "skills/audit-method-data-flow"
+      },
+      {
+        "fields": [
+          "exists",
+          "kind",
+          "sha256",
+          "source"
+        ],
+        "source": "skills/audit-method-data-flow/CITATION.cff"
+      },
+      {
+        "fields": [
+          "exists",
+          "kind",
+          "sha256",
+          "source"
+        ],
+        "source": "skills/audit-method-data-flow/LICENSE"
+      },
+      {
+        "fields": [
+          "exists",
+          "kind",
+          "sha256",
+          "source"
+        ],
+        "source": "skills/audit-method-data-flow/agents/openai.yaml"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_validation_contract.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "validation/release-candidate-test-receipt.json"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "a33e1f24308e6f5c34df19116338bd4cbf7ff0d7f8d3695138429b4bfcec49c3"
+  },
+  "recorded_at_utc": "2026-08-20T08:13:54.705083Z",
+  "scan_id": "20260820T081354705083Z-74d50e6c",
+  "schema_version": "1.0"
+}

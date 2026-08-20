@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "objective": "Determine the strongest evidence-bounded claim that can be made about the local audit-method-data-flow v0.1.0 release candidate before public CI, publication, and consumer activation.",
+  "objective": "Determine the strongest evidence-bounded claim that can be made about the local audit-method-data-flow v0.1.0 release candidate before successful public CI, publication, and consumer activation.",
   "scope": [
     "release identity and owner provenance",
     "release-candidate package integrity",
@@ -22,7 +22,7 @@
       "source": {"kind": "file", "path": "validation/release-candidate-test-receipt.json"},
       "locator": {"kind": "json_pointer", "value": "/tests"},
       "method": "executed_test",
-      "observed_summary": "The UTF-8 unittest command completed with PASS, 26 tests, zero failures, zero errors, and zero skips."
+      "observed_summary": "The UTF-8 unittest command completed with PASS, 27 tests, zero failures, zero errors, and zero skips."
     },
     {
       "evidence_id": "evidence:manifest-verification",
@@ -133,7 +133,7 @@
       "element_ref": {"component_id": "public-distribution", "element_id": "install-update-claims"},
       "material": true,
       "status": "untested",
-      "rationale": "The lifecycle gates are documented, but public PR/main CI, immutable release, consumer installs, and runtime activation have not yet been executed for this candidate."
+      "rationale": "The lifecycle gates are documented. A first public PR CI run exposed platform-dependent directory evidence identity; repaired PR/main CI, immutable release, consumer installs, and runtime activation remain pending."
     },
     {
       "claim_id": "claim:scientific-validity-proved",
@@ -167,7 +167,7 @@
     "no_supported_claim": false
   },
   "unresolved_uncertainties": [
-    "Public PR and exact-main CI have not run.",
+    "A first public PR CI run exposed platform-dependent directory evidence identity; the repaired PR rerun and exact-main CI have not yet passed.",
     "The v0.1.0 tag and immutable GitHub release do not yet exist.",
     "Public Codex and Claude Code consumer installations have not yet been observed.",
     "Claude Code is not installed on this validation machine, so fresh runtime activation may remain unobserved even after distribution smoke."

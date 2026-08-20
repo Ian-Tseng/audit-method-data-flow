@@ -5,7 +5,7 @@
   "tests": {
     "command": "py -3 -X utf8 -m unittest discover -s tests -v",
     "status": "PASS",
-    "tests_run": 26,
+    "tests_run": 27,
     "failures": 0,
     "errors": 0,
     "skipped": 0
