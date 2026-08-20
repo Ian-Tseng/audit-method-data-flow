@@ -45,7 +45,7 @@ def text_files(root: Path):
 class PackageContractTests(unittest.TestCase):
     def test_release_identity_is_synchronized(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-        self.assertEqual(version, "0.1.0")
+        self.assertEqual(version, "0.1.1")
         package_version = json.loads(
             (PACKAGE / "references" / "package-version.json").read_text(
                 encoding="utf-8"
@@ -81,7 +81,7 @@ class PackageContractTests(unittest.TestCase):
 
     def test_github_install_metadata_does_not_change_package_identity(self):
         module = load_integrity_module()
-        for github_ref in ("refs/heads/main", "refs/tags/v0.1.0"):
+        for github_ref in ("refs/heads/main", "refs/tags/v0.1.1"):
             with self.subTest(github_ref=github_ref), tempfile.TemporaryDirectory() as temporary:
                 copy = Path(temporary) / PACKAGE.name
                 shutil.copytree(PACKAGE, copy)

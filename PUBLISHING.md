@@ -4,6 +4,13 @@ Owner: Ian-Tseng. Package: `skills/audit-method-data-flow/`.
 
 ## Release gates
 
+Before enabling managed repair, verify the policy/caller exact SHA agreement,
+the `managed-repair-ready` label, required reviewers on both fixed protected
+environments, explicit `OPENAI_API_KEY` passing, the Actions PR setting, and a
+successful `workflow_dispatch` dry run. This repository is canary 1; activation still requires hosted read-back. A managed
+draft never authorizes evidence acceptance, merge, release, publication,
+installed replacement, or activation. Roll back policy and caller SHA together.
+
 1. Confirm the worktree and reachable release history contain no credentials,
    confidential manuscripts, reviewer material, or private machine paths.
 2. Confirm SOURCE.md still describes the owner decision and transformation.
@@ -34,8 +41,8 @@ Owner: Ian-Tseng. Package: `skills/audit-method-data-flow/`.
 9. From exact merged main:
 
        gh skill publish .\skills --dry-run
-       gh skill publish .\skills --tag v0.1.0
-       gh release verify v0.1.0
+       gh skill publish .\skills --tag v0.1.1
+       gh release verify v0.1.1
 
 10. In separate disposable consumer repositories, test public preview,
     Codex/Claude installation, list, directory-scoped update dry-run, package

@@ -24,7 +24,7 @@ GITHUB_METADATA_KEYS = {
 }
 EXPECTED_GITHUB_PATH = "skills/audit-method-data-flow"
 EXPECTED_GITHUB_REPO = "https://github.com/Ian-Tseng/audit-method-data-flow"
-EXPECTED_GITHUB_REFS = {"refs/heads/main", "refs/tags/v0.1.0"}
+EXPECTED_GITHUB_REFS = {"refs/heads/main", "refs/tags/v0.1.1"}
 GITHUB_TREE_SHA_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 IGNORED_PARTS = {"__pycache__"}
 IGNORED_NAMES = {".DS_Store", "Thumbs.db"}
@@ -227,7 +227,6 @@ def build_manifest(skill_root: Path) -> dict[str, object]:
         "schema_version": 1,
         "skill_name": SKILL_NAME,
         "algorithm": "sha256",
-        "text_normalization": "utf8-lf-v1",
         "skill_normalization": "canonical-frontmatter-v1-without-github-metadata",
         "files": [
             {"path": relative, "sha256": file_digest(relative, path)}

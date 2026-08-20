@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-20T16:16:42.663645Z",
+  "accepted_at_utc": "2026-08-20T08:23:09.741459Z",
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -7,9 +7,6 @@
     "skills/audit-method-data-flow/SKILL.md",
     "skills/audit-method-data-flow/references/package-version.json",
     "skills/audit-method-data-flow/references/package-manifest.json",
-    "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json",
-    "skills/audit-method-data-flow/scripts/skill_outcome.py",
-    "skills/audit-method-data-flow/scripts/update_policy.py",
     "validation/release-candidate-test-receipt.json"
   ],
   "components": [
@@ -50,57 +47,6 @@
       "component_id": "release-package",
       "component_type": "distribution-package",
       "elements": [
-        {
-          "element_id": "managed-update-and-quality-handoff",
-          "evidence_locators": [
-            {
-              "locator": "whole-file",
-              "source": ".github/managed-skill-policy.json"
-            },
-            {
-              "locator": "whole-file",
-              "source": ".github/workflows/managed-skill-repair.yml"
-            },
-            {
-              "locator": "managed repair release gates",
-              "source": "PUBLISHING.md"
-            },
-            {
-              "locator": "GitHub-managed repair boundary",
-              "source": "README.md"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/SKILL.md"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/scripts/_internal/safe_process.py"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/scripts/skill_outcome.py"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/scripts/update_policy.py"
-            },
-            {
-              "locator": "whole-file",
-              "source": "tests/test_managed_lifecycle.py"
-            },
-            {
-              "locator": "json-pointer:/tests",
-              "source": "validation/release-candidate-test-receipt.json"
-            }
-          ],
-          "relation_type": "bounds",
-          "target": "After substantive use, the skill runs consent-gated update maintenance and emits one content-free receipt; separately, one closed repository policy and thin full-SHA-pinned caller permit only owner-triaged, protected-environment-gated draft repair without authorizing telemetry, project-content transport, evidence acceptance, merge, release, or installed replacement."
-        },
         {
           "element_id": "package-integrity",
           "evidence_locators": [
@@ -161,7 +107,7 @@
             }
           ],
           "relation_type": "synchronizes",
-          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.1 MIT release candidate."
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.0 MIT release candidate."
         }
       ]
     },
@@ -226,15 +172,15 @@
       ]
     }
   ],
-  "created_at_utc": "2026-08-20T16:16:23.927071Z",
+  "created_at_utc": "2026-08-20T08:22:56.633813Z",
   "integrity": {
-    "canonical_payload_sha256": "da8628142946227011ba040a0b053b766017d81d43300eb97b970270172b624d"
+    "canonical_payload_sha256": "7e5ab07aad09a332479315fad39214170c9fd7c2765036b0c1cc67180401d621"
   },
-  "map_id": "component-map-33bfa8598c17",
+  "map_id": "component-map-daea9079aad6",
   "map_state": "accepted",
   "mapper_version": "1.3.0",
-  "objective": "Map the v0.1.1 release candidate's identity, integrity, scholarly audit contract, consent-gated update maintenance, content-free quality handoff, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
-  "origin_scan_id": "20260820T161623927071Z-d1021f22",
+  "objective": "Map the v0.1.0 release candidate's identity, integrity, scholarly audit contract, and public distribution boundaries to direct source and test evidence.",
+  "origin_scan_id": "20260820T082256633813Z-26492903",
   "previous_map_id": "component-map-daea9079aad6",
   "schema_version": "1.0",
   "scope": [
@@ -245,8 +191,6 @@
     "PUBLISHING.md",
     "SOURCE.md",
     ".github/workflows/validate.yml",
-    ".github/workflows/managed-skill-repair.yml",
-    ".github/managed-skill-policy.json",
     "skills/audit-method-data-flow/CITATION.cff",
     "skills/audit-method-data-flow/LICENSE",
     "skills/audit-method-data-flow/SKILL.md",
@@ -256,32 +200,15 @@
     "skills/audit-method-data-flow/references/package-manifest.json",
     "skills/audit-method-data-flow/references/package-version.json",
     "skills/audit-method-data-flow/references/paper-terminology-contract.md",
-    "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json",
-    "skills/audit-method-data-flow/scripts/_internal/safe_process.py",
     "skills/audit-method-data-flow/scripts/package_integrity.py",
-    "skills/audit-method-data-flow/scripts/skill_outcome.py",
-    "skills/audit-method-data-flow/scripts/update_policy.py",
-    "tests/test_managed_lifecycle.py",
     "tests/test_package_contract.py",
     "tests/test_skill_contract.py",
     "tests/test_validation_contract.py",
     "validation/release-candidate-test-receipt.json"
   ],
   "skill_name": "analyze-project-claims",
-  "skill_sha256": "d892da7147f2d4ab01bf60a45f9425af3c81970fb979f29af7ee9cbee86ac999",
+  "skill_sha256": "a037edd16f17b7253a4003081c2566838bf5fd195206c371f5e687ff12bdb0bb",
   "source_snapshot": [
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "1c2e2ee6e022d7ac9967d46a757909d6c4b88ce131c33470f45dc7a95f7aa1b5",
-      "source": ".github/managed-skill-policy.json"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "54699a350ac166859aa1e1598b1f6cec0a82eccf132fbc6445fc7038a2b363e7",
-      "source": ".github/workflows/managed-skill-repair.yml"
-    },
     {
       "exists": true,
       "kind": "file",
@@ -291,25 +218,25 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "1fe64d0d0f701beec64e0b5d52ebb4aa2cba29442764eac4d5f5c4f0926e976b",
+      "sha256": "5787b1f51971bae6a8888f540b685884442e235a1f1f57b99387a59e0c0faa4d",
       "source": "CHANGELOG.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "688cfe413d8f5779b95bb3ffcd970c7cd5f1ea519611edaeca03082dac52b365",
+      "sha256": "f7f1ae7a57c5064e16f98aad0cd06482a7e4cb843d77cfd977fd9cbdfda0279d",
       "source": "CITATION.cff"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "aa915a9ce7c99669b94f4069384e11d81371e58d040c3541167ea6769efe2b63",
+      "sha256": "0039433b0275f5c17f35b88271e66ebba3d0f9c03af9ecc14839f5e68e146647",
       "source": "PUBLISHING.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "61ac1ae7b718b3fa8b10c9022a682955fea0c698728646b32669cf231756d147",
+      "sha256": "4011aeca1dcd8705525a9c518ece0fd7fa0c25c5c110b46b85ee8071b824e455",
       "source": "README.md"
     },
     {
@@ -321,13 +248,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "80447316529fc62014fbaa047fb67c51ac30e32830cda370405349d8d66d196c",
+      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
       "source": "VERSION"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "688cfe413d8f5779b95bb3ffcd970c7cd5f1ea519611edaeca03082dac52b365",
+      "sha256": "f7f1ae7a57c5064e16f98aad0cd06482a7e4cb843d77cfd977fd9cbdfda0279d",
       "source": "skills/audit-method-data-flow/CITATION.cff"
     },
     {
@@ -339,7 +266,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "e76b9a1a864429be74c5e5b05b59e4bf81ed19759f7bee82fdbb6c9be6f45b68",
+      "sha256": "01096a03b6658d7c7e6b6ecfa6aa63d629d0d21604154f7804c1814039814741",
       "source": "skills/audit-method-data-flow/SKILL.md"
     },
     {
@@ -363,13 +290,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "3f7c5cace7464798e82182377eb8c1efe842abf67ff31b41c9f9bd9e81bd168a",
+      "sha256": "304754a9cd2174a419f0f48b6c5c5a292504c93cd2775cf3adcc3097cad07f08",
       "source": "skills/audit-method-data-flow/references/package-manifest.json"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "f372299b78ba018678f25393fd808dda03aa1b4ab5c03c795f309d0cc382834b",
+      "sha256": "8462bbe1856270b9d3af89c298067f4e2d9d20e70da74f0d9937c38c939ec500",
       "source": "skills/audit-method-data-flow/references/package-version.json"
     },
     {
@@ -381,49 +308,19 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "3e4a4e8187eb94472454558f4c57ead56d764ed9921cbad27e8bc66846b29d96",
-      "source": "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "a2042ec7d6c52523ffe6f053c15660632697454c366bf0d709f4b00eb92a0a13",
-      "source": "skills/audit-method-data-flow/scripts/_internal/safe_process.py"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "8812ac452a214ec94abc11300a5d47277c87f67c4f4e3cc7707440c6d2d539c2",
+      "sha256": "96630dd562b62742758bae88dc70bfa87dd222657188b4fc41aa9a7f01739e35",
       "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "950a47cd43bd25fbde5fd42203b947206df2b2113535818f2136b35ca9878e40",
-      "source": "skills/audit-method-data-flow/scripts/skill_outcome.py"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "f1a236faed2b8fe9deee1ff9fe9660a32562964974108bd202e050d1129ae022",
-      "source": "skills/audit-method-data-flow/scripts/update_policy.py"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "9bcdf26c3f9530a5646d3538169aefacc52e0bb915e563d49adfc3e2022aac81",
-      "source": "tests/test_managed_lifecycle.py"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "09cc7472932986622bd6289220f1603fde6de38c8baffec06385fa3e10714ef2",
+      "sha256": "3e5842b99db79dff572e53d244a3148447a3a9e0ada2be19d496bf9e3a182c59",
       "source": "tests/test_package_contract.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "863a5bf5f2e6780aaee9567e95d8716285f3b6693754c4aba6b04c4b244e5ec9",
+      "sha256": "5612fa8f7ae4122c9393aaa7956d7d997917cc16757b371d4723d033fe4323d2",
       "source": "tests/test_skill_contract.py"
     },
     {
@@ -435,7 +332,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "e31ab6341c1b3ce595febc27639cf8510176d24d05d910bac81edda2be2dafae",
+      "sha256": "958b8042378bb4bcc22938aa56063978cb1cce69825bc3bf560315f406aeedf9",
       "source": "validation/release-candidate-test-receipt.json"
     }
   ]

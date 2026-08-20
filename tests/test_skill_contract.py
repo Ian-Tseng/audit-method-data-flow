@@ -99,7 +99,7 @@ class SkillContractTests(unittest.TestCase):
         self.assertIn("separately installed `audit-venue-submission`", SKILL)
         self.assertIn("That helper is not bundled here", SKILL)
 
-    def test_package_code_has_no_network_or_process_transport(self):
+    def test_substantive_audit_code_has_no_network_or_process_transport(self):
         forbidden = {
             "http",
             "httpx",
@@ -108,11 +108,7 @@ class SkillContractTests(unittest.TestCase):
             "subprocess",
             "urllib",
         }
-        python_files = list(PACKAGE.rglob("*.py"))
-        self.assertEqual(
-            [path.relative_to(PACKAGE).as_posix() for path in python_files],
-            ["scripts/package_integrity.py"],
-        )
+        python_files = [PACKAGE / "scripts" / "package_integrity.py"]
         for path in python_files:
             tree = ast.parse(path.read_text(encoding="utf-8"))
             imports = set()
@@ -123,12 +119,19 @@ class SkillContractTests(unittest.TestCase):
                     imports.add(node.module.split(".", 1)[0])
             self.assertTrue(forbidden.isdisjoint(imports), f"{path}: {imports & forbidden}")
 
+    def test_lifecycle_transport_is_isolated_and_owner_bound(self):
+        updater = (PACKAGE / "scripts" / "update_policy.py").read_text(encoding="utf-8")
+        emitter = (PACKAGE / "scripts" / "skill_outcome.py").read_text(encoding="utf-8")
+        self.assertIn("_internal.safe_process", updater)
+        self.assertIn('"Ian-Tseng"', emitter)
+        self.assertNotIn("project", emitter.lower())
+
     def test_evidence_boundaries_are_not_overclaimed(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         for phrase in (
             "scientific validity",
             "native rendering",
-            "no automatic updater",
+            "consent-gated managed updater",
             "telemetry",
         ):
             self.assertIn(phrase, readme)
