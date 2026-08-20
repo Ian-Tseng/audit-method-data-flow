@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-20T17:24:59.800238Z",
+  "accepted_at_utc": "2026-08-20T16:16:42.663645Z",
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -226,16 +226,16 @@
       ]
     }
   ],
-  "created_at_utc": "2026-08-20T16:53:15.517499Z",
+  "created_at_utc": "2026-08-20T16:16:23.927071Z",
   "integrity": {
-    "canonical_payload_sha256": "63202364638d75f9c39439a67d3ad91abd989aecb5cca991b7b2e7e17678a241"
+    "canonical_payload_sha256": "da8628142946227011ba040a0b053b766017d81d43300eb97b970270172b624d"
   },
-  "map_id": "component-map-33e16fc245a9",
+  "map_id": "component-map-33bfa8598c17",
   "map_state": "accepted",
   "mapper_version": "1.3.0",
   "objective": "Map the v0.1.1 release candidate's identity, integrity, scholarly audit contract, consent-gated update maintenance, content-free quality handoff, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
-  "origin_scan_id": "20260820T165315517499Z-34b179af",
-  "previous_map_id": "component-map-33bfa8598c17",
+  "origin_scan_id": "20260820T161623927071Z-d1021f22",
+  "previous_map_id": "component-map-daea9079aad6",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -268,18 +268,18 @@
     "validation/release-candidate-test-receipt.json"
   ],
   "skill_name": "analyze-project-claims",
-  "skill_sha256": "a037edd16f17b7253a4003081c2566838bf5fd195206c371f5e687ff12bdb0bb",
+  "skill_sha256": "d892da7147f2d4ab01bf60a45f9425af3c81970fb979f29af7ee9cbee86ac999",
   "source_snapshot": [
     {
       "exists": true,
       "kind": "file",
-      "sha256": "fcd28c4651af286d4f7314805fd43dfa541b79cfa189934526b54d8416ef1bd5",
+      "sha256": "1c2e2ee6e022d7ac9967d46a757909d6c4b88ce131c33470f45dc7a95f7aa1b5",
       "source": ".github/managed-skill-policy.json"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "7a76321b5dc05fb39791ba3d6e8e7e44fdeff4643b7f6cb5fe1b8494f065bade",
+      "sha256": "54699a350ac166859aa1e1598b1f6cec0a82eccf132fbc6445fc7038a2b363e7",
       "source": ".github/workflows/managed-skill-repair.yml"
     },
     {
@@ -309,7 +309,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "1b176ec236da8b48a54229e871717abee5a108582395b6b7993952fe9cb39046",
+      "sha256": "61ac1ae7b718b3fa8b10c9022a682955fea0c698728646b32669cf231756d147",
       "source": "README.md"
     },
     {
@@ -411,7 +411,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "d1429476971f2a19aa2e9d62c29ced74372dc289815235bb26a8cd233dc9abc0",
+      "sha256": "9bcdf26c3f9530a5646d3538169aefacc52e0bb915e563d49adfc3e2022aac81",
       "source": "tests/test_managed_lifecycle.py"
     },
     {
