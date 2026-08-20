@@ -1,0 +1,140 @@
+{
+  "objective": "Map the v0.1.0 release candidate's identity, integrity, scholarly audit contract, and public distribution boundaries to direct source and test evidence.",
+  "scope": [
+    "VERSION",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "README.md",
+    "PUBLISHING.md",
+    "SOURCE.md",
+    ".github/workflows/validate.yml",
+    "skills/audit-method-data-flow",
+    "tests/test_package_contract.py",
+    "tests/test_skill_contract.py",
+    "tests/test_validation_contract.py",
+    "validation/release-candidate-test-receipt.json"
+  ],
+  "authority": [
+    "VERSION",
+    "CITATION.cff",
+    "SOURCE.md",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/references/package-version.json",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "validation/release-candidate-test-receipt.json"
+  ],
+  "components": [
+    {
+      "component_id": "release-package",
+      "component_type": "distribution-package",
+      "elements": [
+        {
+          "element_id": "release-identity",
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.0 MIT release candidate.",
+          "relation_type": "synchronizes",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "VERSION", "locator": "line:1"},
+            {"source": "CITATION.cff", "locator": "whole-file"},
+            {"source": "CHANGELOG.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/package-version.json", "locator": "whole-file"},
+            {"source": "tests/test_package_contract.py", "locator": "whole-file"},
+            {"source": "tests/test_validation_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/tests"}
+          ],
+          "safe_interpretation": "The tested local release identity surfaces are synchronized at v0.1.0.",
+          "required_repair": null
+        },
+        {
+          "element_id": "package-integrity",
+          "target": "The release-candidate package tree binds ordinary files while tolerating only GitHub-managed frontmatter metadata normalization.",
+          "relation_type": "verifies",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "skills/audit-method-data-flow/scripts/package_integrity.py", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/package-manifest.json", "locator": "whole-file"},
+            {"source": "tests/test_package_contract.py", "locator": "whole-file"},
+            {"source": "tests/test_validation_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/package_manifest"}
+          ],
+          "safe_interpretation": "The current release-candidate package tree matches its manifest and the regression suite exercises ordinary drift rejection and GitHub metadata normalization.",
+          "required_repair": null
+        }
+      ]
+    },
+    {
+      "component_id": "scholarly-audit-contract",
+      "component_type": "agent-skill-contract",
+      "elements": [
+        {
+          "element_id": "method-and-claim-flow",
+          "target": "The skill requires explicit dataset, label, component, transformation, output, evaluation, counterevidence, and claim-boundary relations.",
+          "relation_type": "defines",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "skills/audit-method-data-flow/SKILL.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/claim-chain-clarity.md", "locator": "whole-file"},
+            {"source": "tests/test_skill_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/tests"}
+          ],
+          "safe_interpretation": "The package contains and tests the declared method-flow and cross-section claim-chain anchors.",
+          "required_repair": null
+        },
+        {
+          "element_id": "terminology-and-display-flow",
+          "target": "The skill defines a source-backed terminology contract and evidence-bounded figure, table, slide, and generated-artifact gates.",
+          "relation_type": "defines",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "skills/audit-method-data-flow/SKILL.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/paper-terminology-contract.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/figure-table-clarity.md", "locator": "whole-file"},
+            {"source": "tests/test_skill_contract.py", "locator": "whole-file"},
+            {"source": "tests/test_package_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/tests"}
+          ],
+          "safe_interpretation": "The package contains and tests the declared terminology and display contracts, including explicit evidence-status boundaries.",
+          "required_repair": null
+        }
+      ]
+    },
+    {
+      "component_id": "public-distribution",
+      "component_type": "release-process",
+      "elements": [
+        {
+          "element_id": "install-update-claims",
+          "target": "Public Codex and Claude Code installation, explicit managed updates, CI, immutable release, and activation evidence are separated by lifecycle stage.",
+          "relation_type": "bounds",
+          "method": "inspected",
+          "check_status": "PENDING",
+          "claim_status": "untested",
+          "evidence": [
+            {"source": "README.md", "locator": "whole-file"},
+            {"source": "PUBLISHING.md", "locator": "whole-file"},
+            {"source": ".github/workflows/validate.yml", "locator": "whole-file"},
+            {"source": "tests/test_validation_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/boundaries"}
+          ],
+          "safe_interpretation": "The public lifecycle is documented but remains untested until PR/main CI, immutable release, managed installs, and available-client activation checks complete.",
+          "required_repair": "Complete the documented external release and consumer smoke gates without broadening their evidence scope."
+        }
+      ]
+    }
+  ],
+  "strongest_safe_claim": "The local v0.1.0 release candidate is structurally consistent across release identity, package integrity, and its declared scholarly audit contracts.",
+  "claim_boundary": "This does not establish scientific validity, public CI success, immutable publication, managed client installation, client discovery, or runtime invocation.",
+  "unresolved_uncertainties": [
+    "Public PR and exact-main CI have not run.",
+    "The v0.1.0 tag and immutable GitHub release do not yet exist.",
+    "Public Codex and Claude Code consumer installation and activation have not yet been observed."
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Method Data Flow"
+  short_description: "Audit method flow, claims, terminology, and displays"
+  default_prompt: "Use $audit-method-data-flow to trace each scholarly branch and claim chain, refresh the source-backed terminology contract, and audit figures, tables, or slide workflows against the same semantic display contract."

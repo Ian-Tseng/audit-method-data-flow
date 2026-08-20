@@ -1,0 +1,175 @@
+{
+  "schema_version": "2.0",
+  "objective": "Determine the strongest evidence-bounded claim that can be made about the local audit-method-data-flow v0.1.0 release candidate before public CI, publication, and consumer activation.",
+  "scope": [
+    "release identity and owner provenance",
+    "release-candidate package integrity",
+    "declared method-flow, claim-chain, terminology, and display contracts",
+    "documented but not-yet-executed public release lifecycle"
+  ],
+  "authority": [
+    "VERSION",
+    "CITATION.cff",
+    "SOURCE.md",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/references/package-version.json",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "validation/release-candidate-test-receipt.json"
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:test-suite",
+      "source": {"kind": "file", "path": "validation/release-candidate-test-receipt.json"},
+      "locator": {"kind": "json_pointer", "value": "/tests"},
+      "method": "executed_test",
+      "observed_summary": "The UTF-8 unittest command completed with PASS, 26 tests, zero failures, zero errors, and zero skips."
+    },
+    {
+      "evidence_id": "evidence:manifest-verification",
+      "source": {"kind": "file", "path": "validation/release-candidate-test-receipt.json"},
+      "locator": {"kind": "json_pointer", "value": "/package_manifest"},
+      "method": "executed_test",
+      "observed_summary": "The package-integrity verifier returned PACKAGE_VERIFIED for the recorded nine-file package digest."
+    },
+    {
+      "evidence_id": "evidence:official-validator",
+      "source": {"kind": "file", "path": "validation/release-candidate-test-receipt.json"},
+      "locator": {"kind": "json_pointer", "value": "/official_validator"},
+      "method": "executed_test",
+      "observed_summary": "The official skill validator passed in explicit UTF-8 mode."
+    },
+    {
+      "evidence_id": "evidence:version",
+      "source": {"kind": "file", "path": "VERSION"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The repository release authority identifies version 0.1.0."
+    },
+    {
+      "evidence_id": "evidence:citation",
+      "source": {"kind": "file", "path": "CITATION.cff"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "Citation metadata identifies version 0.1.0, the 2026-08-20 release date, Ian-Tseng repository, and MIT license."
+    },
+    {
+      "evidence_id": "evidence:package-version",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/references/package-version.json"},
+      "locator": {"kind": "json_pointer", "value": "/version"},
+      "method": "schema_validated",
+      "observed_summary": "The packaged version authority identifies version 0.1.0."
+    },
+    {
+      "evidence_id": "evidence:skill-contract",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/SKILL.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The release-candidate skill package defines explicit method-flow, claim-chain, terminology, display, artifact, and evidence-boundary gates."
+    },
+    {
+      "evidence_id": "evidence:claim-chain-reference",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/references/claim-chain-clarity.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The packaged claim-chain reference defines same-scope problem, question, protocol, output, result, counterevidence, interpretation, and boundary relations."
+    },
+    {
+      "evidence_id": "evidence:terminology-reference",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/references/paper-terminology-contract.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The packaged terminology reference defines authority order, source ledger, term fields, coverage, drift rules, and a completion gate."
+    },
+    {
+      "evidence_id": "evidence:display-reference",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/references/figure-table-clarity.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The packaged display reference distinguishes direct requirements, synthesis, project choices, source retrieval status, structural checks, and native visual verification."
+    },
+    {
+      "evidence_id": "evidence:public-lifecycle-boundary",
+      "source": {"kind": "file", "path": "PUBLISHING.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The publishing guide requires PR and exact-main CI, protected immutable release, public managed-install smoke, and separate client activation evidence before those states may be claimed."
+    },
+    {
+      "evidence_id": "evidence:scientific-boundary",
+      "source": {"kind": "file", "path": "README.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The README explicitly states that installation and structural consistency do not prove scientific validity, client discovery, runtime invocation, or native rendering."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "statement": "The tested local v0.1.0 release identity is synchronized across repository and packaged authorities.",
+      "element_ref": {"component_id": "release-package", "element_id": "release-identity"},
+      "material": true,
+      "status": "supported",
+      "rationale": "The executed contract suite passed and exact current version, citation, and packaged version authorities all identify v0.1.0."
+    },
+    {
+      "claim_id": "claim:local-package-integrity-verified",
+      "statement": "The current release-candidate package tree matches its deterministic nine-file package manifest.",
+      "element_ref": {"component_id": "release-package", "element_id": "package-integrity"},
+      "material": true,
+      "status": "supported",
+      "rationale": "The persisted execution receipt records PACKAGE_VERIFIED and the regression suite passed manifest drift and GitHub metadata-normalization cases."
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "statement": "The package contains tested structural contracts for method flow, cross-section claims, terminology, and reader-facing displays.",
+      "element_ref": {"component_id": "scholarly-audit-contract", "element_id": "method-and-claim-flow"},
+      "material": true,
+      "status": "supported",
+      "rationale": "The current SKILL and three complete references contain the declared relations, and the persisted contract suite passed their required-anchor checks."
+    },
+    {
+      "claim_id": "claim:public-lifecycle-complete",
+      "statement": "The v0.1.0 public release, managed installs, client discovery, and client invocation have completed.",
+      "element_ref": {"component_id": "public-distribution", "element_id": "install-update-claims"},
+      "material": true,
+      "status": "untested",
+      "rationale": "The lifecycle gates are documented, but public PR/main CI, immutable release, consumer installs, and runtime activation have not yet been executed for this candidate."
+    },
+    {
+      "claim_id": "claim:scientific-validity-proved",
+      "statement": "The package's structural contracts prove the scientific validity of a manuscript or result audited with the skill.",
+      "element_ref": {"component_id": "scholarly-audit-contract", "element_id": "terminology-and-display-flow"},
+      "material": true,
+      "status": "untested",
+      "rationale": "Package structure and deterministic contract tests do not evaluate a manuscript's underlying scientific truth or general reliability."
+    }
+  ],
+  "bindings": [
+    {"claim_id": "claim:local-release-identity-consistent", "evidence_id": "evidence:test-suite", "role": "supports"},
+    {"claim_id": "claim:local-release-identity-consistent", "evidence_id": "evidence:version", "role": "supports"},
+    {"claim_id": "claim:local-release-identity-consistent", "evidence_id": "evidence:citation", "role": "supports"},
+    {"claim_id": "claim:local-release-identity-consistent", "evidence_id": "evidence:package-version", "role": "supports"},
+    {"claim_id": "claim:local-package-integrity-verified", "evidence_id": "evidence:manifest-verification", "role": "supports"},
+    {"claim_id": "claim:local-package-integrity-verified", "evidence_id": "evidence:test-suite", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:skill-contract", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:claim-chain-reference", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:terminology-reference", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:display-reference", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:test-suite", "role": "supports"},
+    {"claim_id": "claim:public-lifecycle-complete", "evidence_id": "evidence:public-lifecycle-boundary", "role": "context"},
+    {"claim_id": "claim:scientific-validity-proved", "evidence_id": "evidence:scientific-boundary", "role": "context"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:official-validator", "role": "context"}
+  ],
+  "limitations": [],
+  "summary": {
+    "strongest_safe_claim_id": "claim:local-package-integrity-verified",
+    "claim_boundary_ids": [],
+    "no_supported_claim": false
+  },
+  "unresolved_uncertainties": [
+    "Public PR and exact-main CI have not run.",
+    "The v0.1.0 tag and immutable GitHub release do not yet exist.",
+    "Public Codex and Claude Code consumer installations have not yet been observed.",
+    "Claude Code is not installed on this validation machine, so fresh runtime activation may remain unobserved even after distribution smoke."
+  ]
+}
