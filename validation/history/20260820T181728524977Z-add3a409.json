@@ -1,0 +1,466 @@
+{
+  "bindings": [
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "evidence_id": "evidence:test-suite",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "evidence_id": "evidence:version",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "evidence_id": "evidence:citation",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "evidence_id": "evidence:package-version",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-package-integrity-verified",
+      "evidence_id": "evidence:manifest-verification",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-package-integrity-verified",
+      "evidence_id": "evidence:test-suite",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:managed-lifecycle-bounded",
+      "evidence_id": "evidence:managed-lifecycle-contract",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:managed-lifecycle-bounded",
+      "evidence_id": "evidence:test-suite",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:skill-contract",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:claim-chain-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:terminology-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:display-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:test-suite",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:public-lifecycle-complete",
+      "evidence_id": "evidence:public-lifecycle-boundary",
+      "role": "context"
+    },
+    {
+      "claim_id": "claim:scientific-validity-proved",
+      "evidence_id": "evidence:scientific-boundary",
+      "role": "context"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:official-validator",
+      "role": "context"
+    }
+  ],
+  "claims": [
+    {
+      "claim_digest": "fad36ce63bda240e150bc9d99664b4163521c8ff64b2ad625f6f76befbbfe2e9",
+      "claim_id": "claim:local-release-identity-consistent",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "release-identity"
+      },
+      "material": true,
+      "rationale": "The executed contract suite passed and exact current version, citation, and packaged version authorities all identify v0.1.1.",
+      "statement": "The tested local v0.1.1 release identity is synchronized across repository and packaged authorities.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "fad533263ec23bf9267d3a7d86689408c5301952840839d4276e09c52eb7d956",
+      "claim_id": "claim:local-package-integrity-verified",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "package-integrity"
+      },
+      "material": true,
+      "rationale": "The persisted execution receipt records PACKAGE_VERIFIED and the regression suite passed manifest drift and GitHub metadata-normalization cases.",
+      "statement": "The current release-candidate package tree matches its deterministic thirteen-file package manifest.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "b29f6f08a222ba1bb351c07f77c0309c92dd4bdbc0d83c810d9f592e1d2b4faf",
+      "claim_id": "claim:managed-lifecycle-bounded",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff"
+      },
+      "material": true,
+      "rationale": "The current skill contract, policy, caller, receipt schema, updater, emitter, and focused lifecycle tests bind this local behavior; protected environments, hosted execution, host routing, and public issue submission remain outside the claim.",
+      "statement": "The local package defines and tests a consent-gated managed-update check plus one content-free owner-bound quality receipt after substantive use, and the repository carries one closed policy plus one thin full-SHA-pinned managed-repair caller, without default outbound transport.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "fe02a05c0c7df2144c015310798f193bf06b261c6fef4dd5ef1c48bf83968588",
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "method-and-claim-flow"
+      },
+      "material": true,
+      "rationale": "The current SKILL and three complete references contain the declared relations, and the persisted contract suite passed their required-anchor checks.",
+      "statement": "The package contains tested structural contracts for method flow, cross-section claims, terminology, and reader-facing displays.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "44c9d66d005d9266a16a635aefc7d43dcd5b0c2a1f91ffe5c0e5641dfc0f04aa",
+      "claim_id": "claim:public-lifecycle-complete",
+      "element_ref": {
+        "component_id": "public-distribution",
+        "element_id": "install-update-claims"
+      },
+      "material": true,
+      "rationale": "The lifecycle gates are documented. A first public PR CI run exposed platform-dependent directory evidence identity; repaired PR/main CI, immutable release, consumer installs, and runtime activation remain pending.",
+      "statement": "The v0.1.1 public release, managed installs, client discovery, and client invocation have completed.",
+      "status": "untested"
+    },
+    {
+      "claim_digest": "2e39670dbf5956d6cc97b47ac36ca0ddb8f6067f2975c2e3837389202be154dc",
+      "claim_id": "claim:scientific-validity-proved",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "terminology-and-display-flow"
+      },
+      "material": true,
+      "rationale": "Package structure and deterministic contract tests do not evaluate a manuscript's underlying scientific truth or general reliability.",
+      "statement": "The package's structural contracts prove the scientific validity of a manuscript or result audited with the skill.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:test-suite",
+      "freshness": "current",
+      "identity_sha256": "13d0ae4af7826b5dc783dd5911fb0eb34ac8a2224456106aecef5660befcf86d",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/tests"
+      },
+      "method": "executed_test",
+      "observed_summary": "The UTF-8 unittest command completed with PASS, 34 tests, zero failures, zero errors, and zero skips.",
+      "selection_sha256": "7ab4f26c42cff95ca54418634903cc0b040e8405e3c780ffa162fb04ad871ad1",
+      "source": {
+        "byte_size": 1099,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/release-candidate-test-receipt.json",
+        "sha256": "e31ab6341c1b3ce595febc27639cf8510176d24d05d910bac81edda2be2dafae"
+      }
+    },
+    {
+      "evidence_id": "evidence:manifest-verification",
+      "freshness": "current",
+      "identity_sha256": "f116d22c1a0a3ec820797878b2f3336af0c043874076f3d4a404027a465cb144",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/package_manifest"
+      },
+      "method": "executed_test",
+      "observed_summary": "The package-integrity verifier returned PACKAGE_VERIFIED for the recorded thirteen-file package digest.",
+      "selection_sha256": "d06365589e1510fcf82a78544f71a471f2f61e49c307c3e65cac25794aa713ba",
+      "source": {
+        "byte_size": 1099,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/release-candidate-test-receipt.json",
+        "sha256": "e31ab6341c1b3ce595febc27639cf8510176d24d05d910bac81edda2be2dafae"
+      }
+    },
+    {
+      "evidence_id": "evidence:official-validator",
+      "freshness": "current",
+      "identity_sha256": "fc24005b4b9ddcaa2d0296872c2ae6397a9f4bb6fa0e8ddc9953061fb4b4015f",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/official_validator"
+      },
+      "method": "executed_test",
+      "observed_summary": "The official skill validator passed in explicit UTF-8 mode.",
+      "selection_sha256": "58d949eade01e27af8cc831b70a2714173fff8a7185bf2b876c3cc0f9c7415e0",
+      "source": {
+        "byte_size": 1099,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/release-candidate-test-receipt.json",
+        "sha256": "e31ab6341c1b3ce595febc27639cf8510176d24d05d910bac81edda2be2dafae"
+      }
+    },
+    {
+      "evidence_id": "evidence:version",
+      "freshness": "current",
+      "identity_sha256": "468d0bb25cbbac49cddd3ea16563f53d3e0ccf91f75b6ac87e6b2e4be1d3c7b5",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The repository release authority identifies version 0.1.1.",
+      "selection_sha256": "80447316529fc62014fbaa047fb67c51ac30e32830cda370405349d8d66d196c",
+      "source": {
+        "byte_size": 6,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "VERSION",
+        "sha256": "80447316529fc62014fbaa047fb67c51ac30e32830cda370405349d8d66d196c"
+      }
+    },
+    {
+      "evidence_id": "evidence:citation",
+      "freshness": "current",
+      "identity_sha256": "8ee6961ab6ba91394777a4a7684d6f5b5215de32e160d33ceb33116535c5798f",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "Citation metadata identifies version 0.1.1, the 2026-08-20 release date, Ian-Tseng repository, and MIT license.",
+      "selection_sha256": "688cfe413d8f5779b95bb3ffcd970c7cd5f1ea519611edaeca03082dac52b365",
+      "source": {
+        "byte_size": 386,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "CITATION.cff",
+        "sha256": "688cfe413d8f5779b95bb3ffcd970c7cd5f1ea519611edaeca03082dac52b365"
+      }
+    },
+    {
+      "evidence_id": "evidence:package-version",
+      "freshness": "current",
+      "identity_sha256": "b532bd397d321b4abbde6bd55a7680bda0afa378f5834a929c538f95bc243d66",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/version"
+      },
+      "method": "schema_validated",
+      "observed_summary": "The packaged version authority identifies version 0.1.1.",
+      "selection_sha256": "40f39c7e529a14b5e2e6dbd274dd1fe8c249603ff6448e1b0760fcacdb88482b",
+      "source": {
+        "byte_size": 90,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "skills/audit-method-data-flow/references/package-version.json",
+        "sha256": "f372299b78ba018678f25393fd808dda03aa1b4ab5c03c795f309d0cc382834b"
+      }
+    },
+    {
+      "evidence_id": "evidence:managed-lifecycle-contract",
+      "freshness": "current",
+      "identity_sha256": "47020f095b565e0b63c158ec2f42a63ef8738dc3f583de4ddf687296ef94b57c",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "After substantive use, the skill requires consent-gated managed-update maintenance followed by one content-free owner-bound receipt marker, while public issue submission remains separately gated.",
+      "selection_sha256": "e76b9a1a864429be74c5e5b05b59e4bf81ed19759f7bee82fdbb6c9be6f45b68",
+      "source": {
+        "byte_size": 16948,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/SKILL.md",
+        "sha256": "e76b9a1a864429be74c5e5b05b59e4bf81ed19759f7bee82fdbb6c9be6f45b68"
+      }
+    },
+    {
+      "evidence_id": "evidence:skill-contract",
+      "freshness": "current",
+      "identity_sha256": "47020f095b565e0b63c158ec2f42a63ef8738dc3f583de4ddf687296ef94b57c",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The release-candidate skill package defines explicit method-flow, claim-chain, terminology, display, artifact, and evidence-boundary gates.",
+      "selection_sha256": "e76b9a1a864429be74c5e5b05b59e4bf81ed19759f7bee82fdbb6c9be6f45b68",
+      "source": {
+        "byte_size": 16948,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/SKILL.md",
+        "sha256": "e76b9a1a864429be74c5e5b05b59e4bf81ed19759f7bee82fdbb6c9be6f45b68"
+      }
+    },
+    {
+      "evidence_id": "evidence:claim-chain-reference",
+      "freshness": "current",
+      "identity_sha256": "64aa52b8f4b11b49ec948a8960f1bbc6a5378306542358b959f2ef1e212ca187",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged claim-chain reference defines same-scope problem, question, protocol, output, result, counterevidence, interpretation, and boundary relations.",
+      "selection_sha256": "36791b71be444b7a498a278ae98496b996056334feefddbf30e2f948c15b07f7",
+      "source": {
+        "byte_size": 3164,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/references/claim-chain-clarity.md",
+        "sha256": "36791b71be444b7a498a278ae98496b996056334feefddbf30e2f948c15b07f7"
+      }
+    },
+    {
+      "evidence_id": "evidence:terminology-reference",
+      "freshness": "current",
+      "identity_sha256": "114065d084b1b77eb8de1c164594d90f6b1b9a2b2e811c6876335fb0a0c0d613",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged terminology reference defines authority order, source ledger, term fields, coverage, drift rules, and a completion gate.",
+      "selection_sha256": "dfd374de5259ddeda732286579497a390c7d60eea8382a199f3d5c3228bd8ad4",
+      "source": {
+        "byte_size": 3764,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/references/paper-terminology-contract.md",
+        "sha256": "dfd374de5259ddeda732286579497a390c7d60eea8382a199f3d5c3228bd8ad4"
+      }
+    },
+    {
+      "evidence_id": "evidence:display-reference",
+      "freshness": "current",
+      "identity_sha256": "a4b8bb1db2d83e7e5400edd459360f4901f2a6dd0b8546bb3cefcf820ffcf671",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged display reference distinguishes direct requirements, synthesis, project choices, source retrieval status, structural checks, and native visual verification.",
+      "selection_sha256": "ecb929bb5162070a457d1a9f98278e7d61b5a5f1b06d5f7243b3bcb5b05d3ecf",
+      "source": {
+        "byte_size": 13135,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/references/figure-table-clarity.md",
+        "sha256": "ecb929bb5162070a457d1a9f98278e7d61b5a5f1b06d5f7243b3bcb5b05d3ecf"
+      }
+    },
+    {
+      "evidence_id": "evidence:public-lifecycle-boundary",
+      "freshness": "current",
+      "identity_sha256": "335c878861680c03471840f564addd6e651522c12fc553fd9cfce4a5499ae0bd",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The publishing guide requires PR and exact-main CI, protected immutable release, public managed-install smoke, and separate client activation evidence before those states may be claimed.",
+      "selection_sha256": "aa915a9ce7c99669b94f4069384e11d81371e58d040c3541167ea6769efe2b63",
+      "source": {
+        "byte_size": 2857,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "PUBLISHING.md",
+        "sha256": "aa915a9ce7c99669b94f4069384e11d81371e58d040c3541167ea6769efe2b63"
+      }
+    },
+    {
+      "evidence_id": "evidence:scientific-boundary",
+      "freshness": "current",
+      "identity_sha256": "1b7fc658ff3b0aa966b13944c1d4cb669160f642395933c0526a5570b4efa1eb",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The README explicitly states that installation and structural consistency do not prove scientific validity, client discovery, runtime invocation, or native rendering.",
+      "selection_sha256": "7b7bb4159fe5ce8cba9dfc1c0e32616a9a433f6c676c5f7b4e6f874debef58df",
+      "source": {
+        "byte_size": 4567,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "README.md",
+        "sha256": "7b7bb4159fe5ce8cba9dfc1c0e32616a9a433f6c676c5f7b4e6f874debef58df"
+      }
+    }
+  ],
+  "integrity": {
+    "canonical_payload_sha256": "fc3d68d4f34b39dfb606c5b7ee151d0e5e7b042a5e3a3f4998a66be79005d355",
+    "output_schema_sha256": "a2a009aeb319922010cdf3e5702884fbe55d013dc3f2f09c3f64914299820e65",
+    "recorder_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63",
+    "renderer_id": "evidence-bound-markdown-v1",
+    "renderer_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63"
+  },
+  "limitations": [],
+  "record_kind": "evidence_bound_audit_record",
+  "scan": {
+    "accepted_map": {
+      "map_id": "component-map-bf472206ac9c",
+      "path": "validation/component-map/accepted-map.json",
+      "sha256": "e57627577d03f3631e3d3c8de67f24b9dd94c5200aded962087808228045e8a9"
+    },
+    "authority": [
+      "VERSION",
+      "CITATION.cff",
+      "SOURCE.md",
+      "skills/audit-method-data-flow/SKILL.md",
+      "skills/audit-method-data-flow/references/package-version.json",
+      "skills/audit-method-data-flow/references/package-manifest.json",
+      "validation/release-candidate-test-receipt.json"
+    ],
+    "engine_identity": {
+      "engine_digest": "7e713ae78e8bd0008926008c75fc4ae0a977f82cc9cc23158cc927c212255f6b",
+      "engine_name": "component-evidence",
+      "engine_version": "1.3.0",
+      "map_schema_version": "1.0",
+      "provider_kind": "embedded",
+      "receipt_protocol_version": "2.0",
+      "status": "verified"
+    },
+    "objective": "Determine the strongest evidence-bounded claim that can be made about the local audit-method-data-flow v0.1.1 release candidate, including consent-gated update maintenance and content-free quality handoff, before successful public CI, publication, and consumer activation.",
+    "recorded_at_utc": "2026-08-20T18:17:28.524977Z",
+    "recorder_version": "2.1.0",
+    "scan_id": "20260820T181728524977Z-add3a409",
+    "scope": [
+      "release identity and owner provenance",
+      "release-candidate package integrity",
+      "declared method-flow, claim-chain, terminology, and display contracts",
+      "documented but not-yet-executed public release lifecycle"
+    ],
+    "skill_name": "analyze-project-claims",
+    "skill_sha256": "a037edd16f17b7253a4003081c2566838bf5fd195206c371f5e687ff12bdb0bb"
+  },
+  "schema_version": "2.0",
+  "summary": {
+    "claim_boundary_ids": [],
+    "claim_count": 6,
+    "claim_counts": {
+      "supported": 4,
+      "untested": 2
+    },
+    "evidence_count": 13,
+    "material_claim_count": 6,
+    "no_supported_claim": false,
+    "scan_status": "PARTIAL",
+    "strongest_safe_claim": "The current release-candidate package tree matches its deterministic thirteen-file package manifest.",
+    "strongest_safe_claim_id": "claim:local-package-integrity-verified",
+    "unresolved_uncertainties": [
+      "A first public PR CI run exposed platform-dependent directory evidence identity; the repaired PR rerun and exact-main CI have not yet passed.",
+      "The v0.1.1 tag and immutable GitHub release do not yet exist.",
+      "Public Codex and Claude Code consumer installations have not yet been observed.",
+      "Claude Code is not installed on this validation machine, so fresh runtime activation may remain unobserved even after distribution smoke.",
+      "Protected managed-repair environments, hosted canary, agent execution, and draft publication remain unobserved."
+    ]
+  }
+}
