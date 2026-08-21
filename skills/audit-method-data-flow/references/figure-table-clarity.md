@@ -22,12 +22,12 @@ Never present a project-specific choice as a universal top-tier requirement. Bef
 
 ## Official-source ledger
 
-Access date: **2026-08-20**.
+Access date: **2026-08-21**.
 
 | Source | Retrieval | Directly adopted guidance |
 |---|---|---|
 | [Nature Research Figure Guide](https://research-figure-guide.nature.com/) | Accessible | Figures should communicate a focused scientific message and be prepared for reliable publication. |
-| [Nature figure specifications](https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/) | Accessible | Use accessible color choices, standard legible fonts, editable/vector artwork where possible, and avoid decorative shadows or effects; judge lettering at final size. Nature's stated 5--7 pt range is venue-specific, not a universal floor. |
+| [Nature figure specifications](https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/) | Accessible | Use editable sans-serif text, preferably Helvetica or Arial, and use Symbol for glyphs and the Greek alphabet. Use accessible color choices and editable/vector artwork where possible; avoid decorative effects and judge lettering at final size. These font preferences and Nature's stated 5--7 pt range are Nature-specific rather than universal. |
 | [Nature writing guidance](https://www.nature.com/nature-portfolio/for-authors/write) | Accessible | State the research question early, keep a focused message, make every figure earn its place, and write clear captions. |
 | [NeurIPS Paper Checklist](https://neurips.cc/public/guides/PaperChecklist) | Accessible | Make protocol, limitations, reproducibility, and evidence boundaries explicit. This supports the display's scientific contract, not a prescribed visual style. |
 | [Elsevier file-preparation guide](https://www.elsevier.support/publishing/answer/how-do-i-prepare-my-files-for-submission-in-editorial-manager) | Accessible; page updated 2026-06-15 | The journal guide controls; double-anonymous title-page separation and journal-specific file roles remain authoritative. |
@@ -107,6 +107,30 @@ Do not use color alone to encode better/worse, supported/unsupported, or source 
 - Use standard fonts, restrained color, solid fills, and sufficient contrast.
 - Avoid gradients, shadows, decorative icons, and dense legends when direct labels fit.
 - Reopen the staged image, embed it in the generated Word/HTML/PDF artifact, and inspect the final PDF page rather than only the source PNG.
+
+## Figure typography roles
+
+Separate direct venue rules from renderer choices before selecting fonts.
+
+- **Direct Nature requirement:** for Nature figures, use editable sans-serif text, preferably Helvetica or Arial, and use Symbol for glyphs and the Greek alphabet. Treat these preferences and Nature's 5--7 pt text range as Nature-specific rather than universal; the active venue's instructions override them.
+- **Cross-source synthesis:** keep ordinary labels visually consistent, reserve typographic changes for meaning, and judge every mixed-font line at final display size.
+- **Project-specific renderer contract:** declare the exact text-font role, math-font role, symbol-font role when used, fallback families, and declared math fragments before rendering. A project may choose Arial for prose and Cambria Math for notation, for example, but must label that pairing as its own renderer choice rather than a venue requirement.
+
+For each display specification, record:
+
+ordinary text -> text-font role and family -> genuine notation -> math-font role and family -> glyph/Greek handling -> declared math fragments -> fallbacks -> final-size evidence
+
+Apply these checks to each generated figure:
+
+1. Inventory the declared math fragments before rendering. Do not switch fonts merely because a label contains punctuation, numerals, parentheses, or an acronym.
+2. Use the text-font role for prose in nodes, arrows, legends, axes, and annotations. Use the math-font role only for genuine variables, operators, equations, subscripts, superscripts, or declared notation.
+3. Validate glyph coverage for every declared family and fallback. Reject missing characters, replacement glyphs, improvised Unicode substitutions, and silent font fallback.
+4. Inspect baseline alignment, weight, size, and spacing where prose and notation share a line. Structural font metadata alone does not prove visual alignment.
+5. Verify editable or embedded fonts in the staged artifact, then inspect the final-size PDF or native render.
+
+Keep tables in one restrained body font for headings, labels, notes, and numeric values. Use a separate math font only for genuine notation, and preserve the same declared notation across prose, figures, tables, and captions.
+
+Fail the typography audit when a renderer does not declare these roles, math fragments are inferred only from character shape, glyph coverage is unverified, mixed-font baseline alignment is not inspected, or a project font choice is presented as a universal top-tier rule.
 
 ## Slide-deck profile
 

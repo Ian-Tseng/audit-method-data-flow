@@ -45,7 +45,7 @@ user installation, and checks through a 24-hour lease after substantive use:
 
 Pin a reproducible installation when needed:
 
-    gh skill install Ian-Tseng/audit-method-data-flow skills/audit-method-data-flow/SKILL.md --agent codex --scope user --pin v0.1.1
+    gh skill install Ian-Tseng/audit-method-data-flow skills/audit-method-data-flow/SKILL.md --agent codex --scope user --pin v0.1.2
 
 This release has a consent-gated managed updater and a content-free quality
 receipt. Both run after the substantive result and never authorize telemetry,

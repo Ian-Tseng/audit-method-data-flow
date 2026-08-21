@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here.
 
+## [0.1.2] - 2026-08-21
+
+### Fixed
+
+- Add the missing figure-typography role contract promised by the owner resolution.
+- Separate direct Nature font requirements from cross-source synthesis and project renderer choices.
+- Validate declared math fragments, font roles, glyph coverage, mixed-font baseline alignment, and restrained table typography.
+
 ## [0.1.1] - 2026-08-20
 
 ### Added

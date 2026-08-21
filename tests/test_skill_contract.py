@@ -90,6 +90,27 @@ class SkillContractTests(unittest.TestCase):
         ):
             self.assertIn(status, SKILL)
 
+    def test_figure_typography_contract_has_source_roles_and_validation(self):
+        display = (PACKAGE / "references" / "figure-table-clarity.md").read_text(
+            encoding="utf-8"
+        )
+        for anchor in (
+            "## Figure typography roles",
+            "Direct Nature requirement",
+            "Project-specific renderer contract",
+            "Arial",
+            "Helvetica",
+            "Symbol",
+            "text-font role",
+            "math-font role",
+            "declared math fragments",
+            "glyph coverage",
+            "baseline alignment",
+            "one restrained body font",
+        ):
+            self.assertIn(anchor, display)
+        self.assertIn("Nature-specific rather than universal", display)
+
     def test_agent_metadata_invokes_exact_skill(self):
         agent = (PACKAGE / "agents" / "openai.yaml").read_text(encoding="utf-8")
         self.assertIn('display_name: "Audit Method Data Flow"', agent)

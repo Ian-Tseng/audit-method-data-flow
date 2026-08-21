@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-08-20",
-  "release_candidate": "0.1.1",
+  "recorded_at": "2026-08-21",
+  "release_candidate": "0.1.2",
   "tests": {
     "command": "py -3 -X utf8 -m unittest discover -s tests -v",
     "status": "PASS",
-    "tests_run": 34,
+    "tests_run": 35,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -13,7 +13,7 @@
   "package_manifest": {
     "command": "py -3 -X utf8 skills/audit-method-data-flow/scripts/package_integrity.py verify",
     "status": "PACKAGE_VERIFIED",
-    "digest_sha256": "22b113e41635202c472ed359d0f829ef38e7de873f475b5a2a3fa8bb70519e5f",
+    "digest_sha256": "def18a0d15f7706f94ca1cb6634f36d5231c765a9ddddd02b4e469142c6c5a36",
     "files": 13
   },
   "official_validator": {

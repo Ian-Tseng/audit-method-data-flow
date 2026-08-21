@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-21T04:55:07.295419Z",
+  "accepted_at_utc": "2026-08-20T18:16:33.496794Z",
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -161,7 +161,7 @@
             }
           ],
           "relation_type": "synchronizes",
-          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.2 MIT release candidate."
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.1 MIT release candidate."
         }
       ]
     },
@@ -226,16 +226,16 @@
       ]
     }
   ],
-  "created_at_utc": "2026-08-21T04:54:47.709124Z",
+  "created_at_utc": "2026-08-20T18:15:29.300505Z",
   "integrity": {
-    "canonical_payload_sha256": "aee8c3e16ad31bbb52842f8001a6e9faae401a9072bd8d813e37afb8072bdf26"
+    "canonical_payload_sha256": "666a5449a3b2ecf733b39d2c569e8089e647a62f3b41ca8d033a2c7aaca62958"
   },
-  "map_id": "component-map-e0421bc3594d",
+  "map_id": "component-map-bf472206ac9c",
   "map_state": "accepted",
   "mapper_version": "1.3.0",
-  "objective": "Map the v0.1.2 release candidate's identity, integrity, scholarly audit contract, consent-gated update maintenance, content-free quality handoff, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
-  "origin_scan_id": "20260821T045447709124Z-e844dae0",
-  "previous_map_id": "component-map-bf472206ac9c",
+  "objective": "Map the v0.1.1 release candidate's identity, integrity, scholarly audit contract, consent-gated update maintenance, content-free quality handoff, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
+  "origin_scan_id": "20260820T181529300505Z-e6114e60",
+  "previous_map_id": "component-map-33e16fc245a9",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -268,7 +268,7 @@
     "validation/release-candidate-test-receipt.json"
   ],
   "skill_name": "analyze-project-claims",
-  "skill_sha256": "d892da7147f2d4ab01bf60a45f9425af3c81970fb979f29af7ee9cbee86ac999",
+  "skill_sha256": "a037edd16f17b7253a4003081c2566838bf5fd195206c371f5e687ff12bdb0bb",
   "source_snapshot": [
     {
       "exists": true,
@@ -291,25 +291,25 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "d2c2250657b28b1737030b79bc70d647bdb754f35f4edaffa1b14192e89a35bb",
+      "sha256": "1fe64d0d0f701beec64e0b5d52ebb4aa2cba29442764eac4d5f5c4f0926e976b",
       "source": "CHANGELOG.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "05ab0c7b36e50a05de202de0b47de6c898064333a61d2719349a4c4c4da97bb1",
+      "sha256": "688cfe413d8f5779b95bb3ffcd970c7cd5f1ea519611edaeca03082dac52b365",
       "source": "CITATION.cff"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "b382973bed515708322623843b485c04c3013c5cfa6720d8798b8303028257aa",
+      "sha256": "aa915a9ce7c99669b94f4069384e11d81371e58d040c3541167ea6769efe2b63",
       "source": "PUBLISHING.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "1a6b4e052f42dfc13ae11c096302d7d8184b2d8a09970f2f87b7647aab8b7ddc",
+      "sha256": "7b7bb4159fe5ce8cba9dfc1c0e32616a9a433f6c676c5f7b4e6f874debef58df",
       "source": "README.md"
     },
     {
@@ -321,13 +321,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "297b50f08386d3521f8fdaf2f78eb8d9d0acdf452d2e61596905fba37208c792",
+      "sha256": "80447316529fc62014fbaa047fb67c51ac30e32830cda370405349d8d66d196c",
       "source": "VERSION"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "05ab0c7b36e50a05de202de0b47de6c898064333a61d2719349a4c4c4da97bb1",
+      "sha256": "688cfe413d8f5779b95bb3ffcd970c7cd5f1ea519611edaeca03082dac52b365",
       "source": "skills/audit-method-data-flow/CITATION.cff"
     },
     {
@@ -357,19 +357,19 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "18b81e4de4eb3d3c64568b0099255e7aebf8e409bb109c6b9bb119a7c38c4bb7",
+      "sha256": "ecb929bb5162070a457d1a9f98278e7d61b5a5f1b06d5f7243b3bcb5b05d3ecf",
       "source": "skills/audit-method-data-flow/references/figure-table-clarity.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "abe027c7184932d3533c69e02af9a5bd702788b13afa825d831b44f9c701756b",
+      "sha256": "3f7c5cace7464798e82182377eb8c1efe842abf67ff31b41c9f9bd9e81bd168a",
       "source": "skills/audit-method-data-flow/references/package-manifest.json"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "022ea96c462b98387d6bdeb4f41237c2b1a5d15ccf82422b9d85584c8f1998b7",
+      "sha256": "f372299b78ba018678f25393fd808dda03aa1b4ab5c03c795f309d0cc382834b",
       "source": "skills/audit-method-data-flow/references/package-version.json"
     },
     {
@@ -393,7 +393,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "64c315a9e6b157a35164d76f494bb7faa29fe83e8c201481a000e886a88e63ce",
+      "sha256": "8812ac452a214ec94abc11300a5d47277c87f67c4f4e3cc7707440c6d2d539c2",
       "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
     },
     {
@@ -411,19 +411,19 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "5e452950eab592b96bcf22c9e6c0cfe36622d61c3e387b3acd5420226416e79f",
+      "sha256": "ffaa255382d532ae465de279a9c59dea8253026247abba7089079315c0bce3e1",
       "source": "tests/test_managed_lifecycle.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "3eeb045e6786021a8675501b8e8294e0c42c6fbb5ccd5e92a245c0b799987b53",
+      "sha256": "09cc7472932986622bd6289220f1603fde6de38c8baffec06385fa3e10714ef2",
       "source": "tests/test_package_contract.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "0f8d43863120cb9a9f3c39209a609bca9be700c9166c876de8967de5595440ca",
+      "sha256": "863a5bf5f2e6780aaee9567e95d8716285f3b6693754c4aba6b04c4b244e5ec9",
       "source": "tests/test_skill_contract.py"
     },
     {
@@ -435,7 +435,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "1857d84c029030b7afa71ebe29258edf418b30357619ac7d4ac628651363b934",
+      "sha256": "e31ab6341c1b3ce595febc27639cf8510176d24d05d910bac81edda2be2dafae",
       "source": "validation/release-candidate-test-receipt.json"
     }
   ]

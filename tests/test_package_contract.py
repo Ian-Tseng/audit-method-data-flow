@@ -45,7 +45,7 @@ def text_files(root: Path):
 class PackageContractTests(unittest.TestCase):
     def test_release_identity_is_synchronized(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-        self.assertEqual(version, "0.1.1")
+        self.assertEqual(version, "0.1.2")
         package_version = json.loads(
             (PACKAGE / "references" / "package-version.json").read_text(
                 encoding="utf-8"
@@ -56,13 +56,13 @@ class PackageContractTests(unittest.TestCase):
         for citation in (ROOT / "CITATION.cff", PACKAGE / "CITATION.cff"):
             content = citation.read_text(encoding="utf-8")
             self.assertIn(f'version: "{version}"', content)
-            self.assertIn('date-released: "2026-08-20"', content)
+            self.assertIn('date-released: "2026-08-21"', content)
             self.assertIn('license: "MIT"', content)
         self.assertEqual(
             (ROOT / "CITATION.cff").read_bytes(),
             (PACKAGE / "CITATION.cff").read_bytes(),
         )
-        self.assertIn(f"## [{version}] - 2026-08-20", (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"))
+        self.assertIn(f"## [{version}] - 2026-08-21", (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"))
 
     def test_root_and_package_license_are_identical(self):
         self.assertEqual((ROOT / "LICENSE").read_bytes(), (PACKAGE / "LICENSE").read_bytes())
@@ -81,7 +81,7 @@ class PackageContractTests(unittest.TestCase):
 
     def test_github_install_metadata_does_not_change_package_identity(self):
         module = load_integrity_module()
-        for github_ref in ("refs/heads/main", "refs/tags/v0.1.1"):
+        for github_ref in ("refs/heads/main", "refs/tags/v0.1.2"):
             with self.subTest(github_ref=github_ref), tempfile.TemporaryDirectory() as temporary:
                 copy = Path(temporary) / PACKAGE.name
                 shutil.copytree(PACKAGE, copy)
@@ -206,7 +206,7 @@ class PackageContractTests(unittest.TestCase):
         ledger = (PACKAGE / "references" / "figure-table-clarity.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn("Access date: **2026-08-20**", ledger)
+        self.assertIn("Access date: **2026-08-21**", ledger)
         for url in (
             "https://research-figure-guide.nature.com/",
             "https://www.nature.com/nature-portfolio/for-authors/write",
