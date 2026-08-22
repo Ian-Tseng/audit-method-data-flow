@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here.
 
+## [0.1.3] - 2026-08-22
+
+### Added
+
+- Add a first-reader definition inventory for central paper terminology.
+- Require a local plain-language definition before a term structures a research question, result, or interpretation.
+- Validate the defining semantic relation and its reading-order position rather than one preferred sentence.
+
 ## [0.1.2] - 2026-08-21
 
 ### Fixed

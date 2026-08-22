@@ -66,6 +66,26 @@ Audit at least:
   acceptance, and provenance states;
 - claim strength, evidence scope, counterevidence, and boundaries.
 
+## First-reader inference gate
+
+Maintain a compact definition inventory in reading order:
+
+| Term | First abstract use | First body use | Local definition locator | Required relation | Verdict |
+|---|---|---|---|---|---|
+| ... | paragraph/sentence or absent | section/paragraph | same sentence or nearby sentence | The distinction a reader must know before interpreting the claim | defined locally / timely body definition / unresolved inference |
+
+A contract entry does not repair an undefined first use by itself. Check whether
+the reader-facing body gives a local definition before the term structures a
+research question, result, or interpretation. The local definition must state
+the required relation that changes the claim, such as label access, source
+exposure, fitted versus fixed state, input/output role, or evaluation boundary.
+If the abstract must stay compact, require a self-explanatory abstract label and
+define it no later than its first substantive body use.
+
+For deterministic checks, assert the semantic relation and its order before the
+dependent claim. Do not require one preferred sentence when equivalent wording
+preserves the same definition.
+
 ## Drift and update rules
 
 1. Read the existing contract before editing any central term.

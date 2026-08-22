@@ -90,6 +90,31 @@ class SkillContractTests(unittest.TestCase):
         ):
             self.assertIn(status, SKILL)
 
+    def test_first_reader_inference_gate_is_explicit(self):
+        contract = (PACKAGE / "references" / "paper-terminology-contract.md").read_text(
+            encoding="utf-8"
+        )
+        skill_folded = SKILL.casefold()
+        contract_folded = contract.casefold()
+        for anchor in (
+            "Eliminate first-reader inference",
+            "first substantive use",
+            "plain-language definition",
+            "definition inventory",
+            "semantic relation",
+            "unresolved inference",
+        ):
+            self.assertIn(anchor.casefold(), skill_folded)
+        for anchor in (
+            "## First-reader inference gate",
+            "first abstract use",
+            "first body use",
+            "local definition locator",
+            "required relation",
+            "unresolved inference",
+        ):
+            self.assertIn(anchor.casefold(), contract_folded)
+
     def test_figure_typography_contract_has_source_roles_and_validation(self):
         display = (PACKAGE / "references" / "figure-table-clarity.md").read_text(
             encoding="utf-8"

@@ -95,6 +95,34 @@ When browsing is unavailable, retain the last verified source ledger and mark
 the refresh pending. If writes are unauthorized, return a candidate contract
 and drift report without implying they were persisted.
 
+## Eliminate first-reader inference
+
+Build a definition inventory for central protocol, component, representation,
+metric, and claim terms:
+
+`term -> first abstract use -> first substantive use -> plain-language definition -> semantic relation -> parent stage/branch -> unresolved inference`
+
+1. Scan the abstract and then the body in reading order. Record the first use,
+   even when the same term has a complete entry in a later table or contract.
+2. When abstract space is constrained, permit a compact self-explanatory label,
+   but provide a local plain-language definition no later than the first
+   substantive body use. Place it before the term structures a research
+   question, result, or interpretation.
+3. Count a term as defined only when the local sentence states the distinction
+   that changes the claim, such as source or label access, fitted versus fixed
+   state, input/output role, or evaluation boundary. Repeating the term,
+   expanding an acronym, or naming its parent stage is not enough.
+4. Do not require readers to combine a later protocol table, caption, glossary,
+   or supplement to recover the meaning of an earlier claim.
+5. When deterministic checks exist, test the required semantic relation and its
+   position before the dependent claim. Avoid locking the paper to one exact
+   sentence when equivalent concise wording is valid.
+
+Classify each item as `defined locally`, `self-explanatory with timely body
+definition`, or `unresolved inference`. Fail when a central term remains an
+unresolved inference at the point where a first-time reader must interpret a
+research question, result, or claim boundary.
+
 ## Link every term to a named stage or branch
 
 Treat stage-linked terminology as the default, not an optional refinement.

@@ -24,7 +24,7 @@ GITHUB_METADATA_KEYS = {
 }
 EXPECTED_GITHUB_PATH = "skills/audit-method-data-flow"
 EXPECTED_GITHUB_REPO = "https://github.com/Ian-Tseng/audit-method-data-flow"
-EXPECTED_GITHUB_REFS = {"refs/heads/main", "refs/tags/v0.1.2"}
+EXPECTED_GITHUB_REFS = {"refs/heads/main", "refs/tags/v0.1.3"}
 GITHUB_TREE_SHA_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 IGNORED_PARTS = {"__pycache__"}
 IGNORED_NAMES = {".DS_Store", "Thumbs.db"}
