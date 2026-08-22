@@ -14,7 +14,7 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "587492491a528634308057d2d038debf80c722d8b47032053fc41a145be6a514"
+      "sha256": "cf1bf261072977498166c8f47d691bc9d4c37f4612e9e4a0878998ea38e95a3f"
     },
     {
       "path": "agents/openai.yaml",
@@ -34,7 +34,7 @@
     },
     {
       "path": "references/paper-terminology-contract.md",
-      "sha256": "de9d53de6debdbf9a12558cfe6b9d7b019f410b141c72bac24272a8edeae8698"
+      "sha256": "f97911f80bfd620b7ced774c944fd10b5b93b75d0390374ca343e627574b41ff"
     },
     {
       "path": "references/skill-outcome-receipt.schema.json",

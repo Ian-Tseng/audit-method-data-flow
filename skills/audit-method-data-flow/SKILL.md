@@ -69,6 +69,16 @@ Before establishing or materially changing a central term:
 4. Select one reader-facing canonical term without copying source jargon that
    changes the implemented meaning.
 
+Apply a **semantic universality gate** before treating a term as ordinary field
+language. Classify it as `field-standard`, `project-specific`, or better stated
+by a `plain protocol description`. A field-standard term must preserve the same
+operation and claim boundary in authoritative sources. A project-specific term
+must be identified as local and defined before it carries a research question or
+result. Prefer a plain protocol description when a coined label merely compresses
+data access, split membership, fitting, selection, or evaluation conditions that
+can be stated directly. Search across the relevant standards and adjacent
+literatures. If a proposed term is absent, report that it was not located in the checked sources; do not claim that no literature uses it.
+
 Cover the whole paper vocabulary:
 
 - datasets, partitions, sampling units, label access, exposure, and leakage;
@@ -201,9 +211,10 @@ When a repository has deterministic manuscript checks, use red-green-refactor: f
 
 Also fail when an active central term lacks a contract entry, one term denotes
 multiple roles, aliases cross phase or lifecycle boundaries, a source-backed
-mapping is presented as a quotation rather than an inference, or an active
-artifact uses a forbidden alias. Report terminology-contract version and
-source-verification date in the handoff.
+mapping is presented as a quotation rather than an inference, a project-specific
+term is presented as field-standard, a plain protocol description would remove
+avoidable first-reader inference, or an active artifact uses a forbidden alias.
+Report terminology-contract version and source-verification date in the handoff.
 
 ## Finish with managed maintenance and one quality receipt
 

@@ -136,6 +136,22 @@ class SkillContractTests(unittest.TestCase):
             self.assertIn(anchor, display)
         self.assertIn("Nature-specific rather than universal", display)
 
+    def test_semantic_universality_gate_distinguishes_standard_and_project_terms(self):
+        contract = (PACKAGE / "references" / "paper-terminology-contract.md").read_text(
+            encoding="utf-8"
+        )
+        skill_folded = SKILL.casefold()
+        contract_folded = contract.casefold()
+        for anchor in (
+            "semantic universality gate",
+            "field-standard",
+            "project-specific",
+            "plain protocol description",
+            "not located in the checked sources",
+        ):
+            self.assertIn(anchor, skill_folded)
+            self.assertIn(anchor, contract_folded)
+
     def test_agent_metadata_invokes_exact_skill(self):
         agent = (PACKAGE / "agents" / "openai.yaml").read_text(encoding="utf-8")
         self.assertIn('display_name: "Audit Method Data Flow"', agent)

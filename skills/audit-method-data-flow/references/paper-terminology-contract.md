@@ -35,6 +35,24 @@ historical_policy: preserve-and-map
 Use primary sources. Prefer official venue, publisher, standards body,
 proceedings, or authoritative paper-PDF pages.
 
+## Semantic universality gate
+
+Classify each proposed central term before adopting it:
+
+| Status | Evidence rule | Reader-facing treatment |
+|---|---|---|
+| `field-standard` | Authoritative sources use the term for the same operation and claim boundary | Use directly, with a citation when the distinction is specialized |
+| `project-specific` | The implementation needs a local label that is not established field language | Mark it as project-specific and define it before it structures a claim |
+| `plain protocol description` | The label only abbreviates observable split, label-access, fitting, selection, or evaluation conditions | Prefer the direct description over a new noun phrase |
+
+Check the relevant reporting standard, the original specialist literature, and
+adjacent fields that use the same ordinary words differently. Record search
+scope and verification date. A finite search cannot prove universal absence;
+write **not located in the checked sources** rather than claiming that no paper
+uses the term. Fail the gate when a project-specific expression looks
+field-standard to a first-time reader, or when a plain protocol description
+would be shorter or clearer than defining new jargon.
+
 ## Required term record
 
 | Field | Requirement |
@@ -50,6 +68,7 @@ proceedings, or authoritative paper-PDF pages.
 | Allowed aliases | Safe shortened forms |
 | Forbidden aliases | Ambiguous or superseded forms |
 | Source mapping | Source-ledger identifier and direct/inferred status |
+| Universality status | `field-standard`, `project-specific`, or `plain protocol description` |
 | Version | Contract version introducing the meaning |
 
 ## Required coverage
@@ -103,5 +122,6 @@ preserves the same definition.
 
 Pass only when every central active term has one role and parent, every source
 mapping is identified as direct or inferred, forbidden aliases are absent from
-active artifacts, historical aliases are classified as provenance, and the
-contract version and source-verification date are reported.
+active artifacts, historical aliases are classified as provenance, the semantic
+universality gate passes, and the contract version and source-verification date
+are reported.
