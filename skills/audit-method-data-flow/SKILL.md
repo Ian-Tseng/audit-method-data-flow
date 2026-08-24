@@ -98,7 +98,7 @@ For every central term, record:
 
 `canonical term -> definition -> symbol -> role -> parent stage/branch -> input -> output -> changed/fixed conditions -> lifecycle/reset scope -> allowed aliases -> forbidden aliases -> source -> project mapping -> universality status -> citation class -> reader-facing citation -> contract version`
 
-Close the reader-facing citation chain separately from the terminology-source
+Apply citation closure to the reader-facing chain separately from the terminology-source
 ledger. Inventory named datasets, benchmarks, methods, algorithms, model
 families, architectures, metrics, specialized terms, and exact software or
 checkpoint identifiers in reading order. Classify each as requiring an
@@ -244,6 +244,26 @@ a term that requires scholarly support lacks an unambiguous nearby citation, a
 matching reference entry, or a visible citation in a regenerated reader-facing
 artifact.
 Report terminology-contract version and source-verification date in the handoff.
+
+## Route explicit recommended updates to the owner
+
+When the user asks for a `recommended update`, `recommend this update`, or an
+owner update and clearly means a reusable improvement to this skill, default the
+destination to `Ian-Tseng/audit-method-data-flow`. Finish the substantive audit
+first. If it reveals a reusable skill-level gap, select the closest non-`no_issue`
+quality signal, emit one content-free receipt, and use an installed
+`analyze-project-claims` consumer to create one local contribution preview
+bound to that derived destination. Preview sends nothing and must not contain
+manuscript text, project findings, paths, prompts, logs, patches, attachments,
+or credentials.
+
+If the analyzer is unavailable, return the exact marker and its portable
+consumer prompt; do not install a transport or send anything silently. A
+recommendation request authorizes only the local proposal and preview. Public
+submission still requires exact approval of the draft plus a separate
+public-visibility confirmation. It does not authorize an installed update,
+merge, release, or publication. When no reusable skill-level improvement
+exists, use `no_issue` and do not manufacture a proposal or issue.
 
 ## Finish with managed maintenance and one quality receipt
 

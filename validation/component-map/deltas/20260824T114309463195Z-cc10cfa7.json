@@ -1,0 +1,137 @@
+{
+  "accepted_map_id": "component-map-e0421bc3594d",
+  "action": "conflict_detected",
+  "candidate_map_id": "component-map-5778504199c4",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [
+      {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff",
+        "fields": [
+          "target",
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "release-package",
+        "element_id": "release-identity",
+        "fields": [
+          "target"
+        ]
+      },
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "terminology-and-display-flow",
+        "fields": [
+          "target"
+        ]
+      }
+    ],
+    "contract_changes": [
+      "objective"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CHANGELOG.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "PUBLISHING.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "VERSION"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/SKILL.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-version.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/paper-terminology-contract.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_managed_lifecycle.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_package_contract.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_skill_contract.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "validation/release-candidate-test-receipt.json"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "e08bb6ea79fc8399aff0ec26e6226627c33841ec22b826be3ad8425975de6d84"
+  },
+  "recorded_at_utc": "2026-08-24T11:43:09.463195Z",
+  "scan_id": "20260824T114309463195Z-cc10cfa7",
+  "schema_version": "1.0"
+}

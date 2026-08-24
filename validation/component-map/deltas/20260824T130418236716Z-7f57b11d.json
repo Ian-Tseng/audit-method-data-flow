@@ -1,0 +1,31 @@
+{
+  "accepted_map_id": "component-map-aa20e8934f8f",
+  "action": "conflict_detected",
+  "candidate_map_id": "component-map-24c68c3be373",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [
+      {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff",
+        "fields": [
+          "target"
+        ]
+      }
+    ],
+    "contract_changes": [
+      "objective"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": []
+  },
+  "integrity": {
+    "canonical_payload_sha256": "d4bd9f3dd330627f946dfdb5826908b5c9d7045b0c91440c4a5396f7d654c1ee"
+  },
+  "recorded_at_utc": "2026-08-24T13:04:18.236716Z",
+  "scan_id": "20260824T130418236716Z-7f57b11d",
+  "schema_version": "1.0"
+}

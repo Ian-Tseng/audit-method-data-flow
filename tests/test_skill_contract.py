@@ -152,6 +152,45 @@ class SkillContractTests(unittest.TestCase):
             self.assertIn(anchor, skill_folded)
             self.assertIn(anchor, contract_folded)
 
+    def test_citation_closure_and_counted_groups_are_explicit(self):
+        contract = (PACKAGE / 'references' / 'paper-terminology-contract.md').read_text(
+            encoding='utf-8'
+        )
+        skill_folded = ' '.join(SKILL.casefold().split())
+        contract_folded = ' '.join(contract.casefold().split())
+        for anchor in (
+            'citation closure',
+            'citation class',
+            'reader-facing citation',
+            'first substantive use',
+            'matching citation key or reference-list entry',
+            'counted or collective component labels',
+            'name every stable member',
+        ):
+            self.assertIn(anchor, skill_folded)
+        for anchor in (
+            'citation closure',
+            'citation class',
+            'reader-facing citation',
+            'first substantive use',
+            'matching citation key or reference-list entry',
+            'counted and collective labels',
+            'name every stable member',
+        ):
+            self.assertIn(anchor, contract_folded)
+
+    def test_recommended_updates_default_to_owner_bound_local_preview(self):
+        skill_folded = ' '.join(SKILL.casefold().split())
+        for anchor in (
+            'recommended update',
+            'Ian-Tseng/audit-method-data-flow',
+            'local contribution preview',
+            'public submission',
+            'exact approval',
+            'do not manufacture',
+        ):
+            self.assertIn(anchor.casefold(), skill_folded)
+
     def test_agent_metadata_invokes_exact_skill(self):
         agent = (PACKAGE / "agents" / "openai.yaml").read_text(encoding="utf-8")
         self.assertIn('display_name: "Audit Method Data Flow"', agent)

@@ -9,6 +9,9 @@ All notable changes to this project are documented here.
 - Add a first-reader definition inventory for central paper terminology.
 - Require a local plain-language definition before a term structures a research question, result, or interpretation.
 - Validate the defining semantic relation and its reading-order position rather than one preferred sentence.
+- Close reader-facing scholarly citations from first substantive use through the reference list and regenerated artifacts.
+- Require counted component labels to name each stable member and role.
+- Default explicit reusable recommended-update requests to a local owner-bound contribution preview without authorizing public submission.
 
 ## [0.1.2] - 2026-08-21
 

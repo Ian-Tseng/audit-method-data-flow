@@ -124,11 +124,11 @@ dependent claim. Do not require one preferred sentence when equivalent wording
 preserves the same definition.
 
 Counted and collective labels require a membership check. When prose says
-`two scorers`, `four signals`, `the auxiliary models`, or a similar group label,
-the first substantive use must name every stable member and its role. If the
-group changes by protocol, name the invariant members and state the rule that
-governs optional membership. A later inventory or implementation table does not
-repair an earlier counted-but-unnamed group.
+`two scorers`, `four signals`, `the auxiliary models`, or a similar group
+label, the first substantive use must name every stable member and its role. If
+the group changes by protocol, name the invariant members and state the rule
+that governs optional membership. A later inventory or implementation table
+does not repair an earlier counted-but-unnamed group.
 
 ## Drift and update rules
 

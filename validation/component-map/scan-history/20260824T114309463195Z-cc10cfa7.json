@@ -1,0 +1,146 @@
+{
+  "accepted_map_id": "component-map-e0421bc3594d",
+  "action": "conflict_detected",
+  "artifacts": {
+    "accepted_map": "accepted-map.json",
+    "candidate": "candidates/20260824T114309463195Z-cc10cfa7-component-map-5778504199c4.json",
+    "delta": "deltas/20260824T114309463195Z-cc10cfa7.json"
+  },
+  "candidate_map_id": "component-map-5778504199c4",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [
+      {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff",
+        "fields": [
+          "target",
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "release-package",
+        "element_id": "release-identity",
+        "fields": [
+          "target"
+        ]
+      },
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "terminology-and-display-flow",
+        "fields": [
+          "target"
+        ]
+      }
+    ],
+    "contract_changes": [
+      "objective"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CHANGELOG.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "PUBLISHING.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "VERSION"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/SKILL.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-version.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/paper-terminology-contract.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_managed_lifecycle.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_package_contract.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_skill_contract.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "validation/release-candidate-test-receipt.json"
+      }
+    ]
+  },
+  "event_id": "20260824T114309463195Z-cc10cfa7",
+  "integrity": {
+    "canonical_payload_sha256": "b2c48e288373d52507fe716631f3eccce45f612c444024e1e4c9c236924aa446"
+  },
+  "map_state_after": "conflict_candidate",
+  "map_state_before": "accepted",
+  "mapper_version": "1.3.0",
+  "recorded_at_utc": "2026-08-24T11:43:09.463195Z",
+  "schema_version": "1.0",
+  "skill_sha256": "d892da7147f2d4ab01bf60a45f9425af3c81970fb979f29af7ee9cbee86ac999"
+}
