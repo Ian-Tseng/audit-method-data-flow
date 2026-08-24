@@ -206,7 +206,7 @@ class PackageContractTests(unittest.TestCase):
         ledger = (PACKAGE / "references" / "figure-table-clarity.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn("Access date: **2026-08-21**", ledger)
+        self.assertIn("Access date: **2026-08-24**", ledger)
         for url in (
             "https://research-figure-guide.nature.com/",
             "https://www.nature.com/nature-portfolio/for-authors/write",

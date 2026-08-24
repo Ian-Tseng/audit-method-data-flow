@@ -136,6 +136,18 @@ class SkillContractTests(unittest.TestCase):
             self.assertIn(anchor, display)
         self.assertIn("Nature-specific rather than universal", display)
 
+        for anchor in (
+            'absolute comparator and method values',
+            'define the subtraction order',
+            'same evaluation rows',
+            'nonmatched descriptive quantities',
+            'do not imply an intervention effect',
+            'target-batch size',
+            'higher-precision run summaries',
+            'row-matching status',
+        ):
+            self.assertIn(anchor, display)
+
     def test_semantic_universality_gate_distinguishes_standard_and_project_terms(self):
         contract = (PACKAGE / "references" / "paper-terminology-contract.md").read_text(
             encoding="utf-8"
