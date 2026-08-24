@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-24T23:13:35.166447Z",
+  "accepted_at_utc": "2026-08-24T13:07:51.973638Z",
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -39,14 +39,10 @@
             {
               "locator": "json-pointer:/boundaries",
               "source": "validation/release-candidate-test-receipt.json"
-            },
-            {
-              "locator": "whole-file",
-              "source": "validation/v0.1.3-public-consumer-receipt.json"
             }
           ],
           "relation_type": "bounds",
-          "target": "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is separated from pending v0.1.4 CI, immutable release, pinned verification, and activation evidence."
+          "target": "Public Codex and Claude Code installation, explicit managed updates, CI, immutable release, and activation evidence are separated by lifecycle stage."
         }
       ]
     },
@@ -131,14 +127,10 @@
             {
               "locator": "json-pointer:/package_manifest",
               "source": "validation/release-candidate-test-receipt.json"
-            },
-            {
-              "locator": "json-pointer:/checks/5",
-              "source": "validation/v0.1.3-public-consumer-receipt.json"
             }
           ],
           "relation_type": "verifies",
-          "target": "The release-candidate package tree binds ordinary files while accepting only allowlisted GitHub-managed frontmatter metadata, including an optional github-pinned value that exactly matches an allowed release tag."
+          "target": "The release-candidate package tree binds ordinary files while tolerating only GitHub-managed frontmatter metadata normalization."
         },
         {
           "element_id": "release-identity",
@@ -173,7 +165,7 @@
             }
           ],
           "relation_type": "synchronizes",
-          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.4 MIT release candidate."
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.3 MIT release candidate."
         }
       ]
     },
@@ -238,16 +230,16 @@
       ]
     }
   ],
-  "created_at_utc": "2026-08-24T23:11:10.958073Z",
+  "created_at_utc": "2026-08-24T13:04:18.236716Z",
   "integrity": {
-    "canonical_payload_sha256": "8023330aa505231e4963bbb5dd1b0124b44bb426f6dc17d08b7fd6cae5cd82a2"
+    "canonical_payload_sha256": "86b81cd4337b14a5b49e694065e6a09ee8ec0d8ac2b5f4b5b8e95535235d4c09"
   },
-  "map_id": "component-map-0c490defe351",
+  "map_id": "component-map-24c68c3be373",
   "map_state": "accepted",
   "mapper_version": "1.3.0",
-  "objective": "Map the v0.1.4 release candidate's identity, integrity, tag-matching GitHub CLI pinned-install compatibility, inherited scholarly audit contract, consent-gated update maintenance, owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
-  "origin_scan_id": "20260824T231110958073Z-184d9533",
-  "previous_map_id": "component-map-becf0add332f",
+  "objective": "Map the v0.1.3 release candidate's identity, integrity, first-reader and citation-closure scholarly audit contract, consent-gated update maintenance, documented owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
+  "origin_scan_id": "20260824T130418236716Z-7f57b11d",
+  "previous_map_id": "component-map-aa20e8934f8f",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -277,8 +269,7 @@
     "tests/test_package_contract.py",
     "tests/test_skill_contract.py",
     "tests/test_validation_contract.py",
-    "validation/release-candidate-test-receipt.json",
-    "validation/v0.1.3-public-consumer-receipt.json"
+    "validation/release-candidate-test-receipt.json"
   ],
   "skill_name": "analyze-project-claims",
   "skill_sha256": "d892da7147f2d4ab01bf60a45f9425af3c81970fb979f29af7ee9cbee86ac999",
@@ -304,25 +295,25 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "d8a9a06c9a940985ab0f72d9ffcf1a16164056a20e0c31c0045ad45e9c0a72e8",
+      "sha256": "4c87bbfe89847afb1e1c29fa791507b4f525087a244e81d80c6755b81c068544",
       "source": "CHANGELOG.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "f669b3c4b817c20cc331a5e546493d972ff7085287ad39034dca36dcc0ae3230",
+      "sha256": "efcde3e47c4bb0f58ed7f0292b7b2043ef4ba784f2ff66c7bc3c4a2352a6c6c3",
       "source": "CITATION.cff"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "b50d5ea86a1be290a5e8b5dfe90cf8c902da42c765634ba9a50a36f1ebec9904",
+      "sha256": "d7da456da0dfeae551bbb36685f16523736fb62f1d8219903e7f21194a7cddc2",
       "source": "PUBLISHING.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "890e86dc683a5992d70fab119596ee579f75135c2dd7f2f1e4de730b8651bc2d",
+      "sha256": "6350e5622810361760c7c8549445f886dda77e0c69bfa2601b5b32aa5aa3272d",
       "source": "README.md"
     },
     {
@@ -334,13 +325,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "8a3dad16d348c163566a456fcf650d85d7aeeda5e53d01ee1fa8dc15212915a7",
+      "sha256": "2d2454ef0edeb462a6ce8b25d387aaa74df08093d5cea0428a10ce55510c6326",
       "source": "VERSION"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "f669b3c4b817c20cc331a5e546493d972ff7085287ad39034dca36dcc0ae3230",
+      "sha256": "efcde3e47c4bb0f58ed7f0292b7b2043ef4ba784f2ff66c7bc3c4a2352a6c6c3",
       "source": "skills/audit-method-data-flow/CITATION.cff"
     },
     {
@@ -376,13 +367,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "0092e270f34baf9db26e26c3dab97167c440fc61dcff8a74341df4f700ca241f",
+      "sha256": "7d32f457fd68bf16a4884bf1b366985dd5c0af37ecd439a452fa94c7bc026ebe",
       "source": "skills/audit-method-data-flow/references/package-manifest.json"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "5db5d146b4d2dceeb6c8e4dbcbf2a5222794dfe941027d4f4c2b43190ffdcf73",
+      "sha256": "a1769d72b143c477632fb9a5e44521c7c2309461f04de8a3273f65107c0b2285",
       "source": "skills/audit-method-data-flow/references/package-version.json"
     },
     {
@@ -406,7 +397,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "6e1dc296514eeb392985f992c2fbb4a07e0fba7b786910a11ea1b2057a1198d2",
+      "sha256": "e71c8aa0ed7126f0bdc2759fdcc38a1d9ecc447fb0925a4dcd39a0e07f5b3fd9",
       "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
     },
     {
@@ -424,13 +415,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "3133673ffe6d9b744931e0781680fe72a5bbec6b87ca371868e0871fce71a97a",
+      "sha256": "140d0252ed208180453de329e7d5ad69a3661ffe2326750189f682be50396b37",
       "source": "tests/test_managed_lifecycle.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "7d667ee68e67dc492c66ee8e754790938a20643c504e2bc23ebff3a60e83130d",
+      "sha256": "89ebc97008f23b10b9240aaf332bf9b35d89fb69b9b7cfeef8b6179257a3ccdd",
       "source": "tests/test_package_contract.py"
     },
     {
@@ -448,14 +439,8 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "557d2aaf6aca703a769ec68d431f813a135f880fe4edf652039012bcc95db68d",
+      "sha256": "e120fd16cbb98c7826cc0188f3abae5fe8380ae2fd71c71afc86d7ee2097fb09",
       "source": "validation/release-candidate-test-receipt.json"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "52fe3867f524696780513b8d6c65b39d7e9eb088b45a70d056c1245d485696c9",
-      "source": "validation/v0.1.3-public-consumer-receipt.json"
     }
   ]
 }

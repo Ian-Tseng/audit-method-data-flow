@@ -16,15 +16,17 @@ from typing import Iterator
 SKILL_NAME = "audit-method-data-flow"
 MANIFEST_RELATIVE_PATH = "references/package-manifest.json"
 GITHUB_METADATA_PATTERN = re.compile(r"^github-[a-z0-9-]+$")
-GITHUB_METADATA_KEYS = {
+GITHUB_METADATA_REQUIRED_KEYS = {
     "github-path",
     "github-ref",
     "github-repo",
     "github-tree-sha",
 }
+GITHUB_METADATA_OPTIONAL_KEYS = {"github-pinned"}
+GITHUB_METADATA_KEYS = GITHUB_METADATA_REQUIRED_KEYS | GITHUB_METADATA_OPTIONAL_KEYS
 EXPECTED_GITHUB_PATH = "skills/audit-method-data-flow"
 EXPECTED_GITHUB_REPO = "https://github.com/Ian-Tseng/audit-method-data-flow"
-EXPECTED_GITHUB_REFS = {"refs/heads/main", "refs/tags/v0.1.3"}
+EXPECTED_GITHUB_REFS = {"refs/heads/main", "refs/tags/v0.1.4"}
 GITHUB_TREE_SHA_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 IGNORED_PARTS = {"__pycache__"}
 IGNORED_NAMES = {".DS_Store", "Thumbs.db"}
@@ -44,9 +46,10 @@ def _frontmatter_scalar(value: str) -> str:
 
 
 def _validate_github_metadata(values: dict[str, str]) -> None:
-    if set(values) != GITHUB_METADATA_KEYS:
-        missing = sorted(GITHUB_METADATA_KEYS - set(values))
-        unknown = sorted(set(values) - GITHUB_METADATA_KEYS)
+    keys = set(values)
+    missing = sorted(GITHUB_METADATA_REQUIRED_KEYS - keys)
+    unknown = sorted(keys - GITHUB_METADATA_KEYS)
+    if missing or unknown:
         details = []
         if missing:
             details.append(f"missing {', '.join(missing)}")
@@ -62,6 +65,14 @@ def _validate_github_metadata(values: dict[str, str]) -> None:
         raise IntegrityError("SKILL.md GitHub metadata has an unexpected repository")
     if values["github-ref"] not in EXPECTED_GITHUB_REFS:
         raise IntegrityError("SKILL.md GitHub metadata has an unexpected ref")
+    pinned = values.get("github-pinned")
+    if pinned is not None:
+        tag_prefix = "refs/tags/"
+        github_ref = values["github-ref"]
+        if not github_ref.startswith(tag_prefix) or pinned != github_ref[len(tag_prefix) :]:
+            raise IntegrityError(
+                "SKILL.md GitHub pin does not match the allowed release tag"
+            )
     if not GITHUB_TREE_SHA_PATTERN.fullmatch(values["github-tree-sha"]):
         raise IntegrityError("SKILL.md GitHub metadata has an invalid tree SHA")
 

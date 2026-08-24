@@ -1,0 +1,489 @@
+{
+  "bindings": [
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "evidence_id": "evidence:test-suite",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "evidence_id": "evidence:version",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "evidence_id": "evidence:citation",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "evidence_id": "evidence:package-version",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-package-integrity-verified",
+      "evidence_id": "evidence:manifest-verification",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-package-integrity-verified",
+      "evidence_id": "evidence:test-suite",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-package-integrity-verified",
+      "evidence_id": "evidence:v013-public-consumer",
+      "role": "context"
+    },
+    {
+      "claim_id": "claim:managed-lifecycle-bounded",
+      "evidence_id": "evidence:managed-lifecycle-contract",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:managed-lifecycle-bounded",
+      "evidence_id": "evidence:test-suite",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:skill-contract",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:claim-chain-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:terminology-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:display-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:test-suite",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:public-lifecycle-complete",
+      "evidence_id": "evidence:public-lifecycle-boundary",
+      "role": "context"
+    },
+    {
+      "claim_id": "claim:scientific-validity-proved",
+      "evidence_id": "evidence:scientific-boundary",
+      "role": "context"
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "evidence_id": "evidence:official-validator",
+      "role": "context"
+    }
+  ],
+  "claims": [
+    {
+      "claim_digest": "6cee0f25821b8ac8de97fdec1c4baf7eb18277f2e5032ea12a4addba24e7a04b",
+      "claim_id": "claim:local-release-identity-consistent",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "release-identity"
+      },
+      "material": true,
+      "rationale": "The executed 34-test product-level suites passed and exact current version, citation, and packaged version authorities all identify v0.1.4. The full 40-test suite remains pending component-map acceptance and formal-record rebuilding.",
+      "statement": "The tested local v0.1.4 release identity is synchronized across repository and packaged authorities.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "7634919b613e8905a61a788f92cf7fe4f0623fae8fdbb829899c0ceed314a8e4",
+      "claim_id": "claim:local-package-integrity-verified",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "package-integrity"
+      },
+      "material": true,
+      "rationale": "The persisted execution receipt records PACKAGE_VERIFIED and the regression suite passed manifest drift, unpinned metadata, matching pinned metadata, mismatched pin rejection, wrong origin rejection, and unknown-key rejection cases. The v0.1.3 public receipt reproduces the compatibility defect this candidate repairs.",
+      "statement": "The current v0.1.4 release-candidate package tree matches its deterministic thirteen-file manifest and accepts only an optional github-pinned value that exactly matches an allowed release tag.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "e735bce9da80cf04397968bd2a7a3b7379eccb55993424932a4f7316521eee1e",
+      "claim_id": "claim:managed-lifecycle-bounded",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff"
+      },
+      "material": true,
+      "rationale": "The current policy, caller, receipt schema, updater, emitter, and focused lifecycle tests bind the local update and content-free receipt behavior. The SKILL documents the external consumer handoff, but this repository does not execute or verify destination derivation, contribution preview, or public-consent enforcement; exact owner acceptance authorizes none of those external states.",
+      "statement": "The local package defines and tests a consent-gated managed-update check plus one content-free owner-bound quality receipt after substantive use, documents an external owner-bound recommended-update handoff, and carries one closed policy plus one thin full-SHA-pinned managed-repair caller without default outbound transport.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "8797bb541400b4bcfaca704020544c6be00eddff8c7281d76c7408db1c3573e0",
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "method-and-claim-flow"
+      },
+      "material": true,
+      "rationale": "The current SKILL and three complete references contain the declared relations, and the persisted contract suite passed their required-anchor checks.",
+      "statement": "The package contains tested structural contracts for method flow, cross-section claims, semantic universality, first-reader definitions, citation closure, counted-component membership, and reader-facing displays.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "8868b666d90b9cba8efb7358d9182fc294df4ff4b2ec309941656a7c9a8ae717",
+      "claim_id": "claim:public-lifecycle-complete",
+      "element_ref": {
+        "component_id": "public-distribution",
+        "element_id": "install-update-claims"
+      },
+      "material": true,
+      "rationale": "The v0.1.3 receipt is bounded historical evidence. The v0.1.4 PR/main CI, immutable release, pinned installation verification, and fresh available-client activation remain pending.",
+      "statement": "The v0.1.4 public release, pinned package verification, managed replacement, client discovery, and fresh invocation have completed.",
+      "status": "untested"
+    },
+    {
+      "claim_digest": "2e39670dbf5956d6cc97b47ac36ca0ddb8f6067f2975c2e3837389202be154dc",
+      "claim_id": "claim:scientific-validity-proved",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "terminology-and-display-flow"
+      },
+      "material": true,
+      "rationale": "Package structure and deterministic contract tests do not evaluate a manuscript's underlying scientific truth or general reliability.",
+      "statement": "The package's structural contracts prove the scientific validity of a manuscript or result audited with the skill.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:test-suite",
+      "freshness": "current",
+      "identity_sha256": "7bb6fd9b8f490070fc392f003d40894345e996a8cbd04a9fb6d7b9b9791eaf60",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/pre_acceptance_product_tests"
+      },
+      "method": "executed_test",
+      "observed_summary": "Three reproducible UTF-8 product-level suites completed with PASS, 34 tests, zero failures, zero errors, and zero skips before component-map acceptance. The full 40-test suite remains pending.",
+      "selection_sha256": "4fb97d6967dc8c61b6394507a6fac6baa3c142198aa57915409a603c5d5e6e20",
+      "source": {
+        "byte_size": 1850,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/release-candidate-test-receipt.json",
+        "sha256": "ce6a9cfef411829d35a1e2aa0ee5b0a8b1865e73e8b3bd68de866fc94e25e367"
+      }
+    },
+    {
+      "evidence_id": "evidence:manifest-verification",
+      "freshness": "current",
+      "identity_sha256": "8993412c7d8a6e198178d549b736e02d0d7ecee6a41f0558de21e8d2c2a2292f",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/package_manifest"
+      },
+      "method": "executed_test",
+      "observed_summary": "The package-integrity verifier returned PACKAGE_VERIFIED for the recorded thirteen-file package digest.",
+      "selection_sha256": "3be611b01c0a06300ea192624d62382c5c515ce97d7622345b9716830b8b4b6d",
+      "source": {
+        "byte_size": 1850,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/release-candidate-test-receipt.json",
+        "sha256": "ce6a9cfef411829d35a1e2aa0ee5b0a8b1865e73e8b3bd68de866fc94e25e367"
+      }
+    },
+    {
+      "evidence_id": "evidence:v013-public-consumer",
+      "freshness": "current",
+      "identity_sha256": "34fe3c5ba165dec2810151ea36b8cd364ed285a434eb046eed9de98d8fa123a9",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "executed_test",
+      "observed_summary": "One Windows consumer run verified the immutable v0.1.3 release, unpinned v0.1.1-to-v0.1.3 replacement, v0.1.3 package integrity, fresh Codex discovery/invocation, Claude placement/package integrity, cleanup, and the exact pinned-install verifier failure that motivates v0.1.4.",
+      "selection_sha256": "52fe3867f524696780513b8d6c65b39d7e9eb088b45a70d056c1245d485696c9",
+      "source": {
+        "byte_size": 3285,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/v0.1.3-public-consumer-receipt.json",
+        "sha256": "52fe3867f524696780513b8d6c65b39d7e9eb088b45a70d056c1245d485696c9"
+      }
+    },
+    {
+      "evidence_id": "evidence:official-validator",
+      "freshness": "current",
+      "identity_sha256": "869d6e4eaf91db2a347d0bff2868c345e832fe89c72b75019d68922583c0de74",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/official_validator"
+      },
+      "method": "executed_test",
+      "observed_summary": "The official skill validator passed in explicit UTF-8 mode.",
+      "selection_sha256": "58d949eade01e27af8cc831b70a2714173fff8a7185bf2b876c3cc0f9c7415e0",
+      "source": {
+        "byte_size": 1850,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/release-candidate-test-receipt.json",
+        "sha256": "ce6a9cfef411829d35a1e2aa0ee5b0a8b1865e73e8b3bd68de866fc94e25e367"
+      }
+    },
+    {
+      "evidence_id": "evidence:version",
+      "freshness": "current",
+      "identity_sha256": "44104e88c4d233972e038039605e22b76f90d2c324a35f6f155d6135089bbbcb",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The repository release authority identifies version 0.1.4.",
+      "selection_sha256": "8a3dad16d348c163566a456fcf650d85d7aeeda5e53d01ee1fa8dc15212915a7",
+      "source": {
+        "byte_size": 6,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "VERSION",
+        "sha256": "8a3dad16d348c163566a456fcf650d85d7aeeda5e53d01ee1fa8dc15212915a7"
+      }
+    },
+    {
+      "evidence_id": "evidence:citation",
+      "freshness": "current",
+      "identity_sha256": "e0458a2c91715e6e8fb7f162c614114de57477a99cac59399c9cdfa2f51c4688",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "Citation metadata identifies version 0.1.4, the 2026-08-24 release date, Ian-Tseng repository, and MIT license.",
+      "selection_sha256": "f669b3c4b817c20cc331a5e546493d972ff7085287ad39034dca36dcc0ae3230",
+      "source": {
+        "byte_size": 386,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "CITATION.cff",
+        "sha256": "f669b3c4b817c20cc331a5e546493d972ff7085287ad39034dca36dcc0ae3230"
+      }
+    },
+    {
+      "evidence_id": "evidence:package-version",
+      "freshness": "current",
+      "identity_sha256": "83540c78055f04b06c9daaf0aa9e93060fb56ecc8d15c9975b07fc3b3c719640",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/version"
+      },
+      "method": "schema_validated",
+      "observed_summary": "The packaged version authority identifies version 0.1.4.",
+      "selection_sha256": "a4a24ffdaf0cf19af014f2854abdf9e3113fae74f6daf722880f01a56abde9f5",
+      "source": {
+        "byte_size": 90,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "skills/audit-method-data-flow/references/package-version.json",
+        "sha256": "5db5d146b4d2dceeb6c8e4dbcbf2a5222794dfe941027d4f4c2b43190ffdcf73"
+      }
+    },
+    {
+      "evidence_id": "evidence:managed-lifecycle-contract",
+      "freshness": "current",
+      "identity_sha256": "e793963575309814d5aea30b436087617f223e339de5d53b718793006d6c9afa",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "After substantive use, the skill requires consent-gated managed-update maintenance followed by one content-free owner-bound receipt marker. It documents an external analyze-project-claims handoff for explicit reusable recommended-update requests, but this repository does not execute or verify that consumer's destination, preview, or public-consent behavior.",
+      "selection_sha256": "76423befdd8467a5fc95f499bd1c6a72e7146c89a183016bad42d2b560e1e6e8",
+      "source": {
+        "byte_size": 22674,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/SKILL.md",
+        "sha256": "76423befdd8467a5fc95f499bd1c6a72e7146c89a183016bad42d2b560e1e6e8"
+      }
+    },
+    {
+      "evidence_id": "evidence:skill-contract",
+      "freshness": "current",
+      "identity_sha256": "e793963575309814d5aea30b436087617f223e339de5d53b718793006d6c9afa",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The release-candidate skill package defines explicit method-flow, claim-chain, semantic-universality, first-reader definition, citation-closure, counted-component, display, artifact, and evidence-boundary gates.",
+      "selection_sha256": "76423befdd8467a5fc95f499bd1c6a72e7146c89a183016bad42d2b560e1e6e8",
+      "source": {
+        "byte_size": 22674,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/SKILL.md",
+        "sha256": "76423befdd8467a5fc95f499bd1c6a72e7146c89a183016bad42d2b560e1e6e8"
+      }
+    },
+    {
+      "evidence_id": "evidence:claim-chain-reference",
+      "freshness": "current",
+      "identity_sha256": "64aa52b8f4b11b49ec948a8960f1bbc6a5378306542358b959f2ef1e212ca187",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged claim-chain reference defines same-scope problem, question, protocol, output, result, counterevidence, interpretation, and boundary relations.",
+      "selection_sha256": "36791b71be444b7a498a278ae98496b996056334feefddbf30e2f948c15b07f7",
+      "source": {
+        "byte_size": 3164,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/references/claim-chain-clarity.md",
+        "sha256": "36791b71be444b7a498a278ae98496b996056334feefddbf30e2f948c15b07f7"
+      }
+    },
+    {
+      "evidence_id": "evidence:terminology-reference",
+      "freshness": "current",
+      "identity_sha256": "18f4666f5e77bfebc0b092a2646d6538bd2791c0cb04bd4886d725532ed9f13f",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged terminology reference defines authority order, a source ledger, universality and citation classes, reader-facing citation closure, counted-component membership, first-reader definitions, drift rules, and a completion gate.",
+      "selection_sha256": "267603e7197bf325ac8b3dd0fad999ad51c5dca6510a3af4f2ffb481aa8992fe",
+      "source": {
+        "byte_size": 8081,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/references/paper-terminology-contract.md",
+        "sha256": "267603e7197bf325ac8b3dd0fad999ad51c5dca6510a3af4f2ffb481aa8992fe"
+      }
+    },
+    {
+      "evidence_id": "evidence:display-reference",
+      "freshness": "current",
+      "identity_sha256": "d4b23d3f3834a690fe3c04a6add8b5541981704b6c9fb8bb6971e8e9b58a2f02",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged display reference distinguishes direct requirements, synthesis, and project choices; it also defines text, math, and symbol font roles, declared math fragments, glyph coverage, baseline alignment, table typography, structural checks, and native visual verification.",
+      "selection_sha256": "18b81e4de4eb3d3c64568b0099255e7aebf8e409bb109c6b9bb119a7c38c4bb7",
+      "source": {
+        "byte_size": 15759,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/references/figure-table-clarity.md",
+        "sha256": "18b81e4de4eb3d3c64568b0099255e7aebf8e409bb109c6b9bb119a7c38c4bb7"
+      }
+    },
+    {
+      "evidence_id": "evidence:public-lifecycle-boundary",
+      "freshness": "current",
+      "identity_sha256": "70b1b23aa7753d6054f6edab70289a39a34f08f7c3a708c5ebdd83baac52977b",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The publishing guide requires PR and exact-main CI, protected immutable release, public managed-install smoke, and separate client activation evidence before those states may be claimed.",
+      "selection_sha256": "b50d5ea86a1be290a5e8b5dfe90cf8c902da42c765634ba9a50a36f1ebec9904",
+      "source": {
+        "byte_size": 2857,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "PUBLISHING.md",
+        "sha256": "b50d5ea86a1be290a5e8b5dfe90cf8c902da42c765634ba9a50a36f1ebec9904"
+      }
+    },
+    {
+      "evidence_id": "evidence:scientific-boundary",
+      "freshness": "current",
+      "identity_sha256": "f4c8fb0924d0e84f167a4e2829c925556d350ba73810ab44e39200184e0ccdfe",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The README explicitly states that installation and structural consistency do not prove scientific validity, client discovery, runtime invocation, or native rendering.",
+      "selection_sha256": "890e86dc683a5992d70fab119596ee579f75135c2dd7f2f1e4de730b8651bc2d",
+      "source": {
+        "byte_size": 4868,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "README.md",
+        "sha256": "890e86dc683a5992d70fab119596ee579f75135c2dd7f2f1e4de730b8651bc2d"
+      }
+    }
+  ],
+  "integrity": {
+    "canonical_payload_sha256": "aa0e2c1a3a431e5a503f76ba17217d156f593429ef1a9f6b9ee2fd208a83b02d",
+    "output_schema_sha256": "a2a009aeb319922010cdf3e5702884fbe55d013dc3f2f09c3f64914299820e65",
+    "recorder_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63",
+    "renderer_id": "evidence-bound-markdown-v1",
+    "renderer_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63"
+  },
+  "limitations": [],
+  "record_kind": "evidence_bound_audit_record",
+  "scan": {
+    "accepted_map": {
+      "map_id": "component-map-becf0add332f",
+      "path": "validation/component-map/accepted-map.json",
+      "sha256": "44621bf3e07e036bf0d4df9d8c39cf727a60c49260e195d6e08b60bdaba1811c"
+    },
+    "authority": [
+      "VERSION",
+      "CITATION.cff",
+      "SOURCE.md",
+      "skills/audit-method-data-flow/SKILL.md",
+      "skills/audit-method-data-flow/references/package-version.json",
+      "skills/audit-method-data-flow/references/package-manifest.json",
+      "validation/release-candidate-test-receipt.json"
+    ],
+    "engine_identity": {
+      "engine_digest": "7e713ae78e8bd0008926008c75fc4ae0a977f82cc9cc23158cc927c212255f6b",
+      "engine_name": "component-evidence",
+      "engine_version": "1.3.0",
+      "map_schema_version": "1.0",
+      "provider_kind": "embedded",
+      "receipt_protocol_version": "2.0",
+      "status": "verified"
+    },
+    "objective": "Determine the strongest evidence-bounded claim that can be made about the local audit-method-data-flow v0.1.4 pinned-install compatibility release candidate, including allowlisted tag-matching github-pinned metadata and inherited scholarly and managed-lifecycle contracts, before successful v0.1.4 public CI, publication, pinned consumer verification, and activation.",
+    "recorded_at_utc": "2026-08-24T23:08:15.623065Z",
+    "recorder_version": "2.1.0",
+    "scan_id": "20260824T230815623065Z-6130ac33",
+    "scope": [
+      "release identity and owner provenance",
+      "release-candidate package integrity",
+      "declared method-flow, claim-chain, terminology, and display contracts",
+      "bounded v0.1.3 public consumer evidence and pending v0.1.4 lifecycle"
+    ],
+    "skill_name": "analyze-project-claims",
+    "skill_sha256": "d892da7147f2d4ab01bf60a45f9425af3c81970fb979f29af7ee9cbee86ac999"
+  },
+  "schema_version": "2.0",
+  "summary": {
+    "claim_boundary_ids": [],
+    "claim_count": 6,
+    "claim_counts": {
+      "supported": 4,
+      "untested": 2
+    },
+    "evidence_count": 14,
+    "material_claim_count": 6,
+    "no_supported_claim": false,
+    "scan_status": "PARTIAL",
+    "strongest_safe_claim": "The current v0.1.4 release-candidate package tree matches its deterministic thirteen-file manifest and accepts only an optional github-pinned value that exactly matches an allowed release tag.",
+    "strongest_safe_claim_id": "claim:local-package-integrity-verified",
+    "unresolved_uncertainties": [
+      "The v0.1.4 repair PR and exact-main CI have not yet passed.",
+      "The v0.1.4 tag and immutable GitHub release do not yet exist.",
+      "Public pinned v0.1.4 package verification and fresh available-client activation have not yet been observed.",
+      "Claude Code is not installed on this validation machine, so fresh runtime activation may remain unobserved even after distribution smoke.",
+      "Protected managed-repair environments, hosted canary, agent execution, and draft publication remain unobserved."
+    ]
+  }
+}

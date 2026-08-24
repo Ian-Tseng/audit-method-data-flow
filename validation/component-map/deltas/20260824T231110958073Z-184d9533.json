@@ -1,0 +1,57 @@
+{
+  "accepted_map_id": "component-map-becf0add332f",
+  "action": "conflict_detected",
+  "candidate_map_id": "component-map-0c490defe351",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [
+      {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff",
+        "fields": [
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "release-package",
+        "element_id": "release-identity",
+        "fields": [
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "method-and-claim-flow",
+        "fields": [
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "terminology-and-display-flow",
+        "fields": [
+          "evidence_locators"
+        ]
+      }
+    ],
+    "contract_changes": [],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "validation/release-candidate-test-receipt.json"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "9e02f31d2c750dc436195643f061701ffe86d62ee93c493b82ef13ee252bb98d"
+  },
+  "recorded_at_utc": "2026-08-24T23:11:10.958073Z",
+  "scan_id": "20260824T231110958073Z-184d9533",
+  "schema_version": "1.0"
+}

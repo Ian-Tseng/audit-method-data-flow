@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "receipt_id": "audit-method-data-flow-v013-public-consumer-20260824T133235Z",
+  "observed_at_utc": "2026-08-24T13:32:35Z",
+  "release": {
+    "tag": "v0.1.3",
+    "commit_sha": "89f32a6bcc0f6376dcbb957e363e32ecbdcf40e4",
+    "release_url": "https://github.com/Ian-Tseng/audit-method-data-flow/releases/tag/v0.1.3",
+    "release_verify": "PASS",
+    "package_digest_sha256": "c3ad58a4405428b0af2d129062b563418861077e395c5a461718483c32e581a3"
+  },
+  "environment": {
+    "platform": "Windows",
+    "github_cli": "2.97.0",
+    "codex_cli": "0.148.0",
+    "python": "3.12.4",
+    "claude_code": "NOT_AVAILABLE"
+  },
+  "checks": [
+    {
+      "check": "public-unpinned-update-preview",
+      "from": "v0.1.1",
+      "to": "v0.1.3",
+      "status": "PASS",
+      "outbound": "GitHub release metadata and package download only"
+    },
+    {
+      "check": "public-unpinned-managed-replacement",
+      "from": "v0.1.1",
+      "to": "v0.1.3",
+      "status": "PASS",
+      "installed_tree_sha": "137a34d8408a87ef7609f554f7bc4d8df69abfcd"
+    },
+    {
+      "check": "public-unpinned-package-verification",
+      "version": "v0.1.3",
+      "status": "PASS",
+      "digest_sha256": "c3ad58a4405428b0af2d129062b563418861077e395c5a461718483c32e581a3"
+    },
+    {
+      "check": "fresh-codex-discovery-and-invocation",
+      "version": "v0.1.3",
+      "status": "PASS",
+      "mode": "ephemeral read-only",
+      "observed_behavior": "The fresh client explicitly activated audit-method-data-flow, read the installed SKILL.md, identified missing scorer identity, split, label-access, aggregation, metric, comparator, stress-protocol, uncertainty, and claim-boundary details, and made no project edit."
+    },
+    {
+      "check": "claude-code-project-install-and-package-verification",
+      "version": "v0.1.3",
+      "status": "PASS",
+      "placement": ".claude/skills/audit-method-data-flow",
+      "activation": "NOT_OBSERVED_CLIENT_UNAVAILABLE"
+    },
+    {
+      "check": "documented-pinned-install-package-verification",
+      "version": "v0.1.3",
+      "status": "FAIL",
+      "observed_metadata": "github-pinned: v0.1.3",
+      "error_status": "PACKAGE_INVALID",
+      "error_message": "SKILL.md GitHub metadata is incomplete or unsupported: unknown github-pinned"
+    },
+    {
+      "check": "disposable-consumer-cleanup",
+      "status": "PASS"
+    }
+  ],
+  "strongest_safe_claim": "The public unpinned v0.1.1-to-v0.1.3 managed replacement, v0.1.3 package verification, and fresh Codex discovery/invocation were observed on one Windows machine; Claude Code placement and package verification were observed without runtime activation.",
+  "finding": "The documented pinned v0.1.3 install is not verifier-compatible with GitHub CLI 2.97.0 because the CLI injects a tag-valued github-pinned field that v0.1.3 rejects.",
+  "limitations": [
+    "One machine and one Codex version do not establish cross-client or cross-platform activation.",
+    "Claude Code runtime activation was not observed because the executable was unavailable.",
+    "The pinned-install failure requires a later immutable patch release; v0.1.3 must not be rewritten.",
+    "No public issue, manuscript content, project content, prompt, patch, credential, or attachment was submitted."
+  ]
+}
