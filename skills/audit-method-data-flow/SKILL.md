@@ -96,7 +96,27 @@ Cover the whole paper vocabulary:
 
 For every central term, record:
 
-`canonical term -> definition -> symbol -> role -> parent stage/branch -> input -> output -> changed/fixed conditions -> lifecycle/reset scope -> allowed aliases -> forbidden aliases -> source -> project mapping -> contract version`
+`canonical term -> definition -> symbol -> role -> parent stage/branch -> input -> output -> changed/fixed conditions -> lifecycle/reset scope -> allowed aliases -> forbidden aliases -> source -> project mapping -> universality status -> citation class -> reader-facing citation -> contract version`
+
+Close the reader-facing citation chain separately from the terminology-source
+ledger. Inventory named datasets, benchmarks, methods, algorithms, model
+families, architectures, metrics, specialized terms, and exact software or
+checkpoint identifiers in reading order. Classify each as requiring an
+authoritative scholarly citation, requiring software/model-card provenance,
+project-defined and requiring a local definition, or an ordinary operation
+that is citation-exempt unless its lineage changes the claim. For every item
+that requires scholarly support, verify:
+
+`first substantive use -> nearby unambiguous citation -> matching citation key or reference-list entry -> visible citation in each regenerated reader-facing artifact`
+
+A terminology source ledger does not replace the manuscript citation. When an
+implementation is inspired by or simplifies a named method, cite the original
+source and state that the project mapping is inspired or inferred rather than
+claiming an exact implementation. If one sentence names several methods, make
+clear which source supports each term instead of relying on an ambiguous bundled
+citation block. Do not add citation clutter for ordinary operations such as a
+mean, minimum, maximum, generic matrix multiplication, or cosine distance unless
+the paper invokes a specific scholarly lineage.
 
 Keep one versioned project contract as the active authority. Increment its
 version when a definition changes. Preserve immutable historical wording as
@@ -127,6 +147,12 @@ metric, and claim terms:
 5. When deterministic checks exist, test the required semantic relation and its
    position before the dependent claim. Avoid locking the paper to one exact
    sentence when equivalent concise wording is valid.
+6. Treat counted or collective component labels as definition obligations. At
+   first substantive use, name every stable member and state its role. If
+   membership varies by protocol, name the invariant members and state the
+   eligibility or selection rule for the rest. A phrase such as `two shared
+   scorers` remains unresolved until the reader is told which two scorers it
+   denotes.
 
 Classify each item as `defined locally`, `self-explanatory with timely body
 definition`, or `unresolved inference`. Fail when a central term remains an
@@ -213,7 +239,10 @@ Also fail when an active central term lacks a contract entry, one term denotes
 multiple roles, aliases cross phase or lifecycle boundaries, a source-backed
 mapping is presented as a quotation rather than an inference, a project-specific
 term is presented as field-standard, a plain protocol description would remove
-avoidable first-reader inference, or an active artifact uses a forbidden alias.
+avoidable first-reader inference, an active artifact uses a forbidden alias, or
+a term that requires scholarly support lacks an unambiguous nearby citation, a
+matching reference entry, or a visible citation in a regenerated reader-facing
+artifact.
 Report terminology-contract version and source-verification date in the handoff.
 
 ## Finish with managed maintenance and one quality receipt

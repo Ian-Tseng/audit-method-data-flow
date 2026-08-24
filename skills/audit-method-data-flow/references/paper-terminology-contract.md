@@ -69,7 +69,25 @@ would be shorter or clearer than defining new jargon.
 | Forbidden aliases | Ambiguous or superseded forms |
 | Source mapping | Source-ledger identifier and direct/inferred status |
 | Universality status | `field-standard`, `project-specific`, or `plain protocol description` |
+| Citation class | `scholarly citation required`, `software/model-card provenance`, `project-defined/local definition`, or `ordinary operation/citation-exempt` |
+| Reader-facing citation | First substantive use, citation key or reference-list entry, and generated-artifact verification; `not applicable` only for a justified exempt class |
 | Version | Contract version introducing the meaning |
+
+## Citation closure
+
+The source ledger records why terminology was selected; it is not a substitute
+for reader-facing attribution. Inventory named datasets, benchmarks, methods,
+algorithms, model families, architectures, metrics, specialized terms, and exact
+software or checkpoint identifiers in reading order. For each item that requires
+scholarly support, close this chain:
+
+`first substantive use -> nearby unambiguous citation -> matching citation key or reference-list entry -> visible citation in regenerated DOCX/PDF`
+
+When the project uses an inspired, simplified, or otherwise non-equivalent
+variant, cite the original method and mark the source mapping as inferred or
+inspired. Disambiguate citations when one sentence names several methods.
+Ordinary operations do not require citations unless the paper invokes a named
+scientific lineage.
 
 ## Required coverage
 
@@ -105,6 +123,13 @@ For deterministic checks, assert the semantic relation and its order before the
 dependent claim. Do not require one preferred sentence when equivalent wording
 preserves the same definition.
 
+Counted and collective labels require a membership check. When prose says
+`two scorers`, `four signals`, `the auxiliary models`, or a similar group label,
+the first substantive use must name every stable member and its role. If the
+group changes by protocol, name the invariant members and state the rule that
+governs optional membership. A later inventory or implementation table does not
+repair an earlier counted-but-unnamed group.
+
 ## Drift and update rules
 
 1. Read the existing contract before editing any central term.
@@ -121,7 +146,9 @@ preserves the same definition.
 ## Completion gate
 
 Pass only when every central active term has one role and parent, every source
-mapping is identified as direct or inferred, forbidden aliases are absent from
-active artifacts, historical aliases are classified as provenance, the semantic
-universality gate passes, and the contract version and source-verification date
-are reported.
+mapping is identified as direct or inferred, every term has a justified citation
+class, each required scholarly citation closes from first substantive use through
+the reference list and regenerated reader-facing artifacts, forbidden aliases
+are absent from active artifacts, historical aliases are classified as
+provenance, the semantic universality gate passes, and the contract version and
+source-verification date are reported.
