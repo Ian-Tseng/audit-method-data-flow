@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-24T23:13:35.166447Z",
+  "accepted_at_utc": null,
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -238,16 +238,16 @@
       ]
     }
   ],
-  "created_at_utc": "2026-08-24T23:11:10.958073Z",
+  "created_at_utc": "2026-08-24T13:37:10.883491Z",
   "integrity": {
-    "canonical_payload_sha256": "8023330aa505231e4963bbb5dd1b0124b44bb426f6dc17d08b7fd6cae5cd82a2"
+    "canonical_payload_sha256": "1a2e2422c5fd1d7691d6d01ffbc932955b77dc97942d35c862d57e39a20672c9"
   },
-  "map_id": "component-map-0c490defe351",
-  "map_state": "accepted",
+  "map_id": "component-map-1efe77051e2b",
+  "map_state": "conflict_candidate",
   "mapper_version": "1.3.0",
   "objective": "Map the v0.1.4 release candidate's identity, integrity, tag-matching GitHub CLI pinned-install compatibility, inherited scholarly audit contract, consent-gated update maintenance, owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
-  "origin_scan_id": "20260824T231110958073Z-184d9533",
-  "previous_map_id": "component-map-becf0add332f",
+  "origin_scan_id": "20260824T133710883491Z-87e08423",
+  "previous_map_id": "component-map-24c68c3be373",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -448,7 +448,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "557d2aaf6aca703a769ec68d431f813a135f880fe4edf652039012bcc95db68d",
+      "sha256": "6612b6b60a26044dc3b925311462ae3719e39860b11227042aeb671871e3ae49",
       "source": "validation/release-candidate-test-receipt.json"
     },
     {

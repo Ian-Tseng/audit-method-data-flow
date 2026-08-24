@@ -45,7 +45,7 @@ def text_files(root: Path):
 class PackageContractTests(unittest.TestCase):
     def test_release_identity_is_synchronized(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-        self.assertEqual(version, "0.1.3")
+        self.assertEqual(version, "0.1.4")
         package_version = json.loads(
             (PACKAGE / "references" / "package-version.json").read_text(
                 encoding="utf-8"
@@ -56,13 +56,13 @@ class PackageContractTests(unittest.TestCase):
         for citation in (ROOT / "CITATION.cff", PACKAGE / "CITATION.cff"):
             content = citation.read_text(encoding="utf-8")
             self.assertIn(f'version: "{version}"', content)
-            self.assertIn('date-released: "2026-08-22"', content)
+            self.assertIn('date-released: "2026-08-24"', content)
             self.assertIn('license: "MIT"', content)
         self.assertEqual(
             (ROOT / "CITATION.cff").read_bytes(),
             (PACKAGE / "CITATION.cff").read_bytes(),
         )
-        self.assertIn(f"## [{version}] - 2026-08-22", (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"))
+        self.assertIn(f"## [{version}] - 2026-08-24", (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"))
 
     def test_root_and_package_license_are_identical(self):
         self.assertEqual((ROOT / "LICENSE").read_bytes(), (PACKAGE / "LICENSE").read_bytes())
@@ -81,17 +81,29 @@ class PackageContractTests(unittest.TestCase):
 
     def test_github_install_metadata_does_not_change_package_identity(self):
         module = load_integrity_module()
-        for github_ref in ("refs/heads/main", "refs/tags/v0.1.3"):
-            with self.subTest(github_ref=github_ref), tempfile.TemporaryDirectory() as temporary:
+        cases = (
+            ("refs/heads/main", None),
+            ("refs/tags/v0.1.4", None),
+            ("refs/tags/v0.1.4", "v0.1.4"),
+        )
+        for github_ref, github_pinned in cases:
+            with self.subTest(
+                github_ref=github_ref,
+                github_pinned=github_pinned,
+            ), tempfile.TemporaryDirectory() as temporary:
                 copy = Path(temporary) / PACKAGE.name
                 shutil.copytree(PACKAGE, copy)
                 skill_path = copy / "SKILL.md"
                 content = skill_path.read_text(encoding="utf-8")
+                pin_line = (
+                    f"  github-pinned: {github_pinned}\n" if github_pinned else ""
+                )
                 content = content.replace(
                     "license: MIT\n---",
                     "license: MIT\n"
                     "metadata:\n"
                     "  github-path: skills/audit-method-data-flow\n"
+                    f"{pin_line}"
                     f"  github-ref: {github_ref}\n"
                     "  github-repo: https://github.com/Ian-Tseng/audit-method-data-flow\n"
                     "  github-tree-sha: 0123456789abcdef0123456789abcdef01234567\n"
@@ -100,6 +112,27 @@ class PackageContractTests(unittest.TestCase):
                 )
                 skill_path.write_text(content, encoding="utf-8")
                 self.assertRegex(module.verify_manifest(copy), r"^[0-9a-f]{64}$")
+
+    def test_github_pin_must_match_the_release_tag(self):
+        module = load_integrity_module()
+        with tempfile.TemporaryDirectory() as temporary:
+            copy = Path(temporary) / PACKAGE.name
+            shutil.copytree(PACKAGE, copy)
+            skill_path = copy / "SKILL.md"
+            metadata = (
+                "metadata:\n"
+                "  github-path: skills/audit-method-data-flow\n"
+                "  github-pinned: v0.1.3\n"
+                "  github-ref: refs/tags/v0.1.4\n"
+                "  github-repo: https://github.com/Ian-Tseng/audit-method-data-flow\n"
+                "  github-tree-sha: 0123456789abcdef0123456789abcdef01234567\n"
+            )
+            content = skill_path.read_text(encoding="utf-8").replace(
+                "license: MIT\n---", f"license: MIT\n{metadata}---", 1
+            )
+            skill_path.write_text(content, encoding="utf-8")
+            with self.assertRaises(module.IntegrityError):
+                module.verify_manifest(copy)
 
     def test_wrong_or_unknown_github_update_origin_is_rejected(self):
         module = load_integrity_module()

@@ -1,0 +1,152 @@
+{
+  "accepted_map_id": "component-map-24c68c3be373",
+  "action": "conflict_detected",
+  "candidate_map_id": "component-map-becf0add332f",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [
+      {
+        "component_id": "public-distribution",
+        "element_id": "install-update-claims",
+        "fields": [
+          "target",
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff",
+        "fields": [
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "release-package",
+        "element_id": "package-integrity",
+        "fields": [
+          "target",
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "release-package",
+        "element_id": "release-identity",
+        "fields": [
+          "target",
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "method-and-claim-flow",
+        "fields": [
+          "evidence_locators"
+        ]
+      },
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "terminology-and-display-flow",
+        "fields": [
+          "evidence_locators"
+        ]
+      }
+    ],
+    "contract_changes": [
+      "objective",
+      "scope"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CHANGELOG.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "PUBLISHING.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "VERSION"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-version.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_managed_lifecycle.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_package_contract.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "validation/release-candidate-test-receipt.json"
+      },
+      {
+        "fields": [
+          "exists",
+          "kind",
+          "sha256",
+          "source"
+        ],
+        "source": "validation/v0.1.3-public-consumer-receipt.json"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "68ea4a45517857a2796addec5037683bf8d0795f039d27961ceaccfee03d1edd"
+  },
+  "recorded_at_utc": "2026-08-24T13:39:29.069478Z",
+  "scan_id": "20260824T133929069478Z-c146ff32",
+  "schema_version": "1.0"
+}

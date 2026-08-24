@@ -41,8 +41,8 @@ installed replacement, or activation. Roll back policy and caller SHA together.
 9. From exact merged main:
 
        gh skill publish .\skills --dry-run
-       gh skill publish .\skills --tag v0.1.3
-       gh release verify v0.1.3
+       gh skill publish .\skills --tag v0.1.4
+       gh release verify v0.1.4
 
 10. In separate disposable consumer repositories, test public preview,
     Codex/Claude installation, list, directory-scoped update dry-run, package

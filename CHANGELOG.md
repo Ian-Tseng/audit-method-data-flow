@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here.
 
+## [0.1.4] - 2026-08-24
+
+### Fixed
+
+- Accept only tag-matching `github-pinned` metadata injected by current GitHub CLI pinned installs, while continuing to reject unknown origins and mismatched pins.
+
 ## [0.1.3] - 2026-08-22
 
 ### Added

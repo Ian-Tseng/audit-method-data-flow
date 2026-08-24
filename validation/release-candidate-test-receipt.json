@@ -1,11 +1,23 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-08-24",
-  "release_candidate": "0.1.3",
+  "recorded_at": "2026-08-25",
+  "release_candidate": "0.1.4",
   "tests": {
     "command": "py -3 -X utf8 -m unittest discover -s tests -v",
     "status": "PASS",
-    "tests_run": 39,
+    "tests_run": 40,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "pre_acceptance_product_tests": {
+    "commands": [
+      "py -3 -X utf8 -m unittest discover -s tests -p test_managed_lifecycle.py -v",
+      "py -3 -X utf8 -m unittest discover -s tests -p test_package_contract.py -v",
+      "py -3 -X utf8 -m unittest discover -s tests -p test_skill_contract.py -v"
+    ],
+    "status": "PASS",
+    "tests_run": 34,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -13,7 +25,7 @@
   "package_manifest": {
     "command": "py -3 -X utf8 skills/audit-method-data-flow/scripts/package_integrity.py verify",
     "status": "PACKAGE_VERIFIED",
-    "digest_sha256": "c3ad58a4405428b0af2d129062b563418861077e395c5a461718483c32e581a3",
+    "digest_sha256": "97977737ababa1ae395ea36b89bf1e26786eaa9990f59daca6466c36d3290788",
     "files": 13
   },
   "official_validator": {
@@ -23,6 +35,8 @@
   },
   "boundaries": [
     "These local checks do not establish scientific validity.",
-    "Public GitHub CI, protected managed-repair environments, hosted canary, agent execution, draft publication, release immutability, managed installation, client discovery, client invocation, deterministic host routing, and public issue submission are not covered by this receipt."
+    "The full 40-test local suite passed after exact component-map acceptance and the interim formal-record rebuild.",
+    "Public v0.1.4 PR/main CI, protected managed-repair environments, hosted canary, agent execution, draft publication, release immutability, pinned-install verification, deterministic host routing, and public issue submission are not covered by this receipt.",
+    "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is recorded separately in validation/v0.1.3-public-consumer-receipt.json."
   ]
 }
