@@ -69,6 +69,16 @@ Before establishing or materially changing a central term:
 4. Select one reader-facing canonical term without copying source jargon that
    changes the implemented meaning.
 
+Apply a **semantic universality gate** before treating a term as ordinary field
+language. Classify it as `field-standard`, `project-specific`, or better stated
+by a `plain protocol description`. A field-standard term must preserve the same
+operation and claim boundary in authoritative sources. A project-specific term
+must be identified as local and defined before it carries a research question or
+result. Prefer a plain protocol description when a coined label merely compresses
+data access, split membership, fitting, selection, or evaluation conditions that
+can be stated directly. Search across the relevant standards and adjacent
+literatures. If a proposed term is absent, report that it was not located in the checked sources; do not claim that no literature uses it.
+
 Cover the whole paper vocabulary:
 
 - datasets, partitions, sampling units, label access, exposure, and leakage;
@@ -86,7 +96,27 @@ Cover the whole paper vocabulary:
 
 For every central term, record:
 
-`canonical term -> definition -> symbol -> role -> parent stage/branch -> input -> output -> changed/fixed conditions -> lifecycle/reset scope -> allowed aliases -> forbidden aliases -> source -> project mapping -> contract version`
+`canonical term -> definition -> symbol -> role -> parent stage/branch -> input -> output -> changed/fixed conditions -> lifecycle/reset scope -> allowed aliases -> forbidden aliases -> source -> project mapping -> universality status -> citation class -> reader-facing citation -> contract version`
+
+Apply citation closure to the reader-facing chain separately from the terminology-source
+ledger. Inventory named datasets, benchmarks, methods, algorithms, model
+families, architectures, metrics, specialized terms, and exact software or
+checkpoint identifiers in reading order. Classify each as requiring an
+authoritative scholarly citation, requiring software/model-card provenance,
+project-defined and requiring a local definition, or an ordinary operation
+that is citation-exempt unless its lineage changes the claim. For every item
+that requires scholarly support, verify:
+
+`first substantive use -> nearby unambiguous citation -> matching citation key or reference-list entry -> visible citation in each regenerated reader-facing artifact`
+
+A terminology source ledger does not replace the manuscript citation. When an
+implementation is inspired by or simplifies a named method, cite the original
+source and state that the project mapping is inspired or inferred rather than
+claiming an exact implementation. If one sentence names several methods, make
+clear which source supports each term instead of relying on an ambiguous bundled
+citation block. Do not add citation clutter for ordinary operations such as a
+mean, minimum, maximum, generic matrix multiplication, or cosine distance unless
+the paper invokes a specific scholarly lineage.
 
 Keep one versioned project contract as the active authority. Increment its
 version when a definition changes. Preserve immutable historical wording as
@@ -94,6 +124,40 @@ provenance and map it to the current term instead of silently rewriting it.
 When browsing is unavailable, retain the last verified source ledger and mark
 the refresh pending. If writes are unauthorized, return a candidate contract
 and drift report without implying they were persisted.
+
+## Eliminate first-reader inference
+
+Build a definition inventory for central protocol, component, representation,
+metric, and claim terms:
+
+`term -> first abstract use -> first substantive use -> plain-language definition -> semantic relation -> parent stage/branch -> unresolved inference`
+
+1. Scan the abstract and then the body in reading order. Record the first use,
+   even when the same term has a complete entry in a later table or contract.
+2. When abstract space is constrained, permit a compact self-explanatory label,
+   but provide a local plain-language definition no later than the first
+   substantive body use. Place it before the term structures a research
+   question, result, or interpretation.
+3. Count a term as defined only when the local sentence states the distinction
+   that changes the claim, such as source or label access, fitted versus fixed
+   state, input/output role, or evaluation boundary. Repeating the term,
+   expanding an acronym, or naming its parent stage is not enough.
+4. Do not require readers to combine a later protocol table, caption, glossary,
+   or supplement to recover the meaning of an earlier claim.
+5. When deterministic checks exist, test the required semantic relation and its
+   position before the dependent claim. Avoid locking the paper to one exact
+   sentence when equivalent concise wording is valid.
+6. Treat counted or collective component labels as definition obligations. At
+   first substantive use, name every stable member and state its role. If
+   membership varies by protocol, name the invariant members and state the
+   eligibility or selection rule for the rest. A phrase such as `two shared
+   scorers` remains unresolved until the reader is told which two scorers it
+   denotes.
+
+Classify each item as `defined locally`, `self-explanatory with timely body
+definition`, or `unresolved inference`. Fail when a central term remains an
+unresolved inference at the point where a first-time reader must interpret a
+research question, result, or claim boundary.
 
 ## Link every term to a named stage or branch
 
@@ -173,9 +237,33 @@ When a repository has deterministic manuscript checks, use red-green-refactor: f
 
 Also fail when an active central term lacks a contract entry, one term denotes
 multiple roles, aliases cross phase or lifecycle boundaries, a source-backed
-mapping is presented as a quotation rather than an inference, or an active
-artifact uses a forbidden alias. Report terminology-contract version and
-source-verification date in the handoff.
+mapping is presented as a quotation rather than an inference, a project-specific
+term is presented as field-standard, a plain protocol description would remove
+avoidable first-reader inference, an active artifact uses a forbidden alias, or
+a term that requires scholarly support lacks an unambiguous nearby citation, a
+matching reference entry, or a visible citation in a regenerated reader-facing
+artifact.
+Report terminology-contract version and source-verification date in the handoff.
+
+## Route explicit recommended updates to the owner
+
+When the user asks for a `recommended update`, `recommend this update`, or an
+owner update and clearly means a reusable improvement to this skill, default the
+destination to `Ian-Tseng/audit-method-data-flow`. Finish the substantive audit
+first. If it reveals a reusable skill-level gap, select the closest non-`no_issue`
+quality signal, emit one content-free receipt, and use an installed
+`analyze-project-claims` consumer to create one local contribution preview
+bound to that derived destination. Preview sends nothing and must not contain
+manuscript text, project findings, paths, prompts, logs, patches, attachments,
+or credentials.
+
+If the analyzer is unavailable, return the exact marker and its portable
+consumer prompt; do not install a transport or send anything silently. A
+recommendation request authorizes only the local proposal and preview. Public
+submission still requires exact approval of the draft plus a separate
+public-visibility confirmation. It does not authorize an installed update,
+merge, release, or publication. When no reusable skill-level improvement
+exists, use `no_issue` and do not manufacture a proposal or issue.
 
 ## Finish with managed maintenance and one quality receipt
 

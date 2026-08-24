@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-24T13:07:51.973638Z",
+  "accepted_at_utc": null,
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -94,16 +94,12 @@
               "source": "tests/test_managed_lifecycle.py"
             },
             {
-              "locator": "whole-file",
-              "source": "tests/test_skill_contract.py"
-            },
-            {
               "locator": "json-pointer:/tests",
               "source": "validation/release-candidate-test-receipt.json"
             }
           ],
           "relation_type": "bounds",
-          "target": "After substantive use, the skill runs consent-gated update maintenance and emits one tested content-free receipt. It documents an external analyze-project-claims handoff for an owner-bound local recommended-update preview and separate public approval, but this repository does not execute or verify that consumer behavior. Separately, one closed repository policy and thin full-SHA-pinned caller permit only owner-triaged, protected-environment-gated draft repair without authorizing telemetry, project-content transport, evidence acceptance, merge, release, or installed replacement."
+          "target": "After substantive use, the skill runs consent-gated update maintenance and emits one content-free receipt; separately, one closed repository policy and thin full-SHA-pinned caller permit only owner-triaged, protected-environment-gated draft repair without authorizing telemetry, project-content transport, evidence acceptance, merge, release, or installed replacement."
         },
         {
           "element_id": "package-integrity",
@@ -165,7 +161,7 @@
             }
           ],
           "relation_type": "synchronizes",
-          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.3 MIT release candidate."
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.2 MIT release candidate."
         }
       ]
     },
@@ -225,21 +221,21 @@
             }
           ],
           "relation_type": "defines",
-          "target": "The skill defines source-backed semantic-universality, first-reader definition, counted-component membership, and reader-facing citation-closure contracts plus evidence-bounded figure, table, slide, and generated-artifact gates."
+          "target": "The skill defines a source-backed terminology contract and evidence-bounded figure, table, slide, and generated-artifact gates."
         }
       ]
     }
   ],
-  "created_at_utc": "2026-08-24T13:04:18.236716Z",
+  "created_at_utc": "2026-08-21T04:54:47.709124Z",
   "integrity": {
-    "canonical_payload_sha256": "86b81cd4337b14a5b49e694065e6a09ee8ec0d8ac2b5f4b5b8e95535235d4c09"
+    "canonical_payload_sha256": "eee3dfe5ffdf65ee2e92699bc584093835edb2b56f1fca02c86bca0c420b0ebf"
   },
-  "map_id": "component-map-24c68c3be373",
-  "map_state": "accepted",
+  "map_id": "component-map-e0421bc3594d",
+  "map_state": "conflict_candidate",
   "mapper_version": "1.3.0",
-  "objective": "Map the v0.1.3 release candidate's identity, integrity, first-reader and citation-closure scholarly audit contract, consent-gated update maintenance, documented owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
-  "origin_scan_id": "20260824T130418236716Z-7f57b11d",
-  "previous_map_id": "component-map-aa20e8934f8f",
+  "objective": "Map the v0.1.2 release candidate's identity, integrity, scholarly audit contract, consent-gated update maintenance, content-free quality handoff, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
+  "origin_scan_id": "20260821T045447709124Z-e844dae0",
+  "previous_map_id": "component-map-bf472206ac9c",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -295,25 +291,25 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "4c87bbfe89847afb1e1c29fa791507b4f525087a244e81d80c6755b81c068544",
+      "sha256": "d2c2250657b28b1737030b79bc70d647bdb754f35f4edaffa1b14192e89a35bb",
       "source": "CHANGELOG.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "efcde3e47c4bb0f58ed7f0292b7b2043ef4ba784f2ff66c7bc3c4a2352a6c6c3",
+      "sha256": "05ab0c7b36e50a05de202de0b47de6c898064333a61d2719349a4c4c4da97bb1",
       "source": "CITATION.cff"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "d7da456da0dfeae551bbb36685f16523736fb62f1d8219903e7f21194a7cddc2",
+      "sha256": "b382973bed515708322623843b485c04c3013c5cfa6720d8798b8303028257aa",
       "source": "PUBLISHING.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "6350e5622810361760c7c8549445f886dda77e0c69bfa2601b5b32aa5aa3272d",
+      "sha256": "1a6b4e052f42dfc13ae11c096302d7d8184b2d8a09970f2f87b7647aab8b7ddc",
       "source": "README.md"
     },
     {
@@ -325,13 +321,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "2d2454ef0edeb462a6ce8b25d387aaa74df08093d5cea0428a10ce55510c6326",
+      "sha256": "297b50f08386d3521f8fdaf2f78eb8d9d0acdf452d2e61596905fba37208c792",
       "source": "VERSION"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "efcde3e47c4bb0f58ed7f0292b7b2043ef4ba784f2ff66c7bc3c4a2352a6c6c3",
+      "sha256": "05ab0c7b36e50a05de202de0b47de6c898064333a61d2719349a4c4c4da97bb1",
       "source": "skills/audit-method-data-flow/CITATION.cff"
     },
     {
@@ -343,7 +339,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "76423befdd8467a5fc95f499bd1c6a72e7146c89a183016bad42d2b560e1e6e8",
+      "sha256": "e76b9a1a864429be74c5e5b05b59e4bf81ed19759f7bee82fdbb6c9be6f45b68",
       "source": "skills/audit-method-data-flow/SKILL.md"
     },
     {
@@ -367,19 +363,19 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "7d32f457fd68bf16a4884bf1b366985dd5c0af37ecd439a452fa94c7bc026ebe",
+      "sha256": "abe027c7184932d3533c69e02af9a5bd702788b13afa825d831b44f9c701756b",
       "source": "skills/audit-method-data-flow/references/package-manifest.json"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "a1769d72b143c477632fb9a5e44521c7c2309461f04de8a3273f65107c0b2285",
+      "sha256": "022ea96c462b98387d6bdeb4f41237c2b1a5d15ccf82422b9d85584c8f1998b7",
       "source": "skills/audit-method-data-flow/references/package-version.json"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "267603e7197bf325ac8b3dd0fad999ad51c5dca6510a3af4f2ffb481aa8992fe",
+      "sha256": "dfd374de5259ddeda732286579497a390c7d60eea8382a199f3d5c3228bd8ad4",
       "source": "skills/audit-method-data-flow/references/paper-terminology-contract.md"
     },
     {
@@ -397,7 +393,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "e71c8aa0ed7126f0bdc2759fdcc38a1d9ecc447fb0925a4dcd39a0e07f5b3fd9",
+      "sha256": "64c315a9e6b157a35164d76f494bb7faa29fe83e8c201481a000e886a88e63ce",
       "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
     },
     {
@@ -415,19 +411,19 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "140d0252ed208180453de329e7d5ad69a3661ffe2326750189f682be50396b37",
+      "sha256": "5e452950eab592b96bcf22c9e6c0cfe36622d61c3e387b3acd5420226416e79f",
       "source": "tests/test_managed_lifecycle.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "89ebc97008f23b10b9240aaf332bf9b35d89fb69b9b7cfeef8b6179257a3ccdd",
+      "sha256": "3eeb045e6786021a8675501b8e8294e0c42c6fbb5ccd5e92a245c0b799987b53",
       "source": "tests/test_package_contract.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "9123642480b831519135ffc5a116f30d1b5debebd230edc4a2d458983d043bf0",
+      "sha256": "0f8d43863120cb9a9f3c39209a609bca9be700c9166c876de8967de5595440ca",
       "source": "tests/test_skill_contract.py"
     },
     {
@@ -439,7 +435,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "e120fd16cbb98c7826cc0188f3abae5fe8380ae2fd71c71afc86d7ee2097fb09",
+      "sha256": "1857d84c029030b7afa71ebe29258edf418b30357619ac7d4ac628651363b934",
       "source": "validation/release-candidate-test-receipt.json"
     }
   ]

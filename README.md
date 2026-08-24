@@ -45,7 +45,7 @@ user installation, and checks through a 24-hour lease after substantive use:
 
 Pin a reproducible installation when needed:
 
-    gh skill install Ian-Tseng/audit-method-data-flow skills/audit-method-data-flow/SKILL.md --agent codex --scope user --pin v0.1.1
+    gh skill install Ian-Tseng/audit-method-data-flow skills/audit-method-data-flow/SKILL.md --agent codex --scope user --pin v0.1.3
 
 This release has a consent-gated managed updater and a content-free quality
 receipt. Both run after the substantive result and never authorize telemetry,
@@ -53,6 +53,12 @@ issue submission, file upload, or feedback transport. A compatible
 `analyze-project-claims` adapter may create one local proposal; any public
 issue requires separate exact approval. The workflow also instructs the active
 agent to refresh time-sensitive first-party scholarly guidance when relevant.
+
+When a user explicitly asks for a recommended reusable skill update, the skill
+defaults the local contribution preview to
+`Ian-Tseng/audit-method-data-flow`. Nothing is sent by default. Public issue
+submission still requires approval of the exact draft and a separate
+public-visibility confirmation.
 
 ## Evidence boundary
 

@@ -90,6 +90,107 @@ class SkillContractTests(unittest.TestCase):
         ):
             self.assertIn(status, SKILL)
 
+    def test_first_reader_inference_gate_is_explicit(self):
+        contract = (PACKAGE / "references" / "paper-terminology-contract.md").read_text(
+            encoding="utf-8"
+        )
+        skill_folded = SKILL.casefold()
+        contract_folded = contract.casefold()
+        for anchor in (
+            "Eliminate first-reader inference",
+            "first substantive use",
+            "plain-language definition",
+            "definition inventory",
+            "semantic relation",
+            "unresolved inference",
+        ):
+            self.assertIn(anchor.casefold(), skill_folded)
+        for anchor in (
+            "## First-reader inference gate",
+            "first abstract use",
+            "first body use",
+            "local definition locator",
+            "required relation",
+            "unresolved inference",
+        ):
+            self.assertIn(anchor.casefold(), contract_folded)
+
+    def test_figure_typography_contract_has_source_roles_and_validation(self):
+        display = (PACKAGE / "references" / "figure-table-clarity.md").read_text(
+            encoding="utf-8"
+        )
+        for anchor in (
+            "## Figure typography roles",
+            "Direct Nature requirement",
+            "Project-specific renderer contract",
+            "Arial",
+            "Helvetica",
+            "Symbol",
+            "text-font role",
+            "math-font role",
+            "declared math fragments",
+            "glyph coverage",
+            "baseline alignment",
+            "one restrained body font",
+        ):
+            self.assertIn(anchor, display)
+        self.assertIn("Nature-specific rather than universal", display)
+
+    def test_semantic_universality_gate_distinguishes_standard_and_project_terms(self):
+        contract = (PACKAGE / "references" / "paper-terminology-contract.md").read_text(
+            encoding="utf-8"
+        )
+        skill_folded = SKILL.casefold()
+        contract_folded = contract.casefold()
+        for anchor in (
+            "semantic universality gate",
+            "field-standard",
+            "project-specific",
+            "plain protocol description",
+            "not located in the checked sources",
+        ):
+            self.assertIn(anchor, skill_folded)
+            self.assertIn(anchor, contract_folded)
+
+    def test_citation_closure_and_counted_groups_are_explicit(self):
+        contract = (PACKAGE / 'references' / 'paper-terminology-contract.md').read_text(
+            encoding='utf-8'
+        )
+        skill_folded = ' '.join(SKILL.casefold().split())
+        contract_folded = ' '.join(contract.casefold().split())
+        for anchor in (
+            'citation closure',
+            'citation class',
+            'reader-facing citation',
+            'first substantive use',
+            'matching citation key or reference-list entry',
+            'counted or collective component labels',
+            'name every stable member',
+        ):
+            self.assertIn(anchor, skill_folded)
+        for anchor in (
+            'citation closure',
+            'citation class',
+            'reader-facing citation',
+            'first substantive use',
+            'matching citation key or reference-list entry',
+            'counted and collective labels',
+            'name every stable member',
+        ):
+            self.assertIn(anchor, contract_folded)
+
+    def test_recommended_updates_default_to_owner_bound_local_preview(self):
+        skill_folded = ' '.join(SKILL.casefold().split())
+        for anchor in (
+            'recommended update',
+            'Ian-Tseng/audit-method-data-flow',
+            'local contribution preview',
+            'public submission',
+            'exact approval',
+            'do not manufacture',
+        ):
+            self.assertIn(anchor.casefold(), skill_folded)
+
     def test_agent_metadata_invokes_exact_skill(self):
         agent = (PACKAGE / "agents" / "openai.yaml").read_text(encoding="utf-8")
         self.assertIn('display_name: "Audit Method Data Flow"', agent)
