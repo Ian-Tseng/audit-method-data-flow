@@ -1,0 +1,205 @@
+{
+  "bindings": [
+    {
+      "claim_id": "claim:local-v083-workflow-pin-consistent",
+      "evidence_id": "evidence:pin-validation-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-v083-workflow-pin-consistent",
+      "evidence_id": "evidence:managed-policy",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-v083-workflow-pin-consistent",
+      "evidence_id": "evidence:thin-caller",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:local-v083-workflow-pin-consistent",
+      "evidence_id": "evidence:public-boundary",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:hosted-v083-repair-complete",
+      "evidence_id": "evidence:pin-validation-receipt",
+      "role": "limits"
+    }
+  ],
+  "claims": [
+    {
+      "claim_digest": "05764a97f6150426c2ef8f2216141f99fda986cab70d0784f6f952d04fdb60ff",
+      "claim_id": "claim:local-v083-workflow-pin-consistent",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff"
+      },
+      "material": true,
+      "rationale": "The exact files are owner-mapped, the focused contract suite and package verifier pass, and managed_fleet validate returns LOCAL_READY with the same full commit.",
+      "statement": "The local audit-method-data-flow policy, thin caller, public documentation, and contract test consistently bind the immutable analyze-project-claims v0.8.3 workflow commit.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "d1df05b43a2a137af7659035fae29137a9a125c6a3ead5e6b0d452c04271e06e",
+      "claim_id": "claim:hosted-v083-repair-complete",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "managed-update-and-quality-handoff"
+      },
+      "material": true,
+      "rationale": "No protected-environment read-back, workflow_dispatch canary, agent execution, or draft publication was observed for this new pin.",
+      "statement": "The producer has completed a protected hosted repair and draft-publication canary through the v0.8.3 workflow.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:pin-validation-receipt",
+      "freshness": "current",
+      "identity_sha256": "191a0519721eb989677d4ce43360d390184abd17378d16cd69bef326405bbe98",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "executed_test",
+      "observed_summary": "The persisted receipt records six passing focused lifecycle tests, package verification, LOCAL_READY policy validation, exact owner map acceptance, unchanged reconciliation, and formal preflight for the immutable central v0.8.3 workflow commit.",
+      "selection_sha256": "d48a39403a6de5a7cc61a8c72b4f2c138e91d6157db531b5606a282dd9ae1460",
+      "source": {
+        "byte_size": 2220,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/managed-workflow-pin-v083-receipt.json",
+        "sha256": "d48a39403a6de5a7cc61a8c72b4f2c138e91d6157db531b5606a282dd9ae1460"
+      }
+    },
+    {
+      "evidence_id": "evidence:managed-policy",
+      "freshness": "current",
+      "identity_sha256": "d5a751a6a404d1607c1f41556f1c7d3abe03820a37a4b14b7358407d245eebcd",
+      "locator": {
+        "kind": "json_pointer",
+        "value": "/workflow"
+      },
+      "method": "schema_validated",
+      "observed_summary": "The closed Ian-Tseng policy binds the central workflow path and commit 0fb28f50d9ed84ba47fdbdf2b7d0001f8b4e05b4.",
+      "selection_sha256": "19f7717070a40f269f1eb4a3e2cfb93fc42c1e6ec33602401c22aa0873c2c228",
+      "source": {
+        "byte_size": 1505,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": ".github/managed-skill-policy.json",
+        "sha256": "7064c81719bb0a85eb5384dddcf2214dbbdfc1b81f0117abea08c2eed0f06b6e"
+      }
+    },
+    {
+      "evidence_id": "evidence:thin-caller",
+      "freshness": "current",
+      "identity_sha256": "83f0fc313b1a989af713c1502982cad4bdfbe29b2a1b941b43c44b53f42d4305",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The thin caller repeats the same full commit in its reusable-workflow ref and workflow-sha input and passes only the explicit OPENAI_API_KEY secret.",
+      "selection_sha256": "eb9fbe1df7f31d462ed7a9b874b290067ad6861c5075dd329a9b97cf7130faf3",
+      "source": {
+        "byte_size": 769,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": ".github/workflows/managed-skill-repair.yml",
+        "sha256": "eb9fbe1df7f31d462ed7a9b874b290067ad6861c5075dd329a9b97cf7130faf3"
+      }
+    },
+    {
+      "evidence_id": "evidence:public-boundary",
+      "freshness": "current",
+      "identity_sha256": "0bd0071d6d0ac4ee50e761319c01e0b3752bb82e6e96135b827f342ae7e9a062",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The README identifies the exact immutable central workflow commit and keeps protected environments, hosted canary, and draft publication separate.",
+      "selection_sha256": "3da99336dc8d4c8dbfc6486f02080dd30961c87fe80cb16be299b5f476c5617c",
+      "source": {
+        "byte_size": 4868,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "README.md",
+        "sha256": "3da99336dc8d4c8dbfc6486f02080dd30961c87fe80cb16be299b5f476c5617c"
+      }
+    }
+  ],
+  "integrity": {
+    "canonical_payload_sha256": "249b345d42001259210533bd3fb6dc6eb05fb4d7f33eea5644be8ab48bbc803e",
+    "output_schema_sha256": "a2a009aeb319922010cdf3e5702884fbe55d013dc3f2f09c3f64914299820e65",
+    "recorder_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63",
+    "renderer_id": "evidence-bound-markdown-v1",
+    "renderer_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63"
+  },
+  "limitations": [
+    {
+      "claim_ids": [
+        "claim:hosted-v083-repair-complete"
+      ],
+      "evidence_ids": [
+        "evidence:pin-validation-receipt"
+      ],
+      "limitation_id": "limitation:pending-hosted-v083-canary",
+      "text": "LOCAL_READY does not establish protected environments, hosted agent execution, draft publication, merge, release, installation, or activation."
+    }
+  ],
+  "record_kind": "evidence_bound_audit_record",
+  "scan": {
+    "accepted_map": {
+      "map_id": "component-map-a8bab6017bdc",
+      "path": "validation/component-map/accepted-map.json",
+      "sha256": "6272bd254fb4e931d8f09bfda3b9104bbcb288ac4b2a3c5139446d63de802faa"
+    },
+    "authority": [
+      ".github/managed-skill-policy.json",
+      ".github/workflows/managed-skill-repair.yml",
+      "README.md",
+      "tests/test_managed_lifecycle.py",
+      "validation/managed-workflow-pin-v083-receipt.json"
+    ],
+    "engine_identity": {
+      "engine_digest": "7e713ae78e8bd0008926008c75fc4ae0a977f82cc9cc23158cc927c212255f6b",
+      "engine_name": "component-evidence",
+      "engine_version": "1.3.0",
+      "map_schema_version": "1.0",
+      "provider_kind": "embedded",
+      "receipt_protocol_version": "2.0",
+      "status": "verified"
+    },
+    "objective": "Determine whether the local audit-method-data-flow managed-repair policy, caller, documentation, and contract test consistently bind the immutable analyze-project-claims v0.8.3 workflow commit while preserving the boundary around pending hosted and publication gates.",
+    "recorded_at_utc": "2026-08-25T04:48:22.480766Z",
+    "recorder_version": "2.1.0",
+    "scan_id": "20260825T044822480766Z-3e160a93",
+    "scope": [
+      "managed-repair workflow pin identity",
+      "local policy/caller agreement",
+      "focused deterministic validation",
+      "pending hosted and publication lifecycle"
+    ],
+    "skill_name": "analyze-project-claims",
+    "skill_sha256": "c30585a2c54b9ed2e92049ceefa06f9b3a6efb886313cbfb592825e74156d451"
+  },
+  "schema_version": "2.0",
+  "summary": {
+    "claim_boundary_ids": [],
+    "claim_count": 2,
+    "claim_counts": {
+      "supported": 1,
+      "untested": 1
+    },
+    "evidence_count": 4,
+    "material_claim_count": 2,
+    "no_supported_claim": false,
+    "scan_status": "PARTIAL",
+    "strongest_safe_claim": "The local audit-method-data-flow policy, thin caller, public documentation, and contract test consistently bind the immutable analyze-project-claims v0.8.3 workflow commit.",
+    "strongest_safe_claim_id": "claim:local-v083-workflow-pin-consistent",
+    "unresolved_uncertainties": [
+      "Protected managed-repair environments have not been read back for this exact pin.",
+      "The hosted workflow_dispatch dry run and protected agent/publish gates have not run for this exact pin.",
+      "Producer PR CI, exact-main CI, merge, and any later package lifecycle remain pending."
+    ]
+  }
+}

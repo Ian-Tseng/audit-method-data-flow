@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-25T04:43:53.069996Z",
+  "accepted_at_utc": null,
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -240,10 +240,10 @@
   ],
   "created_at_utc": "2026-08-25T04:23:41.304030Z",
   "integrity": {
-    "canonical_payload_sha256": "aa04488d71913f0ec6ac88e6d0e1ce6b1cf2eae337b3bc1694fb47ff241aac33"
+    "canonical_payload_sha256": "be022048c6f787ff47dd3f9a9cfddb168ebd70c9e481365035e5df20b824158a"
   },
   "map_id": "component-map-a8bab6017bdc",
-  "map_state": "accepted",
+  "map_state": "drift_candidate",
   "mapper_version": "1.3.0",
   "objective": "Map the v0.1.4 release candidate's identity, integrity, tag-matching GitHub CLI pinned-install compatibility, inherited scholarly audit contract, consent-gated update maintenance, owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
   "origin_scan_id": "20260825T042341304030Z-66b36451",

@@ -1,0 +1,30 @@
+{
+  "accepted_map_id": "component-map-a8bab6017bdc",
+  "action": "checked_unchanged",
+  "artifacts": {
+    "accepted_map": "accepted-map.json",
+    "candidate": null,
+    "delta": null
+  },
+  "candidate_map_id": null,
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": []
+  },
+  "event_id": "20260825T044407460281Z-24d7bced",
+  "integrity": {
+    "canonical_payload_sha256": "01e00b1c052dc01336b9a0a89d16037f3dbb11928a465f876eb295179ec711d9"
+  },
+  "map_state_after": "accepted",
+  "map_state_before": "accepted",
+  "mapper_version": "1.3.0",
+  "recorded_at_utc": "2026-08-25T04:44:07.460281Z",
+  "schema_version": "1.0",
+  "skill_sha256": "c30585a2c54b9ed2e92049ceefa06f9b3a6efb886313cbfb592825e74156d451"
+}
