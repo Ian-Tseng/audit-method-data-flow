@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "product": "audit-method-data-flow",
+  "recorded_at_utc": "2026-08-25T04:45:52Z",
+  "central_workflow": {
+    "repository": "Ian-Tseng/analyze-project-claims",
+    "workflow": ".github/workflows/managed-skill-repair.yml",
+    "commit_sha": "0fb28f50d9ed84ba47fdbdf2b7d0001f8b4e05b4",
+    "release": "v0.8.3",
+    "release_immutable": true,
+    "exact_main_ci_run": 32807711735,
+    "exact_main_ci_status": "PASS"
+  },
+  "producer_binding": {
+    "policy": ".github/managed-skill-policy.json",
+    "caller": ".github/workflows/managed-skill-repair.yml",
+    "documentation": "README.md",
+    "contract_test": "tests/test_managed_lifecycle.py",
+    "accepted_map": "component-map-a8bab6017bdc",
+    "accepted_map_sha256": "6272bd254fb4e931d8f09bfda3b9104bbcb288ac4b2a3c5139446d63de802faa"
+  },
+  "checks": {
+    "focused_managed_lifecycle": {
+      "command": "py -3 -X utf8 -m unittest discover -s tests -p test_managed_lifecycle.py -v",
+      "status": "PASS",
+      "tests_run": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "package_manifest": {
+      "command": "py -3 -X utf8 skills/audit-method-data-flow/scripts/package_integrity.py verify",
+      "status": "PACKAGE_VERIFIED",
+      "digest_sha256": "97977737ababa1ae395ea36b89bf1e26786eaa9990f59daca6466c36d3290788"
+    },
+    "managed_fleet_validate": {
+      "status": "LOCAL_READY",
+      "effect": "NONE",
+      "workflow_sha": "0fb28f50d9ed84ba47fdbdf2b7d0001f8b4e05b4",
+      "policy_sha256": "321d611cec4a4e5178b507ff6d0b88048525e3f792bdc55215c890dcba1516a6"
+    },
+    "map_reconciliation": {
+      "acceptance": "accepted_candidate",
+      "second_reconciliation": "checked_unchanged",
+      "preflight": "READY"
+    }
+  },
+  "boundaries": [
+    "This receipt establishes only the local exact caller/policy/documentation/test binding to the immutable central workflow commit.",
+    "It does not establish protected-environment configuration, hosted dry-run or repair execution, draft publication, producer PR/main CI, merge, release, installed replacement, or fresh activation.",
+    "The installable audit-method-data-flow package bytes and version did not change in this caller-pin update."
+  ]
+}
