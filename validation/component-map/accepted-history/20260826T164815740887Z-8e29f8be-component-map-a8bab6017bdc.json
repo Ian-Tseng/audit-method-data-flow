@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-26T17:00:42.009276Z",
+  "accepted_at_utc": "2026-08-25T04:43:53.069996Z",
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -46,7 +46,7 @@
             }
           ],
           "relation_type": "bounds",
-          "target": "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is separated from pending v0.1.5 CI, immutable release, pinned verification, and activation evidence."
+          "target": "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is separated from pending v0.1.4 CI, immutable release, pinned verification, and activation evidence."
         }
       ]
     },
@@ -173,7 +173,7 @@
             }
           ],
           "relation_type": "synchronizes",
-          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.5 MIT release candidate."
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.4 MIT release candidate."
         }
       ]
     },
@@ -202,7 +202,7 @@
             }
           ],
           "relation_type": "defines",
-          "target": "The skill requires explicit dataset, label, component, transformation, output, evaluation, counterevidence, and claim-boundary relations, followed by bounded full-contract reruns after repairs until a clean pass or a three-cycle nonconvergence boundary."
+          "target": "The skill requires explicit dataset, label, component, transformation, output, evaluation, counterevidence, and claim-boundary relations."
         },
         {
           "element_id": "terminology-and-display-flow",
@@ -233,21 +233,21 @@
             }
           ],
           "relation_type": "defines",
-          "target": "The skill defines source-backed semantic-universality, first-reader definition, counted-component membership, reader-facing citation closure, and matched-row numerical table contracts plus evidence-bounded figure, table, slide, and generated-artifact gates."
+          "target": "The skill defines source-backed semantic-universality, first-reader definition, counted-component membership, and reader-facing citation-closure contracts plus evidence-bounded figure, table, slide, and generated-artifact gates."
         }
       ]
     }
   ],
-  "created_at_utc": "2026-08-26T16:58:15.795997Z",
+  "created_at_utc": "2026-08-25T04:23:41.304030Z",
   "integrity": {
-    "canonical_payload_sha256": "9886ebc9092540b1d0d9d298baf5572e785c5d708d3defb4a221d8f7503b8f44"
+    "canonical_payload_sha256": "aa04488d71913f0ec6ac88e6d0e1ce6b1cf2eae337b3bc1694fb47ff241aac33"
   },
-  "map_id": "component-map-72111294987f",
+  "map_id": "component-map-a8bab6017bdc",
   "map_state": "accepted",
   "mapper_version": "1.3.0",
-  "objective": "Map the v0.1.5 release candidate's identity, integrity, tag-matching GitHub CLI pinned-install compatibility, inherited scholarly audit contract, bounded convergent rechecks, matched-row numerical table rules, consent-gated update maintenance, owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
-  "origin_scan_id": "20260826T165815795997Z-e66b9a42",
-  "previous_map_id": "component-map-82bda8d28227",
+  "objective": "Map the v0.1.4 release candidate's identity, integrity, tag-matching GitHub CLI pinned-install compatibility, inherited scholarly audit contract, consent-gated update maintenance, owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
+  "origin_scan_id": "20260825T042341304030Z-66b36451",
+  "previous_map_id": "component-map-0c490defe351",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -304,25 +304,25 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "bba0d4e40892e83b8dbb706bfb089eadb6aedefbb8de3d479e7be8250be528f4",
+      "sha256": "d8a9a06c9a940985ab0f72d9ffcf1a16164056a20e0c31c0045ad45e9c0a72e8",
       "source": "CHANGELOG.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "bc386e651cb358d1f483ba22caab515b860077edfe70f0e7ea7603d3f0f90715",
+      "sha256": "f669b3c4b817c20cc331a5e546493d972ff7085287ad39034dca36dcc0ae3230",
       "source": "CITATION.cff"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "10ba200d175f1967e885de8abec0874d9df9c1097194d96ec962c5578b70ec25",
+      "sha256": "b50d5ea86a1be290a5e8b5dfe90cf8c902da42c765634ba9a50a36f1ebec9904",
       "source": "PUBLISHING.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "18368554df0f8725b5e0b9a29a03f9d03517412458079931cf73855c6029e022",
+      "sha256": "3da99336dc8d4c8dbfc6486f02080dd30961c87fe80cb16be299b5f476c5617c",
       "source": "README.md"
     },
     {
@@ -334,13 +334,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "800cf1c0392b24de7c0a1c6ea6778ecb433dec71c49a150bce96a98477527b2f",
+      "sha256": "8a3dad16d348c163566a456fcf650d85d7aeeda5e53d01ee1fa8dc15212915a7",
       "source": "VERSION"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "bc386e651cb358d1f483ba22caab515b860077edfe70f0e7ea7603d3f0f90715",
+      "sha256": "f669b3c4b817c20cc331a5e546493d972ff7085287ad39034dca36dcc0ae3230",
       "source": "skills/audit-method-data-flow/CITATION.cff"
     },
     {
@@ -352,7 +352,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "8f43eb2323cc758c97236df21e1608c27d962c2a433991aa0380119734077ca2",
+      "sha256": "76423befdd8467a5fc95f499bd1c6a72e7146c89a183016bad42d2b560e1e6e8",
       "source": "skills/audit-method-data-flow/SKILL.md"
     },
     {
@@ -370,19 +370,19 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "3dda1ca91d6be2ffdd86e1a25dc52bf18a67a181c22c805d7a2cee02fe3910c6",
+      "sha256": "18b81e4de4eb3d3c64568b0099255e7aebf8e409bb109c6b9bb119a7c38c4bb7",
       "source": "skills/audit-method-data-flow/references/figure-table-clarity.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "0fe412daf790ee05c21031ce3f1bb1be4a912ffef014b98c6808ca72a7d7268c",
+      "sha256": "0092e270f34baf9db26e26c3dab97167c440fc61dcff8a74341df4f700ca241f",
       "source": "skills/audit-method-data-flow/references/package-manifest.json"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "d4c2329ca4100259ce06724bb783428bda5fddeae4d6329d15a75c1948568b8e",
+      "sha256": "5db5d146b4d2dceeb6c8e4dbcbf2a5222794dfe941027d4f4c2b43190ffdcf73",
       "source": "skills/audit-method-data-flow/references/package-version.json"
     },
     {
@@ -406,7 +406,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "944cea3fa00daf34441988dd1dc141f444ce2336374a6b53a81d817365ed1ce5",
+      "sha256": "6e1dc296514eeb392985f992c2fbb4a07e0fba7b786910a11ea1b2057a1198d2",
       "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
     },
     {
@@ -424,19 +424,19 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "33d9e8dff65a396d8644f8cc935f4500f4420545fbdfaa12e8968d303e525502",
+      "sha256": "39d98b25d679ceeb02fa3349edc2312144c3a019db9590a49960ad7c0faac3a5",
       "source": "tests/test_managed_lifecycle.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "5ac4c09694f5b9e84ed38eab60cf86b250503e48d7ee994d0d93ec34a7b6dc6c",
+      "sha256": "7d667ee68e67dc492c66ee8e754790938a20643c504e2bc23ebff3a60e83130d",
       "source": "tests/test_package_contract.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "3a5531d6b41862fdabfedd5e145b8ade7fd11d7e4eb40a9ac19fb7149b6579fa",
+      "sha256": "9123642480b831519135ffc5a116f30d1b5debebd230edc4a2d458983d043bf0",
       "source": "tests/test_skill_contract.py"
     },
     {
@@ -448,7 +448,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "1afe86c6230ea27c0e1e80097ae39f2c26d1bb971db2acd9f599be6f5417d018",
+      "sha256": "557d2aaf6aca703a769ec68d431f813a135f880fe4edf652039012bcc95db68d",
       "source": "validation/release-candidate-test-receipt.json"
     },
     {

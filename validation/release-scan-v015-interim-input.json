@@ -1,0 +1,202 @@
+{
+  "schema_version": "2.0",
+  "objective": "Determine the strongest evidence-bounded interim claim that can be made about the local audit-method-data-flow v0.1.5 release candidate, including bounded convergent rechecks and matched-row numerical table rules, before the self-referential full validation suite, successful v0.1.5 public CI, publication, pinned consumer verification, and activation.",
+  "scope": [
+    "release identity and owner provenance",
+    "release-candidate package integrity",
+    "declared method-flow, claim-chain, terminology, bounded convergent recheck, and matched-row display contracts",
+    "bounded v0.1.3 public consumer evidence and pending v0.1.5 lifecycle"
+  ],
+  "authority": [
+    "VERSION",
+    "CITATION.cff",
+    "SOURCE.md",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/references/package-version.json",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "validation/release-candidate-test-receipt.json"
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:test-suite",
+      "source": {"kind": "file", "path": "validation/release-candidate-test-receipt.json"},
+      "locator": {"kind": "json_pointer", "value": "/pre_acceptance_product_tests"},
+      "method": "executed_test",
+      "observed_summary": "The three reproducible UTF-8 pre-acceptance product suites completed with PASS, 35 tests, zero failures, zero errors, and zero skips. The six self-referential validation-contract tests are intentionally excluded until exact map acceptance and an interim record exist."
+    },
+    {
+      "evidence_id": "evidence:manifest-verification",
+      "source": {"kind": "file", "path": "validation/release-candidate-test-receipt.json"},
+      "locator": {"kind": "json_pointer", "value": "/package_manifest"},
+      "method": "executed_test",
+      "observed_summary": "The package-integrity verifier returned PACKAGE_VERIFIED for the recorded thirteen-file package digest."
+    },
+    {
+      "evidence_id": "evidence:v013-public-consumer",
+      "source": {"kind": "file", "path": "validation/v0.1.3-public-consumer-receipt.json"},
+      "locator": {"kind": "whole_file"},
+      "method": "executed_test",
+      "observed_summary": "One Windows consumer run verified the immutable v0.1.3 release, unpinned v0.1.1-to-v0.1.3 replacement, v0.1.3 package integrity, fresh Codex discovery/invocation, Claude placement/package integrity, cleanup, and the exact pinned-install verifier failure that motivates v0.1.4."
+    },
+    {
+      "evidence_id": "evidence:official-validator",
+      "source": {"kind": "file", "path": "validation/release-candidate-test-receipt.json"},
+      "locator": {"kind": "json_pointer", "value": "/official_validator"},
+      "method": "executed_test",
+      "observed_summary": "The official skill validator passed in explicit UTF-8 mode."
+    },
+    {
+      "evidence_id": "evidence:version",
+      "source": {"kind": "file", "path": "VERSION"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The repository release authority identifies version 0.1.5."
+    },
+    {
+      "evidence_id": "evidence:citation",
+      "source": {"kind": "file", "path": "CITATION.cff"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "Citation metadata identifies version 0.1.5, the 2026-08-27 release date, Ian-Tseng repository, and MIT license."
+    },
+    {
+      "evidence_id": "evidence:package-version",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/references/package-version.json"},
+      "locator": {"kind": "json_pointer", "value": "/version"},
+      "method": "schema_validated",
+      "observed_summary": "The packaged version authority identifies version 0.1.5."
+    },
+    {
+      "evidence_id": "evidence:managed-lifecycle-contract",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/SKILL.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "After substantive use, the skill requires consent-gated managed-update maintenance followed by one content-free owner-bound receipt marker. It documents an external analyze-project-claims handoff for explicit reusable recommended-update requests, but this repository does not execute or verify that consumer's destination, preview, or public-consent behavior."
+    },
+    {
+      "evidence_id": "evidence:skill-contract",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/SKILL.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The release-candidate skill package defines explicit method-flow, claim-chain, semantic-universality, first-reader definition, citation-closure, counted-component, display, artifact, evidence-boundary, and bounded repair-and-recheck gates."
+    },
+    {
+      "evidence_id": "evidence:claim-chain-reference",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/references/claim-chain-clarity.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The packaged claim-chain reference defines same-scope problem, question, protocol, output, result, counterevidence, interpretation, and boundary relations."
+    },
+    {
+      "evidence_id": "evidence:terminology-reference",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/references/paper-terminology-contract.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The packaged terminology reference defines authority order, a source ledger, universality and citation classes, reader-facing citation closure, counted-component membership, first-reader definitions, drift rules, and a completion gate."
+    },
+    {
+      "evidence_id": "evidence:display-reference",
+      "source": {"kind": "file", "path": "skills/audit-method-data-flow/references/figure-table-clarity.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The packaged display reference distinguishes direct requirements, synthesis, and project choices; it also defines matched-row absolute endpoints, subtraction order, row identity, target-batch exclusion, hidden-precision auditability, font roles, structural checks, and native visual verification."
+    },
+    {
+      "evidence_id": "evidence:public-lifecycle-boundary",
+      "source": {"kind": "file", "path": "PUBLISHING.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The publishing guide requires PR and exact-main CI, protected immutable release, public managed-install smoke, and separate client activation evidence before those states may be claimed."
+    },
+    {
+      "evidence_id": "evidence:scientific-boundary",
+      "source": {"kind": "file", "path": "README.md"},
+      "locator": {"kind": "whole_file"},
+      "method": "inspected",
+      "observed_summary": "The README explicitly states that installation and structural consistency do not prove scientific validity, client discovery, runtime invocation, or native rendering."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim:local-release-identity-consistent",
+      "statement": "The pre-acceptance-tested local v0.1.5 release identity is synchronized across repository and packaged authorities.",
+      "element_ref": {"component_id": "release-package", "element_id": "release-identity"},
+      "material": true,
+      "status": "supported",
+      "rationale": "The executed 35-test pre-acceptance product suite passed and exact current version, citation, and packaged version authorities all identify v0.1.5; the self-referential validation-contract tests remain pending."
+    },
+    {
+      "claim_id": "claim:local-package-integrity-verified",
+      "statement": "The current v0.1.5 release-candidate package tree matches its deterministic thirteen-file manifest and accepts only an optional github-pinned value that exactly matches an allowed release tag.",
+      "element_ref": {"component_id": "release-package", "element_id": "package-integrity"},
+      "material": true,
+      "status": "supported",
+      "rationale": "The persisted execution receipt records PACKAGE_VERIFIED and the 35 pre-acceptance tests passed manifest drift, unpinned metadata, matching pinned metadata, mismatched pin rejection, wrong origin rejection, and unknown-key rejection cases. The v0.1.3 public receipt remains bounded historical context."
+    },
+    {
+      "claim_id": "claim:managed-lifecycle-bounded",
+      "statement": "The local package defines and tests a consent-gated managed-update check plus one content-free owner-bound quality receipt after substantive use, documents an external owner-bound recommended-update handoff, and carries one closed policy plus one thin full-SHA-pinned managed-repair caller without default outbound transport.",
+      "element_ref": {"component_id": "release-package", "element_id": "managed-update-and-quality-handoff"},
+      "material": true,
+      "status": "supported",
+      "rationale": "The current policy, caller, receipt schema, updater, emitter, and focused pre-acceptance lifecycle tests bind the local update and content-free receipt behavior. The SKILL documents the external consumer handoff, but this repository does not execute or verify destination derivation, contribution preview, or public-consent enforcement; exact owner acceptance authorizes none of those external states."
+    },
+    {
+      "claim_id": "claim:scholarly-audit-contract-present",
+      "statement": "The package contains pre-acceptance-tested structural contracts for method flow, cross-section claims, bounded convergent rechecks, semantic universality, first-reader definitions, citation closure, counted-component membership, and matched-row reader-facing displays.",
+      "element_ref": {"component_id": "scholarly-audit-contract", "element_id": "method-and-claim-flow"},
+      "material": true,
+      "status": "supported",
+      "rationale": "The current SKILL and three complete references contain the declared relations, and the persisted 15-test contract suite passed anchors for full-contract reruns after repair, a three-cycle nonconvergence boundary, absolute endpoints, declared subtraction order, same-row matching, target-batch exclusion, and hidden-precision auditability."
+    },
+    {
+      "claim_id": "claim:public-lifecycle-complete",
+      "statement": "The v0.1.5 public release, pinned package verification, managed replacement, client discovery, and fresh invocation have completed.",
+      "element_ref": {"component_id": "public-distribution", "element_id": "install-update-claims"},
+      "material": true,
+      "status": "untested",
+      "rationale": "The v0.1.3 receipt is bounded historical evidence. The v0.1.5 replacement PR/main CI, immutable release, pinned installation verification, and fresh available-client activation remain pending."
+    },
+    {
+      "claim_id": "claim:scientific-validity-proved",
+      "statement": "The package's structural contracts prove the scientific validity of a manuscript or result audited with the skill.",
+      "element_ref": {"component_id": "scholarly-audit-contract", "element_id": "terminology-and-display-flow"},
+      "material": true,
+      "status": "untested",
+      "rationale": "Package structure and deterministic contract tests do not evaluate a manuscript's underlying scientific truth or general reliability."
+    }
+  ],
+  "bindings": [
+    {"claim_id": "claim:local-release-identity-consistent", "evidence_id": "evidence:test-suite", "role": "supports"},
+    {"claim_id": "claim:local-release-identity-consistent", "evidence_id": "evidence:version", "role": "supports"},
+    {"claim_id": "claim:local-release-identity-consistent", "evidence_id": "evidence:citation", "role": "supports"},
+    {"claim_id": "claim:local-release-identity-consistent", "evidence_id": "evidence:package-version", "role": "supports"},
+    {"claim_id": "claim:local-package-integrity-verified", "evidence_id": "evidence:manifest-verification", "role": "supports"},
+    {"claim_id": "claim:local-package-integrity-verified", "evidence_id": "evidence:test-suite", "role": "supports"},
+    {"claim_id": "claim:local-package-integrity-verified", "evidence_id": "evidence:v013-public-consumer", "role": "context"},
+    {"claim_id": "claim:managed-lifecycle-bounded", "evidence_id": "evidence:managed-lifecycle-contract", "role": "supports"},
+    {"claim_id": "claim:managed-lifecycle-bounded", "evidence_id": "evidence:test-suite", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:skill-contract", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:claim-chain-reference", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:terminology-reference", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:display-reference", "role": "supports"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:test-suite", "role": "supports"},
+    {"claim_id": "claim:public-lifecycle-complete", "evidence_id": "evidence:public-lifecycle-boundary", "role": "context"},
+    {"claim_id": "claim:scientific-validity-proved", "evidence_id": "evidence:scientific-boundary", "role": "context"},
+    {"claim_id": "claim:scholarly-audit-contract-present", "evidence_id": "evidence:official-validator", "role": "context"}
+  ],
+  "limitations": [],
+  "summary": {
+    "strongest_safe_claim_id": "claim:local-package-integrity-verified",
+    "claim_boundary_ids": [],
+    "no_supported_claim": false
+  },
+  "unresolved_uncertainties": [
+    "The self-referential 41-test full suite has not yet passed against an interim current record.",
+    "The v0.1.5 replacement PR and exact-main CI have not yet passed.",
+    "The v0.1.5 tag and immutable GitHub release do not yet exist.",
+    "Public pinned v0.1.5 package verification and fresh available-client activation have not yet been observed.",
+    "Claude Code is not installed on this validation machine, so fresh runtime activation may remain unobserved even after distribution smoke."
+    ,"Protected managed-repair environments, hosted canary, agent execution, and draft publication remain unobserved."
+  ]
+}

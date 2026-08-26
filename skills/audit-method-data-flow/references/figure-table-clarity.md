@@ -91,6 +91,16 @@ For numerical tables:
 
 - put metric direction in the header or note;
 - name aggregation (row-level, source mean, fold mean, seed mean);
+- report absolute comparator and method values whenever a delta or effect
+  arrow is shown, and define the subtraction order;
+- use a delta or effect arrow only when comparator and method use the same
+  evaluation rows, population or split, metric weighting, and aggregation. If
+  row sets differ, show the absolute values as nonmatched descriptive
+  quantities and do not imply an intervention effect;
+- name the target-batch size and whether those batch rows are excluded from
+  evaluation whenever adaptation changes the evaluated row set;
+- state when deltas use higher-precision run summaries than the rounded
+  endpoints;
 - pair positive evidence with the same-scope counterevidence;
 - distinguish different-protocol context from like-for-like comparison;
 - keep units and decimal precision consistent;
@@ -215,6 +225,8 @@ Use status labels that distinguish evidence:
 - [ ] Processing stages and evidence analyses are not conflated.
 - [ ] Input, operation, output, access, and boundary are locally visible.
 - [ ] Canonical terminology matches prose, caption, table, notes, and generated artifacts.
+- [ ] Every numerical delta names its metric, subtraction order, absolute endpoints, aggregation unit, and row-matching status.
+- [ ] Nonmatched row sets are labeled as descriptive quantities without an effect arrow or causal-looking delta.
 - [ ] The caption is standalone and the callout is nearby.
 - [ ] Final-size fonts, aspect ratio, contrast, and non-color cues pass.
 - [ ] Paper figures are inspected in the final PDF.

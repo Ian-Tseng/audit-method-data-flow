@@ -2,6 +2,17 @@
 
 All notable changes to this project are documented here.
 
+## [0.1.5] - 2026-08-27
+
+### Added
+
+- Require numerical deltas and effect arrows to expose absolute endpoints,
+  subtraction order, row-matching status, aggregation, target-batch exclusion,
+  and hidden-precision rounding.
+- Re-run every applicable audit from the beginning after a repair, bounded to
+  three repair-and-recheck cycles, and report nonconvergence as partial or
+  blocked instead of clean.
+
 ## [0.1.4] - 2026-08-24
 
 ### Fixed

@@ -1,0 +1,186 @@
+{
+  "objective": "Map the v0.1.5 release candidate's identity, integrity, tag-matching GitHub CLI pinned-install compatibility, inherited scholarly audit contract, bounded convergent rechecks, matched-row numerical table rules, consent-gated update maintenance, owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
+  "scope": [
+    "VERSION",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "README.md",
+    "PUBLISHING.md",
+    "SOURCE.md",
+    ".github/workflows/validate.yml",
+    ".github/workflows/managed-skill-repair.yml",
+    ".github/managed-skill-policy.json",
+    "skills/audit-method-data-flow/CITATION.cff",
+    "skills/audit-method-data-flow/LICENSE",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/agents/openai.yaml",
+    "skills/audit-method-data-flow/references/claim-chain-clarity.md",
+    "skills/audit-method-data-flow/references/figure-table-clarity.md",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "skills/audit-method-data-flow/references/package-version.json",
+    "skills/audit-method-data-flow/references/paper-terminology-contract.md",
+    "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json",
+    "skills/audit-method-data-flow/scripts/_internal/safe_process.py",
+    "skills/audit-method-data-flow/scripts/package_integrity.py",
+    "skills/audit-method-data-flow/scripts/skill_outcome.py",
+    "skills/audit-method-data-flow/scripts/update_policy.py",
+    "tests/test_managed_lifecycle.py",
+    "tests/test_package_contract.py",
+    "tests/test_skill_contract.py",
+    "tests/test_validation_contract.py",
+    "validation/release-candidate-test-receipt.json",
+    "validation/v0.1.3-public-consumer-receipt.json"
+  ],
+  "authority": [
+    "VERSION",
+    "CITATION.cff",
+    "SOURCE.md",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/references/package-version.json",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json",
+    "skills/audit-method-data-flow/scripts/skill_outcome.py",
+    "skills/audit-method-data-flow/scripts/update_policy.py",
+    "validation/release-candidate-test-receipt.json"
+  ],
+  "components": [
+    {
+      "component_id": "release-package",
+      "component_type": "distribution-package",
+      "elements": [
+        {
+          "element_id": "release-identity",
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.5 MIT release candidate.",
+          "relation_type": "synchronizes",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "VERSION", "locator": "line:1"},
+            {"source": "CITATION.cff", "locator": "whole-file"},
+            {"source": "CHANGELOG.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/package-version.json", "locator": "whole-file"},
+            {"source": "tests/test_package_contract.py", "locator": "whole-file"},
+            {"source": "tests/test_validation_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/tests"}
+          ],
+          "safe_interpretation": "The full 41-test local suite supports synchronized release identity surfaces at v0.1.5 against the exact accepted map and current interim record.",
+          "required_repair": null
+        },
+        {
+          "element_id": "package-integrity",
+          "target": "The release-candidate package tree binds ordinary files while accepting only allowlisted GitHub-managed frontmatter metadata, including an optional github-pinned value that exactly matches an allowed release tag.",
+          "relation_type": "verifies",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "skills/audit-method-data-flow/scripts/package_integrity.py", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/package-manifest.json", "locator": "whole-file"},
+            {"source": "tests/test_package_contract.py", "locator": "whole-file"},
+            {"source": "tests/test_validation_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/package_manifest"},
+            {"source": "validation/v0.1.3-public-consumer-receipt.json", "locator": "json-pointer:/checks/5"}
+          ],
+          "safe_interpretation": "The current release-candidate package tree matches its manifest, and the regression suite exercises ordinary drift rejection, allowlisted GitHub metadata normalization, a matching tag-valued github-pinned field, mismatched pin rejection, and unknown-key rejection. Public v0.1.5 pinned-install verification remains pending.",
+          "required_repair": null
+        },
+        {
+          "element_id": "managed-update-and-quality-handoff",
+          "target": "After substantive use, the skill runs consent-gated update maintenance and emits one tested content-free receipt. It documents an external analyze-project-claims handoff for an owner-bound local recommended-update preview and separate public approval, but this repository does not execute or verify that consumer behavior. Separately, one closed repository policy and thin full-SHA-pinned caller permit only owner-triaged, protected-environment-gated draft repair without authorizing telemetry, project-content transport, evidence acceptance, merge, release, or installed replacement.",
+          "relation_type": "bounds",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "skills/audit-method-data-flow/SKILL.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/scripts/_internal/safe_process.py", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/scripts/skill_outcome.py", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/scripts/update_policy.py", "locator": "whole-file"},
+            {"source": ".github/managed-skill-policy.json", "locator": "whole-file"},
+            {"source": ".github/workflows/managed-skill-repair.yml", "locator": "whole-file"},
+            {"source": "README.md", "locator": "GitHub-managed repair boundary"},
+            {"source": "PUBLISHING.md", "locator": "managed repair release gates"},
+            {"source": "tests/test_managed_lifecycle.py", "locator": "whole-file"},
+            {"source": "tests/test_skill_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/tests"}
+          ],
+          "safe_interpretation": "The current package and full local suite enforce local update and content-free receipt boundaries plus exact thin-caller identity. The owner-derived preview and separate public-submission approval are documented external-consumer requirements, not behavior executed or verified by this repository; hosted protection, public issue submission, and workflow execution remain unobserved.",
+          "required_repair": null
+        }
+      ]
+    },
+    {
+      "component_id": "scholarly-audit-contract",
+      "component_type": "agent-skill-contract",
+      "elements": [
+        {
+          "element_id": "method-and-claim-flow",
+          "target": "The skill requires explicit dataset, label, component, transformation, output, evaluation, counterevidence, and claim-boundary relations, followed by bounded full-contract reruns after repairs until a clean pass or a three-cycle nonconvergence boundary.",
+          "relation_type": "defines",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "skills/audit-method-data-flow/SKILL.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/claim-chain-clarity.md", "locator": "whole-file"},
+            {"source": "tests/test_skill_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/tests"}
+          ],
+          "safe_interpretation": "The package and full 41-test local suite cover the declared method-flow, cross-section claim-chain anchors, and a bounded repair-and-recheck loop that invalidates earlier passes after edits, reruns all applicable checks, stops after a clean pass, and reports partial/blocked after three unsuccessful cycles.",
+          "required_repair": null
+        },
+        {
+          "element_id": "terminology-and-display-flow",
+          "target": "The skill defines source-backed semantic-universality, first-reader definition, counted-component membership, reader-facing citation closure, and matched-row numerical table contracts plus evidence-bounded figure, table, slide, and generated-artifact gates.",
+          "relation_type": "defines",
+          "method": "executed_test",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {"source": "skills/audit-method-data-flow/SKILL.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/paper-terminology-contract.md", "locator": "whole-file"},
+            {"source": "skills/audit-method-data-flow/references/figure-table-clarity.md", "locator": "whole-file"},
+            {"source": "tests/test_skill_contract.py", "locator": "whole-file"},
+            {"source": "tests/test_package_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/tests"}
+          ],
+          "safe_interpretation": "The package and full 41-test local suite cover the declared terminology and display contracts, including semantic universality, timely first-use definitions, counted-component membership, citation closure, source-classified font roles, declared math fragments, glyph coverage, baseline alignment, explicit evidence-status boundaries, absolute comparator and method endpoints, declared subtraction order, same-row matching, exclusion of target-batch size as an intervention effect, and hidden-precision auditability.",
+          "required_repair": null
+        }
+      ]
+    },
+    {
+      "component_id": "public-distribution",
+      "component_type": "release-process",
+      "elements": [
+        {
+          "element_id": "install-update-claims",
+          "target": "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is separated from pending v0.1.5 CI, immutable release, pinned verification, and activation evidence.",
+          "relation_type": "bounds",
+          "method": "inspected",
+          "check_status": "PENDING",
+          "claim_status": "untested",
+          "evidence": [
+            {"source": "README.md", "locator": "whole-file"},
+            {"source": "PUBLISHING.md", "locator": "whole-file"},
+            {"source": ".github/workflows/validate.yml", "locator": "whole-file"},
+            {"source": "tests/test_validation_contract.py", "locator": "whole-file"},
+            {"source": "validation/release-candidate-test-receipt.json", "locator": "json-pointer:/boundaries"},
+            {"source": "validation/v0.1.3-public-consumer-receipt.json", "locator": "whole-file"}
+          ],
+          "safe_interpretation": "One Windows public v0.1.3 unpinned update and Codex activation plus Claude placement were observed, and the v0.1.3 pinned verifier defect was reproduced. The v0.1.5 candidate remains local until its PR/main CI, immutable release, pinned-install verification, and available-client activation checks complete.",
+          "required_repair": "Complete the documented external release and consumer smoke gates without broadening their evidence scope."
+        }
+      ]
+    }
+  ],
+  "strongest_safe_claim": "The local v0.1.5 release candidate is structurally consistent across release identity, package integrity, allowlisted tag-matching github-pinned metadata, inherited scholarly audit contracts, bounded convergent rechecks, matched-row numerical table rules, consent-gated update maintenance, content-free quality receipts, a documented owner-bound external recommended-update handoff, and a repository-bound thin managed-repair caller pinned to analyzer workflow f15311473e33d15f0ab9eee5a4bfca385ff4c5db.",
+  "claim_boundary": "This does not establish scientific validity, protected GitHub environments, hosted canary, agent execution, draft publication, v0.1.5 public CI success, immutable v0.1.5 publication, public v0.1.5 pinned installation, Claude runtime invocation, deterministic host routing, or any public issue submission.",
+  "unresolved_uncertainties": [
+    "The v0.1.5 replacement PR and exact-main CI have not yet passed.",
+    "The v0.1.5 tag and immutable GitHub release do not yet exist.",
+    "Public pinned v0.1.5 package verification and fresh available-client activation have not yet been observed."
+  ]
+}
