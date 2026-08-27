@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-27T05:16:00.534779Z",
+  "accepted_at_utc": "2026-08-27T04:36:35.748502Z",
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -238,16 +238,16 @@
       ]
     }
   ],
-  "created_at_utc": "2026-08-27T05:11:20.984370Z",
+  "created_at_utc": "2026-08-27T04:26:44.109164Z",
   "integrity": {
-    "canonical_payload_sha256": "679626a9b5dc33066c3308940f1ee0a879c4ef9293f9ad7229996f7a5b4b73bb"
+    "canonical_payload_sha256": "e8fbbebb0ba97864467307acc4e43abd293e3f02eaa2533fb82432078d1a195f"
   },
-  "map_id": "component-map-e1c145536297",
+  "map_id": "component-map-0c4577e414f4",
   "map_state": "accepted",
   "mapper_version": "1.3.0",
   "objective": "Map the audit-method-data-flow v0.2.0 release candidate's identity, package integrity, confidential local method/claim/evidence contract, inherited scholarly audit contracts, managed maintenance and repair boundaries, and pending public lifecycle gates.",
-  "origin_scan_id": "20260827T051120984370Z-3838f332",
-  "previous_map_id": "component-map-0c4577e414f4",
+  "origin_scan_id": "20260827T042644109164Z-593a6cd8",
+  "previous_map_id": "component-map-72111294987f",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -318,7 +318,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "998f56bc97ab0ee196673b9e6a9fec9e56941f534908d9b9ee86741d75dcb286",
+      "sha256": "4a1799d128204abead286c600a97052c5d23d1eec9505ea44b84287c27bd6d7d",
       "source": "PUBLISHING.md"
     },
     {
@@ -378,13 +378,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "bf3209d74833c3ca597522d66714737b1d34311aeb5f21730410dba48c01b73b",
+      "sha256": "dc70dee9bc4487b0a07aecff2351ed9002c0f7cf47a6b265c1b100086d82cfd0",
       "source": "skills/audit-method-data-flow/references/method-evidence-contract.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "f9bcd390c518a9c79e69646ba57036c76e9a0742007592c781f4ae97679ecb7d",
+      "sha256": "ff6bd9e38bd1dc1de742afa82ca7e279615eb84c818f3fa911597497ac540c54",
       "source": "skills/audit-method-data-flow/references/package-manifest.json"
     },
     {
@@ -414,7 +414,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "7bb532a45c580c183ebc992d1d0384d68ebe7903b4188c5118665ddb3d53f01a",
+      "sha256": "15adbb87787f524499420449ccb8c2c17778d0653f0a7e1cb0816c776ca7c0ad",
       "source": "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
     },
     {
@@ -444,7 +444,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "b12342a55c574c021ce8d42699b30577b246f89f8408a284e49d02e958418ece",
+      "sha256": "e746c008c4cd963b0048db6a69abfda2057a84a45d8138c304dadaf5e2f7e48e",
       "source": "tests/test_method_evidence_contract.py"
     },
     {

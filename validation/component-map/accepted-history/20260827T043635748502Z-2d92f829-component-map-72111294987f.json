@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-08-27T05:16:00.534779Z",
+  "accepted_at_utc": "2026-08-26T17:00:42.009276Z",
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -10,8 +10,7 @@
     "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json",
     "skills/audit-method-data-flow/scripts/skill_outcome.py",
     "skills/audit-method-data-flow/scripts/update_policy.py",
-    "skills/audit-method-data-flow/references/method-evidence-contract.md",
-    "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
+    "validation/release-candidate-test-receipt.json"
   ],
   "components": [
     {
@@ -38,12 +37,16 @@
               "source": "tests/test_validation_contract.py"
             },
             {
+              "locator": "json-pointer:/boundaries",
+              "source": "validation/release-candidate-test-receipt.json"
+            },
+            {
               "locator": "whole-file",
               "source": "validation/v0.1.3-public-consumer-receipt.json"
             }
           ],
           "relation_type": "bounds",
-          "target": "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is separated from pending v0.2.0 CI, immutable release, pinned verification, and activation evidence."
+          "target": "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is separated from pending v0.1.5 CI, immutable release, pinned verification, and activation evidence."
         }
       ]
     },
@@ -97,6 +100,10 @@
             {
               "locator": "whole-file",
               "source": "tests/test_skill_contract.py"
+            },
+            {
+              "locator": "json-pointer:/tests",
+              "source": "validation/release-candidate-test-receipt.json"
             }
           ],
           "relation_type": "bounds",
@@ -120,6 +127,10 @@
             {
               "locator": "whole-file",
               "source": "tests/test_validation_contract.py"
+            },
+            {
+              "locator": "json-pointer:/package_manifest",
+              "source": "validation/release-candidate-test-receipt.json"
             },
             {
               "locator": "json-pointer:/checks/5",
@@ -155,10 +166,14 @@
             {
               "locator": "whole-file",
               "source": "tests/test_validation_contract.py"
+            },
+            {
+              "locator": "json-pointer:/tests",
+              "source": "validation/release-candidate-test-receipt.json"
             }
           ],
           "relation_type": "synchronizes",
-          "target": "Version, citation, license, changelog, and packaged version identify one v0.2.0 MIT release candidate."
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.1.5 MIT release candidate."
         }
       ]
     },
@@ -166,29 +181,6 @@
       "component_id": "scholarly-audit-contract",
       "component_type": "agent-skill-contract",
       "elements": [
-        {
-          "element_id": "confidential-method-evidence-contract",
-          "evidence_locators": [
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/SKILL.md"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/references/method-evidence-contract.md"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
-            },
-            {
-              "locator": "whole-file",
-              "source": "tests/test_method_evidence_contract.py"
-            }
-          ],
-          "relation_type": "validated_by",
-          "target": "The skill provides a bounded local JSON contract for authorization, confidentiality, complete method branches, cross-section claims, and hash-bound evidence; reports identify gaps by stable ID without echoing claim prose or performing external processing."
-        },
         {
           "element_id": "method-and-claim-flow",
           "evidence_locators": [
@@ -203,6 +195,10 @@
             {
               "locator": "whole-file",
               "source": "tests/test_skill_contract.py"
+            },
+            {
+              "locator": "json-pointer:/tests",
+              "source": "validation/release-candidate-test-receipt.json"
             }
           ],
           "relation_type": "defines",
@@ -230,6 +226,10 @@
             {
               "locator": "whole-file",
               "source": "tests/test_skill_contract.py"
+            },
+            {
+              "locator": "json-pointer:/tests",
+              "source": "validation/release-candidate-test-receipt.json"
             }
           ],
           "relation_type": "defines",
@@ -238,16 +238,16 @@
       ]
     }
   ],
-  "created_at_utc": "2026-08-27T05:11:20.984370Z",
+  "created_at_utc": "2026-08-26T16:58:15.795997Z",
   "integrity": {
-    "canonical_payload_sha256": "679626a9b5dc33066c3308940f1ee0a879c4ef9293f9ad7229996f7a5b4b73bb"
+    "canonical_payload_sha256": "9886ebc9092540b1d0d9d298baf5572e785c5d708d3defb4a221d8f7503b8f44"
   },
-  "map_id": "component-map-e1c145536297",
+  "map_id": "component-map-72111294987f",
   "map_state": "accepted",
   "mapper_version": "1.3.0",
-  "objective": "Map the audit-method-data-flow v0.2.0 release candidate's identity, package integrity, confidential local method/claim/evidence contract, inherited scholarly audit contracts, managed maintenance and repair boundaries, and pending public lifecycle gates.",
-  "origin_scan_id": "20260827T051120984370Z-3838f332",
-  "previous_map_id": "component-map-0c4577e414f4",
+  "objective": "Map the v0.1.5 release candidate's identity, integrity, tag-matching GitHub CLI pinned-install compatibility, inherited scholarly audit contract, bounded convergent rechecks, matched-row numerical table rules, consent-gated update maintenance, owner-bound recommended-update handoff, content-free quality receipt, full-SHA-pinned managed repair caller, and public distribution boundaries to direct source and test evidence.",
+  "origin_scan_id": "20260826T165815795997Z-e66b9a42",
+  "previous_map_id": "component-map-82bda8d28227",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -277,13 +277,11 @@
     "tests/test_package_contract.py",
     "tests/test_skill_contract.py",
     "tests/test_validation_contract.py",
-    "validation/v0.1.3-public-consumer-receipt.json",
-    "skills/audit-method-data-flow/references/method-evidence-contract.md",
-    "skills/audit-method-data-flow/scripts/method_evidence_contract.py",
-    "tests/test_method_evidence_contract.py"
+    "validation/release-candidate-test-receipt.json",
+    "validation/v0.1.3-public-consumer-receipt.json"
   ],
   "skill_name": "analyze-project-claims",
-  "skill_sha256": "b0c29b21680f02657af6533fba19c94067b44f1e651408c7b1f835c920b9a260",
+  "skill_sha256": "c30585a2c54b9ed2e92049ceefa06f9b3a6efb886313cbfb592825e74156d451",
   "source_snapshot": [
     {
       "exists": true,
@@ -306,25 +304,25 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "a31f51897eae8779a24d7992f366d9cddf5853ab41f80e5a0d673ac04867af4a",
+      "sha256": "bba0d4e40892e83b8dbb706bfb089eadb6aedefbb8de3d479e7be8250be528f4",
       "source": "CHANGELOG.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "31469bf774874904f0f87275ea7e131871cdfd5b113d036ba4a52dbd7afd8aa1",
+      "sha256": "bc386e651cb358d1f483ba22caab515b860077edfe70f0e7ea7603d3f0f90715",
       "source": "CITATION.cff"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "998f56bc97ab0ee196673b9e6a9fec9e56941f534908d9b9ee86741d75dcb286",
+      "sha256": "10ba200d175f1967e885de8abec0874d9df9c1097194d96ec962c5578b70ec25",
       "source": "PUBLISHING.md"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "16be2da3f8e774852e26afa31f189b83b64d2dd530c0366fd7f5e3de2cf8f43f",
+      "sha256": "18368554df0f8725b5e0b9a29a03f9d03517412458079931cf73855c6029e022",
       "source": "README.md"
     },
     {
@@ -336,13 +334,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9",
+      "sha256": "800cf1c0392b24de7c0a1c6ea6778ecb433dec71c49a150bce96a98477527b2f",
       "source": "VERSION"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "31469bf774874904f0f87275ea7e131871cdfd5b113d036ba4a52dbd7afd8aa1",
+      "sha256": "bc386e651cb358d1f483ba22caab515b860077edfe70f0e7ea7603d3f0f90715",
       "source": "skills/audit-method-data-flow/CITATION.cff"
     },
     {
@@ -354,7 +352,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "698c0ff88654e26d34217a832c8fd3959cdb56010e00f2781f9349de9ebc52ed",
+      "sha256": "8f43eb2323cc758c97236df21e1608c27d962c2a433991aa0380119734077ca2",
       "source": "skills/audit-method-data-flow/SKILL.md"
     },
     {
@@ -378,19 +376,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "bf3209d74833c3ca597522d66714737b1d34311aeb5f21730410dba48c01b73b",
-      "source": "skills/audit-method-data-flow/references/method-evidence-contract.md"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "f9bcd390c518a9c79e69646ba57036c76e9a0742007592c781f4ae97679ecb7d",
+      "sha256": "0fe412daf790ee05c21031ce3f1bb1be4a912ffef014b98c6808ca72a7d7268c",
       "source": "skills/audit-method-data-flow/references/package-manifest.json"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "ef5456edd4244cf333fc7f224c8d6743db7ab3899d8de4d46f841b54f94c26b8",
+      "sha256": "d4c2329ca4100259ce06724bb783428bda5fddeae4d6329d15a75c1948568b8e",
       "source": "skills/audit-method-data-flow/references/package-version.json"
     },
     {
@@ -414,13 +406,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "7bb532a45c580c183ebc992d1d0384d68ebe7903b4188c5118665ddb3d53f01a",
-      "source": "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "5083a9d8720aa6ed9f39ba2022c96c6cc40c132c190275d91dbf43988f28f622",
+      "sha256": "944cea3fa00daf34441988dd1dc141f444ce2336374a6b53a81d817365ed1ce5",
       "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
     },
     {
@@ -438,19 +424,13 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "770d0ac85f3f53abcd518b95c1b44007749ff89c5d190279c1f0dfa329cd248d",
+      "sha256": "33d9e8dff65a396d8644f8cc935f4500f4420545fbdfaa12e8968d303e525502",
       "source": "tests/test_managed_lifecycle.py"
     },
     {
       "exists": true,
       "kind": "file",
-      "sha256": "b12342a55c574c021ce8d42699b30577b246f89f8408a284e49d02e958418ece",
-      "source": "tests/test_method_evidence_contract.py"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "d1f4782f77d1b75e641523d5bc12472302bc2f8ed09864c19f3c9b4c73e626db",
+      "sha256": "5ac4c09694f5b9e84ed38eab60cf86b250503e48d7ee994d0d93ec34a7b6dc6c",
       "source": "tests/test_package_contract.py"
     },
     {
@@ -464,6 +444,12 @@
       "kind": "file",
       "sha256": "d5a4c20cf520f38d08b0c316b7111b468f90b192c10371dfb0e75c122b2dca9e",
       "source": "tests/test_validation_contract.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "1afe86c6230ea27c0e1e80097ae39f2c26d1bb971db2acd9f599be6f5417d018",
+      "source": "validation/release-candidate-test-receipt.json"
     },
     {
       "exists": true,

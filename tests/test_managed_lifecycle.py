@@ -87,7 +87,7 @@ class ManagedLifecycleTests(unittest.TestCase):
                 "owner": "Ian-Tseng",
                 "repository": "audit-method-data-flow",
                 "skill": "audit-method-data-flow",
-                "version": "0.1.5",
+                "version": "0.2.0",
                 "package_digest_sha256": payload["package_digest_sha256"],
                 "identity_authority": "producer_declared_untrusted",
             },

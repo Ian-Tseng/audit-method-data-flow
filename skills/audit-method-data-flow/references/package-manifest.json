@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "CITATION.cff",
-      "sha256": "bc386e651cb358d1f483ba22caab515b860077edfe70f0e7ea7603d3f0f90715"
+      "sha256": "31469bf774874904f0f87275ea7e131871cdfd5b113d036ba4a52dbd7afd8aa1"
     },
     {
       "path": "LICENSE",
@@ -14,7 +14,7 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "8f43eb2323cc758c97236df21e1608c27d962c2a433991aa0380119734077ca2"
+      "sha256": "698c0ff88654e26d34217a832c8fd3959cdb56010e00f2781f9349de9ebc52ed"
     },
     {
       "path": "agents/openai.yaml",
@@ -29,8 +29,12 @@
       "sha256": "3dda1ca91d6be2ffdd86e1a25dc52bf18a67a181c22c805d7a2cee02fe3910c6"
     },
     {
+      "path": "references/method-evidence-contract.md",
+      "sha256": "bf3209d74833c3ca597522d66714737b1d34311aeb5f21730410dba48c01b73b"
+    },
+    {
       "path": "references/package-version.json",
-      "sha256": "d4c2329ca4100259ce06724bb783428bda5fddeae4d6329d15a75c1948568b8e"
+      "sha256": "ef5456edd4244cf333fc7f224c8d6743db7ab3899d8de4d46f841b54f94c26b8"
     },
     {
       "path": "references/paper-terminology-contract.md",
@@ -45,8 +49,12 @@
       "sha256": "a2042ec7d6c52523ffe6f053c15660632697454c366bf0d709f4b00eb92a0a13"
     },
     {
+      "path": "scripts/method_evidence_contract.py",
+      "sha256": "7bb532a45c580c183ebc992d1d0384d68ebe7903b4188c5118665ddb3d53f01a"
+    },
+    {
       "path": "scripts/package_integrity.py",
-      "sha256": "944cea3fa00daf34441988dd1dc141f444ce2336374a6b53a81d817365ed1ce5"
+      "sha256": "5083a9d8720aa6ed9f39ba2022c96c6cc40c132c190275d91dbf43988f28f622"
     },
     {
       "path": "scripts/skill_outcome.py",

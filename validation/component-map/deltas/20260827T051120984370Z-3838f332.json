@@ -1,0 +1,52 @@
+{
+  "accepted_map_id": "component-map-0c4577e414f4",
+  "action": "drift_detected",
+  "candidate_map_id": "component-map-e1c145536297",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "PUBLISHING.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/method-evidence-contract.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_method_evidence_contract.py"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "ce63f493a0b3784c2ff35939b8ca4ce06a026d61789dedf27a6a9a5f6286f44b"
+  },
+  "recorded_at_utc": "2026-08-27T05:11:20.984370Z",
+  "scan_id": "20260827T051120984370Z-3838f332",
+  "schema_version": "1.0"
+}
