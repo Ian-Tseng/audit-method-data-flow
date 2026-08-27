@@ -220,6 +220,24 @@ Fail the audit if exact headings drift, an active body contains a forbidden alia
 
 ## Validate
 
+Use a convergent repair loop for every audit that permits edits:
+
+1. Run the complete applicable audit and record every in-scope finding.
+2. Repair the findings, then rebuild and reload every affected reader-facing
+   artifact from disk.
+3. Treat any repair as invalidating the preceding pass. Restart every
+   applicable source, contract, generated-artifact, and visual check from the
+   beginning; do not resume only at the repaired item.
+4. Repeat until one complete pass makes no further repair and reports zero
+   unresolved in-scope failures.
+5. Stop after at most three repair-and-recheck cycles. If an external
+   dependency, missing authority, repeated finding set, or the cycle bound
+   prevents convergence, report the artifact as blocked or partially verified
+   rather than clean.
+
+A complete clean pass closes the audit. The three-cycle bound is a safety stop,
+not permission to call a still-changing artifact complete.
+
 Ask whether a skeptical reader can answer, without searching elsewhere:
 
 - What dataset or source supplies this branch?

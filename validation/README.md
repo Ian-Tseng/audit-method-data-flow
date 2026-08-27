@@ -1,26 +1,26 @@
 # Validation Evidence
 
 This directory separates structural mapping, semantic claims, execution
-receipts, and derived reports for the v0.1.4 release candidate.
+receipts, and derived reports for the v0.1.5 release candidate.
 
 - [`component-map/accepted-map.json`](component-map/accepted-map.json) is the
-  exact owner-accepted map `component-map-a8bab6017bdc` with SHA-256
-  `6272bd254fb4e931d8f09bfda3b9104bbcb288ac4b2a3c5139446d63de802faa`.
+  exact owner-accepted map `component-map-72111294987f` with SHA-256
+  `1877c51f0e2919bde6c7f79dd91fdae3ef6b62de5b322551bab86f1f4466b1b3`.
 - [`release-candidate-test-receipt.json`](release-candidate-test-receipt.json)
-  records the full 40-test local suite, package verification, and the official
-  skill validator.
+  records the passing full 41-test local suite, package verification, and the
+  official skill validator.
 - [`managed-workflow-pin-v083-receipt.json`](managed-workflow-pin-v083-receipt.json)
   records the focused local pin checks and their hosted-lifecycle limits.
 - [`managed-workflow-pin-v083-final-input.json`](managed-workflow-pin-v083-final-input.json)
   is the reviewed v2 pin claim/evidence/binding input.
-- [`history/20260825T044942270679Z-a30a4870.json`](history/20260825T044942270679Z-a30a4870.json)
-  is the current append-only semantic authority with canonical digest
-  `8bad41397efa9b2513b1af1e030530eddaa7c974a6cf8e279c70d78af26d4a90`.
-- [`reports/20260825T044942270679Z-a30a4870.md`](reports/20260825T044942270679Z-a30a4870.md)
+- [`history/20260826T170245964364Z-9e9090ff.json`](history/20260826T170245964364Z-9e9090ff.json)
+  is the current final append-only semantic authority with canonical digest
+  `fdc550991b69c919cf6dda467993f5dc7b8361bcd94192f34a8d98c8f081013a`.
+- [`reports/20260826T170245964364Z-9e9090ff.md`](reports/20260826T170245964364Z-9e9090ff.md)
   is its deterministic human-readable view.
 
 Earlier release records, inputs, and maps remain immutable historical states.
-The current pin record is `PARTIAL`: local exact-SHA consistency and focused
-validation do not establish protected environments, hosted canary, agent
-execution, draft publication, producer PR/main CI, merge, release, installed
+The current v0.1.5 record is `PARTIAL`: the full local suite and package
+verification do not establish replacement PR/main CI, protected environments,
+hosted canary, agent execution, draft publication, merge, release, installed
 replacement, fresh activation, public issue submission, or scientific validity.

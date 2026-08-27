@@ -136,6 +136,32 @@ class SkillContractTests(unittest.TestCase):
             self.assertIn(anchor, display)
         self.assertIn("Nature-specific rather than universal", display)
 
+        display_folded = " ".join(display.split())
+        for anchor in (
+            "absolute comparator and method values",
+            "define the subtraction order",
+            "same evaluation rows",
+            "nonmatched descriptive quantities",
+            "do not imply an intervention effect",
+            "target-batch size",
+            "higher-precision run summaries",
+            "row-matching status",
+        ):
+            self.assertIn(anchor, display_folded)
+
+    def test_validate_contract_requires_bounded_convergent_rechecks(self):
+        skill_folded = " ".join(SKILL.casefold().split())
+        for anchor in (
+            "convergent repair loop",
+            "rebuild and reload every affected reader-facing artifact",
+            "invalidating the preceding pass",
+            "restart every applicable source",
+            "at most three repair-and-recheck cycles",
+            "one complete pass makes no further repair",
+            "blocked or partially verified rather than clean",
+        ):
+            self.assertIn(anchor, skill_folded)
+
     def test_semantic_universality_gate_distinguishes_standard_and_project_terms(self):
         contract = (PACKAGE / "references" / "paper-terminology-contract.md").read_text(
             encoding="utf-8"
