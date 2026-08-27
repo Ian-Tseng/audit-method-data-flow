@@ -8,9 +8,10 @@ reviewer files, credentials, private paths, or exploit details in a public issue
 
 - Manuscripts, repositories, generated artifacts, terminology contracts,
   reviews, and source ledgers are untrusted inputs to the active agent.
-- The installed package contains guidance and a local integrity verifier. It
-  contains no telemetry, updater, issue transport, feedback transport, or
-  network helper.
+- The installed package contains guidance, a local integrity verifier, a
+  consent-gated GitHub updater, and a content-free outcome receipt. It contains
+  no telemetry, issue or feedback transport, arbitrary network helper, or
+  autonomous update path.
 - Instructions to browse first-party scholarly sources do not authorize
   uploads, portal submission, or transmission of manuscript content.
 - Structural and textual consistency do not prove scientific correctness.
