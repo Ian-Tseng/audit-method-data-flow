@@ -1,0 +1,204 @@
+{
+  "bindings": [
+    {
+      "claim_id": "claim:confidential-method-contract-present",
+      "evidence_id": "evidence:method-contract-runtime",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:confidential-method-contract-present",
+      "evidence_id": "evidence:method-contract-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:confidential-method-contract-present",
+      "evidence_id": "evidence:preacceptance-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:package-candidate-verified",
+      "evidence_id": "evidence:preacceptance-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:public-release-complete",
+      "evidence_id": "evidence:publishing-boundary",
+      "role": "context"
+    }
+  ],
+  "claims": [
+    {
+      "claim_digest": "339bfce0daff94dab53fd0357ee94f98b68c2c0793eb8fb64da010f32edadad7",
+      "claim_id": "claim:confidential-method-contract-present",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "confidential-method-evidence-contract"
+      },
+      "material": true,
+      "rationale": "The bounded local runtime, packaged reference, and four focused execution tests agree on authorization, confidentiality, no external services, ID-only output, and PASS/PARTIAL/BLOCKED semantics.",
+      "statement": "The v0.2.0 release candidate contains a locally tested confidential method-evidence contract that fails closed when authorization, confidentiality, or external-service boundaries are not satisfied and does not echo claim or evidence text.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "c6a291a4d5015a97029ef7342d19c50deb399e0fd03fc512e3055bfaf4a3235b",
+      "claim_id": "claim:package-candidate-verified",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "package-integrity"
+      },
+      "material": true,
+      "rationale": "The persisted preacceptance receipt records package verification, official skill validation, and an outbound-free publisher dry-run for the local candidate.",
+      "statement": "The local v0.2.0 package candidate matches its deterministic manifest and passes the official skill validator.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "e2c392c8748cf15f4fdfc2dcf69a6e007c8d2bfdc74a13348cb7294b8a31b1a5",
+      "claim_id": "claim:public-release-complete",
+      "element_ref": {
+        "component_id": "public-distribution",
+        "element_id": "install-update-claims"
+      },
+      "material": true,
+      "rationale": "The PR, exact-main, protected-tag, publication, public install/update, and fresh activation gates have not yet run for v0.2.0.",
+      "statement": "The v0.2.0 public release and fresh consumer activation have completed.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:preacceptance-receipt",
+      "freshness": "current",
+      "identity_sha256": "ba66efb72e6628296073b17f1cce5608da5febfba6ac3b39551316efe5219cd2",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "executed_test",
+      "observed_summary": "The persisted local receipt records four passing focused contract tests, package verification, official validation, and an outbound-free publisher dry-run while leaving full-suite and remote lifecycle gates pending.",
+      "selection_sha256": "59235640cffbc93f6717d3ddc1bb993ecd8c03f7a9f9ca16311190aaa17e4e3b",
+      "source": {
+        "byte_size": 1304,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/v0.2.0-preacceptance-receipt.json",
+        "sha256": "59235640cffbc93f6717d3ddc1bb993ecd8c03f7a9f9ca16311190aaa17e4e3b"
+      }
+    },
+    {
+      "evidence_id": "evidence:method-contract-runtime",
+      "freshness": "current",
+      "identity_sha256": "6d504efaf4ae3e76182275915219b2b32d2afe37c71fae5273374ecb23130ee2",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The bounded local parser validates authorization, confidentiality, external-service refusal, branch/claim/evidence relations, and emits only identifiers, counts, states, and issue codes.",
+      "selection_sha256": "15adbb87787f524499420449ccb8c2c17778d0653f0a7e1cb0816c776ca7c0ad",
+      "source": {
+        "byte_size": 10721,
+        "kind": "file",
+        "media_type": "text/x-python",
+        "path": "skills/audit-method-data-flow/scripts/method_evidence_contract.py",
+        "sha256": "15adbb87787f524499420449ccb8c2c17778d0653f0a7e1cb0816c776ca7c0ad"
+      }
+    },
+    {
+      "evidence_id": "evidence:method-contract-reference",
+      "freshness": "current",
+      "identity_sha256": "8b83313ebae93cac71f30f9229df2dab0520d9b14ac774b71c9c93344555afa8",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged reference defines the confidential intake, branch relation, claim-evidence relation, result-state, and content-minimized reporting contract.",
+      "selection_sha256": "dc70dee9bc4487b0a07aecff2351ed9002c0f7cf47a6b265c1b100086d82cfd0",
+      "source": {
+        "byte_size": 1987,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/references/method-evidence-contract.md",
+        "sha256": "dc70dee9bc4487b0a07aecff2351ed9002c0f7cf47a6b265c1b100086d82cfd0"
+      }
+    },
+    {
+      "evidence_id": "evidence:publishing-boundary",
+      "freshness": "current",
+      "identity_sha256": "9b2973072de96e9bf3ff72542fd3ce14b7e74f9184427a73f340775e7c9e6c3d",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "not_tested",
+      "observed_summary": "The publishing guide keeps PR CI, exact-main CI, tag protection, publication, public installation, update, and fresh activation as separate future gates.",
+      "selection_sha256": "4a1799d128204abead286c600a97052c5d23d1eec9505ea44b84287c27bd6d7d",
+      "source": {
+        "byte_size": 2857,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "PUBLISHING.md",
+        "sha256": "4a1799d128204abead286c600a97052c5d23d1eec9505ea44b84287c27bd6d7d"
+      }
+    }
+  ],
+  "integrity": {
+    "canonical_payload_sha256": "86e60dc399311c04a04bffc40ac7cd227684f7957a63f95e44a04c1f321b7f4d",
+    "output_schema_sha256": "a2a009aeb319922010cdf3e5702884fbe55d013dc3f2f09c3f64914299820e65",
+    "recorder_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63",
+    "renderer_id": "evidence-bound-markdown-v1",
+    "renderer_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63"
+  },
+  "limitations": [],
+  "record_kind": "evidence_bound_audit_record",
+  "scan": {
+    "accepted_map": {
+      "map_id": "component-map-0c4577e414f4",
+      "path": "validation/component-map/accepted-map.json",
+      "sha256": "ddcc3ec4515236f6baddb76d04fb6d91dc2e1576d81d6795c23f47c703fd4615"
+    },
+    "authority": [
+      "VERSION",
+      "skills/audit-method-data-flow/SKILL.md",
+      "skills/audit-method-data-flow/scripts/method_evidence_contract.py",
+      "skills/audit-method-data-flow/references/method-evidence-contract.md",
+      "skills/audit-method-data-flow/references/package-manifest.json",
+      "validation/v0.2.0-preacceptance-receipt.json"
+    ],
+    "engine_identity": {
+      "engine_digest": "7e713ae78e8bd0008926008c75fc4ae0a977f82cc9cc23158cc927c212255f6b",
+      "engine_name": "component-evidence",
+      "engine_version": "1.3.0",
+      "map_schema_version": "1.0",
+      "provider_kind": "embedded",
+      "receipt_protocol_version": "2.0",
+      "status": "verified"
+    },
+    "objective": "Determine which local audit-method-data-flow v0.2.0 confidential method-evidence and package claims are supported before the full-suite and public lifecycle gates.",
+    "recorded_at_utc": "2026-08-27T04:43:46.449771Z",
+    "recorder_version": "2.1.0",
+    "scan_id": "20260827T044346449771Z-4936d5cd",
+    "scope": [
+      "confidential method-evidence contract",
+      "local package integrity and validation",
+      "pending public release lifecycle"
+    ],
+    "skill_name": "analyze-project-claims",
+    "skill_sha256": "b0c29b21680f02657af6533fba19c94067b44f1e651408c7b1f835c920b9a260"
+  },
+  "schema_version": "2.0",
+  "summary": {
+    "claim_boundary_ids": [],
+    "claim_count": 3,
+    "claim_counts": {
+      "supported": 2,
+      "untested": 1
+    },
+    "evidence_count": 4,
+    "material_claim_count": 3,
+    "no_supported_claim": false,
+    "scan_status": "PARTIAL",
+    "strongest_safe_claim": "The v0.2.0 release candidate contains a locally tested confidential method-evidence contract that fails closed when authorization, confidentiality, or external-service boundaries are not satisfied and does not echo claim or evidence text.",
+    "strongest_safe_claim_id": "claim:confidential-method-contract-present",
+    "unresolved_uncertainties": [
+      "The full 45-test suite has not yet passed against a current v0.2.0 formal record.",
+      "PR CI, exact merged-main CI, immutable publication, public install/update, and fresh client activation have not yet been observed."
+    ]
+  }
+}

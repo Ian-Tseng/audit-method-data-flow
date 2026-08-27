@@ -31,20 +31,28 @@ installed replacement, or activation. Roll back policy and caller SHA together.
    and Windows so committed checkout bytes, rather than an unnormalized local
    worktree view, are the release authority.
 
-6. Review the exact diff, push a versioned feature branch, open a PR whose title
+6. Confirm the exact owner-accepted component map is unchanged, run evidence
+   preflight, and verify the current record/report named by
+   validation/README.md:
+
+       py -3 -X utf8 <analyze-project-claims-root>\scripts\reconcile_component_map.py reconcile --observation validation\component-map-observation-v020.json --map-root validation\component-map --project-root .
+       py -3 -X utf8 <analyze-project-claims-root>\scripts\record_scan.py preflight --map-root validation\component-map --project-root .
+       py -3 -X utf8 <analyze-project-claims-root>\scripts\record_scan.py verify --record validation\history\<current>.json --map-root validation\component-map --project-root . --report validation\reports\<current>.md
+
+7. Review the exact diff, push a versioned feature branch, open a PR whose title
    starts with the release version, and require every PR job to pass.
-7. Merge without bypass and require the exact merged main commit to pass every
+8. Merge without bypass and require the exact merged main commit to pass every
    main CI job. The initial non-installable repository bootstrap is not a skill
    release; every supported package release uses this PR gate.
-8. Before tagging, require an active no-bypass `refs/tags/v*` update/deletion
+9. Before tagging, require an active no-bypass `refs/tags/v*` update/deletion
    ruleset, private vulnerability reporting, and GitHub release immutability.
-9. From exact merged main:
+10. From exact merged main:
 
        gh skill publish .\skills --dry-run
-       gh skill publish .\skills --tag v0.1.5
-       gh release verify v0.1.5
+       gh skill publish .\skills --tag v0.2.0
+       gh release verify v0.2.0
 
-10. In separate disposable consumer repositories, test public preview,
+11. In separate disposable consumer repositories, test public preview,
     Codex/Claude installation, list, directory-scoped update dry-run, package
     verification, helper execution, cleanup, and fresh activation when each
     client executable exists.

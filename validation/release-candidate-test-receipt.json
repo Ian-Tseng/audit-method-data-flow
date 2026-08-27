@@ -1,23 +1,21 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-08-27",
-  "release_candidate": "0.1.5",
+  "recorded_at_utc": "2026-08-27T05:19:31Z",
+  "release_candidate": "0.2.0",
   "tests": {
     "command": "py -3 -X utf8 -m unittest discover -s tests -v",
     "status": "PASS",
-    "tests_run": 41,
+    "tests_run": 55,
     "failures": 0,
     "errors": 0,
     "skipped": 0
   },
   "pre_acceptance_product_tests": {
     "commands": [
-      "py -3 -X utf8 -m unittest discover -s tests -p test_managed_lifecycle.py -v",
-      "py -3 -X utf8 -m unittest discover -s tests -p test_package_contract.py -v",
-      "py -3 -X utf8 -m unittest discover -s tests -p test_skill_contract.py -v"
+      "py -3 -X utf8 -m unittest discover -s tests -p test_method_evidence_contract.py -v"
     ],
     "status": "PASS",
-    "tests_run": 35,
+    "tests_run": 14,
     "failures": 0,
     "errors": 0,
     "skipped": 0
@@ -25,8 +23,8 @@
   "package_manifest": {
     "command": "py -3 -X utf8 skills/audit-method-data-flow/scripts/package_integrity.py verify",
     "status": "PACKAGE_VERIFIED",
-    "digest_sha256": "dddb7c336c39a4e5f906c63564fb4960382369da0a8b2044e3dba47a6be6fa6a",
-    "files": 13
+    "digest_sha256": "7a847016c887a19ff1d1651d498c0d39ba6d64a05e4659494a40b4e96b85a49e",
+    "files": 15
   },
   "official_validator": {
     "command": "py -3 -X utf8 <skill-creator-root>/scripts/quick_validate.py skills/audit-method-data-flow",
@@ -35,8 +33,8 @@
   },
   "boundaries": [
     "These local checks do not establish scientific validity.",
-    "The full 41-test suite passes against the exact accepted component map and current interim formal record; the package verifier and official validator also pass.",
-    "Public v0.1.5 PR/main CI, agent execution, draft publication, release immutability, pinned-install verification, deterministic host routing, and public issue submission are not covered by this local receipt.",
+    "The full 55-test suite passes against the exact accepted component map and current interim formal record; the package verifier and official validator also pass.",
+    "Public v0.2.0 PR/main CI, agent execution, draft publication, release immutability, pinned-install verification, deterministic host routing, and public issue submission are not covered by this local receipt.",
     "Protected managed-repair environments and dry-run canary evidence are hosted external state and are not established by this local receipt.",
     "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is recorded separately in validation/v0.1.3-public-consumer-receipt.json."
   ]

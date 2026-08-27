@@ -45,7 +45,7 @@ def text_files(root: Path):
 class PackageContractTests(unittest.TestCase):
     def test_release_identity_is_synchronized(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-        self.assertEqual(version, "0.1.5")
+        self.assertEqual(version, "0.2.0")
         package_version = json.loads(
             (PACKAGE / "references" / "package-version.json").read_text(
                 encoding="utf-8"
@@ -83,8 +83,8 @@ class PackageContractTests(unittest.TestCase):
         module = load_integrity_module()
         cases = (
             ("refs/heads/main", None),
-            ("refs/tags/v0.1.5", None),
-            ("refs/tags/v0.1.5", "v0.1.5"),
+            ("refs/tags/v0.2.0", None),
+            ("refs/tags/v0.2.0", "v0.2.0"),
         )
         for github_ref, github_pinned in cases:
             with self.subTest(
@@ -123,7 +123,7 @@ class PackageContractTests(unittest.TestCase):
                 "metadata:\n"
                 "  github-path: skills/audit-method-data-flow\n"
                 "  github-pinned: v0.1.3\n"
-                "  github-ref: refs/tags/v0.1.5\n"
+                "  github-ref: refs/tags/v0.2.0\n"
                 "  github-repo: https://github.com/Ian-Tseng/audit-method-data-flow\n"
                 "  github-tree-sha: 0123456789abcdef0123456789abcdef01234567\n"
             )

@@ -13,6 +13,10 @@ The skill keeps four surfaces distinct:
 - a versioned paper terminology contract;
 - reader-facing displays and generated-artifact evidence.
 
+Version 0.2.0 adds a bounded local JSON contract that binds method branches,
+cross-section claims, and verified evidence while enforcing explicit
+authorization/confidentiality gates and avoiding claim-text echo in reports.
+
 ## Install
 
 Install for Codex:
@@ -45,7 +49,12 @@ user installation, and checks through a 24-hour lease after substantive use:
 
 Pin a reproducible installation when needed:
 
-    gh skill install Ian-Tseng/audit-method-data-flow skills/audit-method-data-flow/SKILL.md --agent codex --scope user --pin v0.1.5
+    gh skill install Ian-Tseng/audit-method-data-flow skills/audit-method-data-flow/SKILL.md --agent codex --scope user --pin v0.2.0
+
+Create and validate a local evidence contract:
+
+    py "<skill-root>\scripts\method_evidence_contract.py" template
+    py "<skill-root>\scripts\method_evidence_contract.py" validate --contract <local-contract.json>
 
 This release has a consent-gated managed updater and a content-free quality
 receipt. Both run after the substantive result and never authorize telemetry,

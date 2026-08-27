@@ -10,6 +10,29 @@ Make each method branch readable as a complete scientific contract:
 
 `input -> dataset/source -> sampled rows and label access -> model/component -> transformation -> output -> evaluation and claim boundary`
 
+## Confirm authorization and create the local evidence contract
+
+Before processing an unpublished manuscript, reviewer material, restricted data
+description, or confidential result, confirm that the requester is authorized,
+the applicable venue/institution AI and confidentiality policies were checked,
+external processing is not being used, a retention decision exists, and a human
+verifier remains accountable. Do not paste manuscript text, reviewer text,
+private paths, credentials, or unpublished results into web searches or quality
+receipts.
+
+Read [references/method-evidence-contract.md](references/method-evidence-contract.md)
+completely when a project needs a reusable machine-readable audit artifact.
+Create the template locally, replace unresolved fields, then validate:
+
+```text
+<python-3> "<skill-root>/scripts/method_evidence_contract.py" template
+<python-3> "<skill-root>/scripts/method_evidence_contract.py" validate --contract <local-contract.json>
+```
+
+The helper reads one bounded local JSON file and emits IDs, hashes, counts, and
+finding codes without echoing claim prose. It performs no network call and
+never treats structural `PASS` as proof of scientific validity.
+
 ## Build the flow contract
 
 For every supervised, adaptation, external-validation, and diagnostic branch, record:

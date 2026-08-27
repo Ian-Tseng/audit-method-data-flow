@@ -2,6 +2,17 @@
 
 All notable changes to this project are documented here.
 
+## [0.2.0] - 2026-08-27
+
+### Added
+
+- Add a bounded, local machine-readable method/claim/evidence contract with
+  stable branch, claim, locator, and SHA-256 evidence identities.
+- Block audits when processing authorization or confidentiality checks are
+  missing, or when external processing is enabled.
+- Emit content-minimized structural reports that never echo claim prose and
+  keep scientific validity outside the helper's claim boundary.
+
 ## [0.1.5] - 2026-08-27
 
 ### Added
