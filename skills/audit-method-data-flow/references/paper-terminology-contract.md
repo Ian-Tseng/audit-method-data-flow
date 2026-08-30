@@ -130,6 +130,23 @@ the group changes by protocol, name the invariant members and state the rule
 that governs optional membership. A later inventory or implementation table
 does not repair an earlier counted-but-unnamed group.
 
+## Independent artifact scope gate
+
+Create an **active artifact inventory** before running the terminology audit.
+List every independently readable manuscript, abstract packet, technical
+appendix, supplement entry document, release guide, reviewer response, upload
+copy, and generated archive. Assign each item an explicit contract scope and
+state whether it is active source, generated output, immutable provenance, or
+superseded material.
+
+Do not assume that a main-paper definition repairs a first use in technical
+appendices or release guides. Audit those documents in their own reading order.
+For generated archives, inspect the packaged entries and compare them with the
+intended source directory; checking only the archive filename, source files, or
+an unpackaged PDF cannot establish archive closure. Require forbidden aliases
+to be absent from active source, regenerated derivatives, upload copies, and
+archive contents, while classifying immutable historical wording as provenance.
+
 ## Drift and update rules
 
 1. Read the existing contract before editing any central term.
@@ -145,7 +162,8 @@ does not repair an earlier counted-but-unnamed group.
 
 ## Completion gate
 
-Pass only when every central active term has one role and parent, every source
+Pass only when the active artifact inventory has no omitted independently
+readable surface or generated archive, every central active term has one role and parent, every source
 mapping is identified as direct or inferred, every term has a justified citation
 class, each required scholarly citation closes from first substantive use through
 the reference list and regenerated reader-facing artifacts, forbidden aliases

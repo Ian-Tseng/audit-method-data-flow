@@ -35,7 +35,7 @@ installed replacement, or activation. Roll back policy and caller SHA together.
    preflight, and verify the current record/report named by
    validation/README.md:
 
-       py -3 -X utf8 <analyze-project-claims-root>\scripts\reconcile_component_map.py reconcile --observation validation\component-map-observation-v020.json --map-root validation\component-map --project-root .
+       py -3 -X utf8 <analyze-project-claims-root>\scripts\reconcile_component_map.py reconcile --observation validation\component-map-observation-v021.json --map-root validation\component-map --project-root .
        py -3 -X utf8 <analyze-project-claims-root>\scripts\record_scan.py preflight --map-root validation\component-map --project-root .
        py -3 -X utf8 <analyze-project-claims-root>\scripts\record_scan.py verify --record validation\history\<current>.json --map-root validation\component-map --project-root . --report validation\reports\<current>.md
 
@@ -49,8 +49,8 @@ installed replacement, or activation. Roll back policy and caller SHA together.
 10. From exact merged main:
 
        gh skill publish .\skills --dry-run
-       gh skill publish .\skills --tag v0.2.0
-       gh release verify v0.2.0
+       gh skill publish .\skills --tag v0.2.1
+       gh release verify v0.2.1
 
 11. In separate disposable consumer repositories, test public preview,
     Codex/Claude installation, list, directory-scoped update dry-run, package

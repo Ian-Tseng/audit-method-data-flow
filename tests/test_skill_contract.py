@@ -156,9 +156,9 @@ class SkillContractTests(unittest.TestCase):
             "rebuild and reload every affected reader-facing artifact",
             "invalidating the preceding pass",
             "restart every applicable source",
-            "at most three repair-and-recheck cycles",
+            "limit one audit run to three repair-and-recheck cycles",
             "one complete pass makes no further repair",
-            "blocked or partially verified rather than clean",
+            "pending, with its reason, required evidence, and resumption condition",
         ):
             self.assertIn(anchor, skill_folded)
 
@@ -204,6 +204,15 @@ class SkillContractTests(unittest.TestCase):
             'name every stable member',
         ):
             self.assertIn(anchor, contract_folded)
+        for anchor in (
+            'active artifact inventory',
+            'independently readable',
+            'technical appendices',
+            'release guides',
+            'generated archives',
+        ):
+            self.assertIn(anchor, skill_folded)
+            self.assertIn(anchor, contract_folded)
 
     def test_recommended_updates_default_to_owner_bound_local_preview(self):
         skill_folded = ' '.join(SKILL.casefold().split())
@@ -216,6 +225,32 @@ class SkillContractTests(unittest.TestCase):
             'do not manufacture',
         ):
             self.assertIn(anchor.casefold(), skill_folded)
+
+    def test_default_paper_quality_gate_is_recursive_and_auditable(self):
+        skill_folded = ' '.join(SKILL.casefold().split())
+        for anchor in (
+            'default paper-quality gate',
+            'first-reader clarity and define-before-use',
+            'smooth, lean prose without redundant wording',
+            'claim, protocol, evidence, counterevidence, and boundary consistency',
+            'semantic universality classifications and canonical terminology',
+            'figure and table callouts, captions, column labels, metric directions, and final-size readability',
+            'run-aware docx checks and rendered pdf inspection',
+            'm1-m18',
+            's1-s31',
+            'independent fresh-reader review',
+            'pass, n/a, or pending',
+            'every applicable item is pass or n/a',
+            'any pending item keeps the gate open',
+            'zero critical or major findings',
+            'keep the gate open',
+            'cycle count does not establish closure',
+            'reason, required evidence, and resumption condition',
+            'what exact output does the component produce?',
+            'the auditor visually inspects',
+            'when a terminology contract is in scope',
+        ):
+            self.assertIn(anchor, skill_folded)
 
     def test_agent_metadata_invokes_exact_skill(self):
         agent = (PACKAGE / "agents" / "openai.yaml").read_text(encoding="utf-8")
