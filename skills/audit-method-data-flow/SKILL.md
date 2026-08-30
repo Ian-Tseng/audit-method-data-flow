@@ -191,6 +191,7 @@ Treat stage-linked terminology as the default, not an optional refinement.
 3. Prefer a stage-bearing canonical term when the relationship would otherwise be ambiguous, such as `source-exposed base-scoring control`. Do not rely on relative words such as `upstream`, `downstream`, `initial`, `post-hoc`, `upper`, or `lower` without also naming the exact stage or branch.
 4. For an exposure control, distinguish where the evaluated source was seen from where the tested operation begins. For an ablation or baseline, state the parent protocol, the input that changes, and the batch, labels, models, and evaluation conditions that remain fixed.
 5. Use the same canonical term in the abstract, Introduction, Methods, Results, Discussion, Limitations, headings, figure labels, captions, callouts, table titles and notes, reviewer responses, supplements, and generated DOCX/PDF artifacts. Record old or ambiguous aliases as forbidden variants in the project terminology contract.
+6. Build an **active artifact inventory** before declaring coverage. Give every independently readable manuscript, technical appendix, supplement entry document, release guide, upload copy, and generated archive an explicit terminology scope. Audit archive contents, not only the source directory or archive filename; a broad `supplement` label does not cover an omitted file or stale packaged copy.
 
 Use a compact mapping during the audit:
 
@@ -227,7 +228,7 @@ Require every figure branch to show, in reading order:
 
 `named source -> sampled input -> model/component -> operation -> output`
 
-Show label access or disjointness where it changes the claim. A standalone caption must identify the dataset/protocol, explain which model or component operates on each input, state what each branch produces, and give the evaluation boundary. Align the same terms and mathematical typography across prose, headings, boxes, arrows, captions, table headers, supplements, DOCX, PDF, and peer-review copies. Require native inline OMML in Word and inline MathML or equivalent mathematical rendering in HTML/PDF; reject replacement/question-mark glyphs within math runs; display equations alone do not satisfy this gate.
+Show label access or disjointness where it changes the claim. A standalone caption must identify the dataset/protocol, explain which model or component operates on each input, state what each branch produces, and give the evaluation boundary. Align the same terms and mathematical typography across prose, headings, boxes, arrows, captions, table headers, supplements, technical appendices, release guides, DOCX, PDF, peer-review copies, and generated archives. Require native inline OMML in Word and inline MathML or equivalent mathematical rendering in HTML/PDF; reject replacement/question-mark glyphs within math runs; display equations alone do not satisfy this gate.
 
 ## Run a word- and paragraph-level artifact check
 
@@ -241,6 +242,31 @@ Do not treat a raw XML substring search as a Word audit. DOCX may split one visi
 
 Fail the audit if exact headings drift, an active body contains a forbidden alias, a supposedly synchronized copy differs, or the scan silently ignores non-body Word parts.
 
+## Run the default paper-quality gate
+
+After any change to reader-facing paper content or an active paper artifact, run
+one complete gate covering:
+
+- first-reader clarity and define-before-use;
+- smooth, lean prose without redundant wording;
+- claim, protocol, evidence, counterevidence, and boundary consistency;
+- semantic universality classifications and canonical terminology, including
+  first-use expansions and citation closure;
+- figure and table callouts, captions, column labels, metric directions, and
+  final-size readability;
+- source, generated-artifact, and upload-copy synchronization, including
+  run-aware DOCX checks and rendered PDF inspection;
+- the paper-writing M1-M18 mechanical audit and S1-S31 semantic audit when that
+  skill is available, or equivalent explicit checks with the substitution
+  recorded; and
+- independent fresh-reader review.
+
+Record the changed source or artifact hash, checks run, a PASS, N/A, or PENDING
+disposition for each applicable item, mechanical output, semantic findings, and
+the independent reviewer verdict. Pass only when every applicable item is PASS
+or N/A, the record contains zero CRITICAL or MAJOR findings, and no
+repair-triggering finding remains. Any PENDING item keeps the gate OPEN.
+
 ## Validate
 
 Use a convergent repair loop for every audit that permits edits:
@@ -253,13 +279,12 @@ Use a convergent repair loop for every audit that permits edits:
    beginning; do not resume only at the repaired item.
 4. Repeat until one complete pass makes no further repair and reports zero
    unresolved in-scope failures.
-5. Stop after at most three repair-and-recheck cycles. If an external
-   dependency, missing authority, repeated finding set, or the cycle bound
-   prevents convergence, report the artifact as blocked or partially verified
-   rather than clean.
+5. Limit one audit run to three repair-and-recheck cycles. After three
+   unsuccessful cycles, keep the gate OPEN, record the remaining findings, and
+   resume after repair. Record an external dependency or missing authority as
+   PENDING, with its reason, required evidence, and resumption condition.
 
-A complete clean pass closes the audit. The three-cycle bound is a safety stop,
-not permission to call a still-changing artifact complete.
+The cycle count does not establish closure. Convergence closes the audit.
 
 Ask whether a skeptical reader can answer, without searching elsewhere:
 
@@ -269,22 +294,26 @@ Ask whether a skeptical reader can answer, without searching elsewhere:
 - Which labels are available at each stage?
 - Which model or component consumes each input?
 - What operation does that model or component perform?
-- What exact output is produced?
+- What exact output does the component produce?
 - Where is that output applied?
 - How and against what is the output evaluated?
 - What conclusion is and is not supported?
+- Does the Conclusion synthesize the problem-level takeaway, governing conditions,
+  strongest boundary, and resulting action without replaying a seed, batch, dataset,
+  interval, or diagnostic-comparator ledger?
 
-When a repository has deterministic manuscript checks, use red-green-refactor: first add a failing dataset-to-output contract assertion, then revise the canonical source, and finally rebuild and audit every affected generated artifact. Do not call the flow clear merely because the source text passes; inspect the rendered figure and final PDF. For slide decks, require native editable workflow shapes and report `UNVERIFIED_VISUAL / BLOCKED_NATIVE_RENDER` until a PowerPoint or LibreOffice export has been visually inspected.
+When a repository has deterministic manuscript checks, use red-green-refactor: first add a failing dataset-to-output contract assertion, then revise the canonical source, and finally rebuild and audit every affected generated artifact. Do not call the flow clear merely because the source text passes; inspect the rendered figure and final PDF. For slide decks, require native editable workflow shapes. Record PENDING (`UNVERIFIED_VISUAL / BLOCKED_NATIVE_RENDER`) until the auditor visually inspects a PowerPoint or LibreOffice export.
 
-Also fail when an active central term lacks a contract entry, one term denotes
-multiple roles, aliases cross phase or lifecycle boundaries, a source-backed
-mapping is presented as a quotation rather than an inference, a project-specific
-term is presented as field-standard, a plain protocol description would remove
-avoidable first-reader inference, an active artifact uses a forbidden alias, or
-a term that requires scholarly support lacks an unambiguous nearby citation, a
-matching reference entry, or a visible citation in a regenerated reader-facing
-artifact.
-Report terminology-contract version and source-verification date in the handoff.
+Fail the terminology audit when:
+
+- an active central term lacks a contract entry;
+- one term denotes multiple roles or an alias crosses phase or lifecycle boundaries;
+- active prose presents a source-backed mapping as a quotation instead of identifying it as an inference;
+- active prose presents a project-specific term as field-standard or uses a coined label where a plain protocol description would remove first-reader inference;
+- an active artifact uses a forbidden alias; or
+- a term that requires scholarly support lacks an unambiguous nearby citation, a matching reference entry, or a visible citation in a regenerated reader-facing artifact.
+
+When a terminology contract is in scope, report its version and source-verification date. Otherwise, record N/A.
 
 ## Route explicit recommended updates to the owner
 

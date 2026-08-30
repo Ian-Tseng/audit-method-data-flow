@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "product": "audit-method-data-flow",
+  "version": "0.2.1",
+  "recorded_at_utc": "2026-08-28T16:06:49Z",
+  "focused_contract_tests": {
+    "commands": [
+      "py -3 -X utf8 -m unittest discover -s tests -p test_method_evidence_contract.py -v",
+      "py -3 -X utf8 -m unittest discover -s tests -p test_skill_contract.py -v"
+    ],
+    "tests_run": 30,
+    "passed": 30,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "status": "PASS"
+  },
+  "package": {
+    "command": "py -3 -X utf8 skills/audit-method-data-flow/scripts/package_integrity.py verify",
+    "manifest_digest": "e0a05d33d398538e0e67905a98d6570aaebdd29819a762c466d1d3849a3e041a",
+    "files": 15,
+    "status": "PACKAGE_VERIFIED"
+  },
+  "official_skill_validator": {
+    "command": "py -3 -X utf8 <skill-creator-root>/scripts/quick_validate.py skills/audit-method-data-flow",
+    "result": "Skill is valid!",
+    "status": "PASS"
+  },
+  "github_skill_publisher": {
+    "command": "gh skill publish .\skills --dry-run",
+    "outbound": "NONE",
+    "status": "PASS"
+  },
+  "pending_external_gates": [
+    "full release-candidate suite against a current v0.2.1 formal record",
+    "release PR and exact PR-head CI",
+    "exact merged-main CI",
+    "tag protection and immutable release verification",
+    "v0.2.1 publication",
+    "fresh public Codex and Claude Code installation, update, discovery, and invocation"
+  ]
+}

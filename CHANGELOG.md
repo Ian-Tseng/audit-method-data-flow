@@ -2,6 +2,24 @@
 
 All notable changes to this project are documented here.
 
+## [0.2.1] - 2026-08-29
+
+### Added
+
+- Add one default paper-quality gate for first-reader clarity, lean prose,
+  claim and terminology consistency, displays, generated artifacts, and
+  independent review.
+- Require an active inventory of independently readable manuscripts,
+  appendices, supplement entry documents, release guides, upload copies, and
+  generated archives before terminology coverage can pass.
+- Add a conclusion-synthesis gate that preserves governing evidence boundaries
+  without repeating a results ledger.
+
+### Fixed
+
+- Make `PENDING` fail closed: any pending applicable check keeps the gate open,
+  and a three-cycle safety bound cannot be used as a completion condition.
+
 ## [0.2.0] - 2026-08-27
 
 ### Added

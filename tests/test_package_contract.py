@@ -45,7 +45,7 @@ def text_files(root: Path):
 class PackageContractTests(unittest.TestCase):
     def test_release_identity_is_synchronized(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-        self.assertEqual(version, "0.2.0")
+        self.assertEqual(version, "0.2.1")
         package_version = json.loads(
             (PACKAGE / "references" / "package-version.json").read_text(
                 encoding="utf-8"
@@ -56,13 +56,13 @@ class PackageContractTests(unittest.TestCase):
         for citation in (ROOT / "CITATION.cff", PACKAGE / "CITATION.cff"):
             content = citation.read_text(encoding="utf-8")
             self.assertIn(f'version: "{version}"', content)
-            self.assertIn('date-released: "2026-08-27"', content)
+            self.assertIn('date-released: "2026-08-29"', content)
             self.assertIn('license: "MIT"', content)
         self.assertEqual(
             (ROOT / "CITATION.cff").read_bytes(),
             (PACKAGE / "CITATION.cff").read_bytes(),
         )
-        self.assertIn(f"## [{version}] - 2026-08-27", (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"))
+        self.assertIn(f"## [{version}] - 2026-08-29", (ROOT / "CHANGELOG.md").read_text(encoding="utf-8"))
 
     def test_root_and_package_license_are_identical(self):
         self.assertEqual((ROOT / "LICENSE").read_bytes(), (PACKAGE / "LICENSE").read_bytes())
@@ -83,8 +83,8 @@ class PackageContractTests(unittest.TestCase):
         module = load_integrity_module()
         cases = (
             ("refs/heads/main", None),
-            ("refs/tags/v0.2.0", None),
-            ("refs/tags/v0.2.0", "v0.2.0"),
+            ("refs/tags/v0.2.1", None),
+            ("refs/tags/v0.2.1", "v0.2.1"),
         )
         for github_ref, github_pinned in cases:
             with self.subTest(
@@ -123,7 +123,7 @@ class PackageContractTests(unittest.TestCase):
                 "metadata:\n"
                 "  github-path: skills/audit-method-data-flow\n"
                 "  github-pinned: v0.1.3\n"
-                "  github-ref: refs/tags/v0.2.0\n"
+                "  github-ref: refs/tags/v0.2.1\n"
                 "  github-repo: https://github.com/Ian-Tseng/audit-method-data-flow\n"
                 "  github-tree-sha: 0123456789abcdef0123456789abcdef01234567\n"
             )

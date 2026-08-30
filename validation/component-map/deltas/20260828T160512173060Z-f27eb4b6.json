@@ -1,0 +1,144 @@
+{
+  "accepted_map_id": "component-map-e1c145536297",
+  "action": "conflict_detected",
+  "candidate_map_id": "component-map-97f5ce00d8f1",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [
+      {
+        "component_id": "public-distribution",
+        "element_id": "install-update-claims",
+        "fields": [
+          "target"
+        ]
+      },
+      {
+        "component_id": "release-package",
+        "element_id": "release-identity",
+        "fields": [
+          "target"
+        ]
+      },
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "method-and-claim-flow",
+        "fields": [
+          "target"
+        ]
+      },
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "terminology-and-display-flow",
+        "fields": [
+          "target"
+        ]
+      }
+    ],
+    "contract_changes": [
+      "objective",
+      "skill_sha256"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CHANGELOG.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "PUBLISHING.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "VERSION"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/SKILL.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/claim-chain-clarity.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-version.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/paper-terminology-contract.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_managed_lifecycle.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_package_contract.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_skill_contract.py"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "03157255112556e76092b5ad6ac0f7867548f3adcd89a9342e26c4f3fae7e101"
+  },
+  "recorded_at_utc": "2026-08-28T16:05:12.173060Z",
+  "scan_id": "20260828T160512173060Z-f27eb4b6",
+  "schema_version": "1.0"
+}

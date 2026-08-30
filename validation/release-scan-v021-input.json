@@ -1,0 +1,172 @@
+{
+  "authority": [
+    "VERSION",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/scripts/method_evidence_contract.py",
+    "skills/audit-method-data-flow/references/method-evidence-contract.md",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "validation/release-candidate-test-receipt.json"
+  ],
+  "bindings": [
+    {
+      "claim_id": "claim:confidential-method-contract-present",
+      "evidence_id": "evidence:method-contract-runtime",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:confidential-method-contract-present",
+      "evidence_id": "evidence:method-contract-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:confidential-method-contract-present",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:paper-quality-gate-present",
+      "evidence_id": "evidence:skill-contract-source",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:paper-quality-gate-present",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:package-candidate-verified",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:public-release-complete",
+      "evidence_id": "evidence:publishing-boundary",
+      "role": "context"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim:confidential-method-contract-present",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "confidential-method-evidence-contract"
+      },
+      "material": true,
+      "rationale": "The bounded local runtime, packaged reference, fourteen focused method-evidence tests, and full 56-test suite agree on authorization, confidentiality, no external services, stable locator identity, placeholder exclusion, ID-only output, and PASS/PARTIAL/BLOCKED semantics.",
+      "statement": "The v0.2.1 release candidate contains a locally tested confidential method-evidence contract that fails closed when authorization, confidentiality, or external-service boundaries are not satisfied and does not echo claim or evidence text.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "claim:paper-quality-gate-present",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "method-and-claim-flow"
+      },
+      "material": true,
+      "rationale": "The skill source, sixteen focused skill-contract tests, and full 56-test suite agree that paper changes trigger one auditable gate, repairs invalidate the preceding pass, every PENDING item keeps the gate open, and three cycles are a safety bound rather than completion.",
+      "statement": "The v0.2.1 candidate defines a recursive default paper-quality gate with fail-closed PENDING handling and explicit independent-artifact coverage.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "claim:package-candidate-verified",
+      "element_ref": {
+        "component_id": "release-package",
+        "element_id": "package-integrity"
+      },
+      "material": true,
+      "rationale": "The persisted final receipt records 56 passing tests, package verification, official skill validation, and bounded local lifecycle exclusions for the candidate.",
+      "statement": "The local v0.2.1 package candidate matches its deterministic manifest and passes the official skill validator.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "claim:public-release-complete",
+      "element_ref": {
+        "component_id": "public-distribution",
+        "element_id": "install-update-claims"
+      },
+      "material": true,
+      "rationale": "The PR, exact-main, protected-tag, publication, public install/update, and fresh activation gates have not yet run for v0.2.1.",
+      "statement": "The v0.2.1 public release and fresh consumer activation have completed.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:release-receipt",
+      "source": {
+        "kind": "file",
+        "path": "validation/release-candidate-test-receipt.json"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "executed_test",
+      "observed_summary": "The persisted local final receipt records 56 passing tests, including fourteen method-evidence and sixteen paper-quality skill-contract tests, package verification, and official validation while leaving remote lifecycle gates pending."
+    },
+    {
+      "evidence_id": "evidence:skill-contract-source",
+      "source": {
+        "kind": "file",
+        "path": "skills/audit-method-data-flow/SKILL.md"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The skill defines the default paper-quality gate, active artifact inventory, recursive repair loop, fail-closed PENDING disposition, and convergence boundary."
+    },
+    {
+      "evidence_id": "evidence:method-contract-runtime",
+      "source": {
+        "kind": "file",
+        "path": "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The bounded local parser validates authorization, confidentiality, external-service refusal, branch/claim/evidence relations, and emits only identifiers, counts, states, and issue codes."
+    },
+    {
+      "evidence_id": "evidence:method-contract-reference",
+      "source": {
+        "kind": "file",
+        "path": "skills/audit-method-data-flow/references/method-evidence-contract.md"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged reference defines the confidential intake, branch relation, claim-evidence relation, result-state, and content-minimized reporting contract."
+    },
+    {
+      "evidence_id": "evidence:publishing-boundary",
+      "source": {
+        "kind": "file",
+        "path": "PUBLISHING.md"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "not_tested",
+      "observed_summary": "The publishing guide keeps PR CI, exact-main CI, tag protection, publication, public installation, update, and fresh activation as separate future gates."
+    }
+  ],
+  "limitations": [],
+  "objective": "Determine which local audit-method-data-flow v0.2.1 method-evidence, paper-quality, and package claims are supported before public lifecycle gates.",
+  "schema_version": "2.0",
+  "scope": [
+    "confidential method-evidence contract",
+    "recursive paper-quality and independent-artifact contract",
+    "local package integrity and validation",
+    "pending public release lifecycle"
+  ],
+  "summary": {
+    "claim_boundary_ids": [],
+    "no_supported_claim": false,
+    "strongest_safe_claim_id": "claim:paper-quality-gate-present"
+  },
+  "unresolved_uncertainties": [
+    "PR CI, exact merged-main CI, immutable publication, public install/update, and fresh client activation have not yet been observed."
+  ]
+}

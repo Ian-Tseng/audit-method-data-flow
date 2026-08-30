@@ -39,6 +39,19 @@ Classify a chain as:
 - **conclusion drift:** the Discussion or active guidance broadens the result;
 - **duplicated boundary:** repeated caveats add length without making the governing limit easier to find.
 
+## Conclusion synthesis gate
+
+Treat the Conclusion as the final inference, not a compressed Results report. It should normally state:
+
+1. the problem-level takeaway;
+2. the condition under which the strongest positive result holds;
+3. the strongest transfer, validity, or deployment boundary; and
+4. the resulting evaluation or operational action.
+
+Flag a conclusion as a **results-ledger conclusion** when it mainly lists seeds, batch sizes, dataset-by-dataset directions, confidence intervals, or diagnostic comparators that Results or Discussion already owns. Retain one such detail only when the reader cannot understand the general inference without it. Removing detail must not erase same-scope counterevidence or broaden the claim.
+
+Exact wording locks are project-specific. Freeze a conclusion verbatim only after explicit author approval, and then synchronize the manuscript, canonical claim records, deterministic regression, generated artifacts, and active check table.
+
 ## Repair pattern
 
 Prefer the smallest repair that closes the broken relation:

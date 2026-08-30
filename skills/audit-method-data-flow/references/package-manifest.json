@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "CITATION.cff",
-      "sha256": "31469bf774874904f0f87275ea7e131871cdfd5b113d036ba4a52dbd7afd8aa1"
+      "sha256": "e0b9b64843a61555779705993baddd65bf7fbbec65cfc424e24368402c2ab6c9"
     },
     {
       "path": "LICENSE",
@@ -14,7 +14,7 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "698c0ff88654e26d34217a832c8fd3959cdb56010e00f2781f9349de9ebc52ed"
+      "sha256": "c39e632ec6afc1b70e61c10695e4210abf413b771bd6a66f7fc6878355957181"
     },
     {
       "path": "agents/openai.yaml",
@@ -22,7 +22,7 @@
     },
     {
       "path": "references/claim-chain-clarity.md",
-      "sha256": "36791b71be444b7a498a278ae98496b996056334feefddbf30e2f948c15b07f7"
+      "sha256": "7a85a64e408596e52b5f3306b59abbc351ba0418453c4a28ea82e6b46f446a40"
     },
     {
       "path": "references/figure-table-clarity.md",
@@ -34,11 +34,11 @@
     },
     {
       "path": "references/package-version.json",
-      "sha256": "ef5456edd4244cf333fc7f224c8d6743db7ab3899d8de4d46f841b54f94c26b8"
+      "sha256": "0a1a53e0b85a26eacddc21098d6e2437db61d366136396eba2fb48734653f88f"
     },
     {
       "path": "references/paper-terminology-contract.md",
-      "sha256": "267603e7197bf325ac8b3dd0fad999ad51c5dca6510a3af4f2ffb481aa8992fe"
+      "sha256": "33839903fe028f9c220ec609f3ec2b805d3e461a34a36f6c287359f5d0818d4b"
     },
     {
       "path": "references/skill-outcome-receipt.schema.json",
@@ -54,7 +54,7 @@
     },
     {
       "path": "scripts/package_integrity.py",
-      "sha256": "5083a9d8720aa6ed9f39ba2022c96c6cc40c132c190275d91dbf43988f28f622"
+      "sha256": "f1e8e915c99cc5663c3c165c9a325808a74f54d41588877e3ba6fb6eab7c3750"
     },
     {
       "path": "scripts/skill_outcome.py",
