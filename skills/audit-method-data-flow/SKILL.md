@@ -10,6 +10,17 @@ Make each method branch readable as a complete scientific contract:
 
 `input -> dataset/source -> sampled rows and label access -> model/component -> transformation -> output -> evaluation and claim boundary`
 
+## Recheck inconsistencies and retain useful lessons
+
+After a substantive audit, authorized repair, or changed controlling evidence,
+read [references/review-learning.md](references/review-learning.md). Recheck
+the complete applicable scope and affected dependencies, record useful lessons
+with their evidence and verification limits, and promote validated guidance
+into the appropriate project record, decision flow, or reusable workflow.
+Keep uncertain lessons provisional and reuse existing guidance before adding
+rules. The guide adds explicit stopping conditions to the repair loop below;
+it does not reduce required checks or turn read-only work into permission to edit.
+
 ## Confirm authorization and create the local evidence contract
 
 Before processing an unpublished manuscript, reviewer material, restricted data
