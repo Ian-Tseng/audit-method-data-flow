@@ -1,5 +1,5 @@
 {
-  "accepted_at_utc": "2026-09-09T05:47:35.648198Z",
+  "accepted_at_utc": "2026-08-28T16:11:59.493829Z",
   "authority": [
     "VERSION",
     "CITATION.cff",
@@ -11,8 +11,7 @@
     "skills/audit-method-data-flow/scripts/skill_outcome.py",
     "skills/audit-method-data-flow/scripts/update_policy.py",
     "skills/audit-method-data-flow/references/method-evidence-contract.md",
-    "skills/audit-method-data-flow/scripts/method_evidence_contract.py",
-    "skills/audit-method-data-flow/references/review-learning.md"
+    "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
   ],
   "components": [
     {
@@ -164,72 +163,6 @@
       ]
     },
     {
-      "component_id": "reusable-audit-learning",
-      "component_type": "workflow-guidance",
-      "elements": [
-        {
-          "element_id": "bounded-recheck",
-          "evidence_locators": [
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/SKILL.md"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/references/review-learning.md"
-            }
-          ],
-          "relation_type": "defines",
-          "target": "Defines complete applicable rechecks, preserved scope, recurrence stopping, and a maximum three-cycle bound."
-        },
-        {
-          "element_id": "evidence-linked-lessons",
-          "evidence_locators": [
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/SKILL.md"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/references/review-learning.md"
-            }
-          ],
-          "relation_type": "defines",
-          "target": "Retains useful lessons with evidence, cause uncertainty, correction, verification, applicability, and reversal conditions."
-        },
-        {
-          "element_id": "future-use-and-reopening",
-          "evidence_locators": [
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/SKILL.md"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/references/review-learning.md"
-            }
-          ],
-          "relation_type": "defines",
-          "target": "Links promoted guidance into later relevant invocations and reopens it when its evidence or assumptions change."
-        },
-        {
-          "element_id": "validated-promotion",
-          "evidence_locators": [
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/SKILL.md"
-            },
-            {
-              "locator": "whole-file",
-              "source": "skills/audit-method-data-flow/references/review-learning.md"
-            }
-          ],
-          "relation_type": "defines",
-          "target": "Routes validated lessons into project records, decision flows, or reusable guidance without duplicate authority or unsupported generalization."
-        }
-      ]
-    },
-    {
       "component_id": "scholarly-audit-contract",
       "component_type": "agent-skill-contract",
       "elements": [
@@ -305,16 +238,16 @@
       ]
     }
   ],
-  "created_at_utc": "2026-09-08T12:27:31.794418Z",
+  "created_at_utc": "2026-08-28T16:11:48.120524Z",
   "integrity": {
-    "canonical_payload_sha256": "6cf74d95cf85d550dec7dbdd9955cf66cb22a41b8f8d5a98d5de959c2e0f80bc"
+    "canonical_payload_sha256": "974516ba47dba76323b2c696ae89476d4011d1a2b62ba159bde06c4325c18779"
   },
-  "map_id": "component-map-cbb849faebee",
+  "map_id": "component-map-38ac16028770",
   "map_state": "accepted",
   "mapper_version": "1.3.0",
-  "objective": "Map the audit-method-data-flow v0.2.1 release candidate's identity, package integrity, confidential local method/claim/evidence contract, recursive paper-quality and independent-artifact gates, managed maintenance and repair boundaries, and pending public lifecycle gates. Extend the repository-source map with the unreleased bounded recheck and evidence-linked reusable-learning workflow; this candidate is not accepted and does not establish behavioral effectiveness or release readiness.",
-  "origin_scan_id": "20260908T122731794418Z-9a2e5dd2",
-  "previous_map_id": "component-map-38ac16028770",
+  "objective": "Map the audit-method-data-flow v0.2.1 release candidate's identity, package integrity, confidential local method/claim/evidence contract, recursive paper-quality and independent-artifact gates, managed maintenance and repair boundaries, and pending public lifecycle gates.",
+  "origin_scan_id": "20260828T161148120524Z-47e19fa4",
+  "previous_map_id": "component-map-97f5ce00d8f1",
   "schema_version": "1.0",
   "scope": [
     "VERSION",
@@ -347,11 +280,10 @@
     "validation/v0.1.3-public-consumer-receipt.json",
     "skills/audit-method-data-flow/references/method-evidence-contract.md",
     "skills/audit-method-data-flow/scripts/method_evidence_contract.py",
-    "tests/test_method_evidence_contract.py",
-    "skills/audit-method-data-flow/references/review-learning.md"
+    "tests/test_method_evidence_contract.py"
   ],
   "skill_name": "analyze-project-claims",
-  "skill_sha256": "4d01ac355bdbe9d9fcb6f63f241fef547469d8b7f9666d2e272b030ddff9e03c",
+  "skill_sha256": "ecfeebfdafe5b960d77641149a3fccb15f66246f6dfedc56ff3a8b4ee9d03639",
   "source_snapshot": [
     {
       "exists": true,
@@ -374,7 +306,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "51f458156b1a70324f6a0926ba00c6b2bf1fc9266d20828daca4175af282576f",
+      "sha256": "a11ca698b5a991821a7093e1f24f529f36ff865668e20678b867242f54516cea",
       "source": "CHANGELOG.md"
     },
     {
@@ -392,7 +324,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "ea2ad9bba30514a13db760a4ac2e5712ad3509d800f49fea9e18ab7bbd1609a0",
+      "sha256": "1333edfa48a687248b4b051aabc286220b1b1893275a711188dea05b80034204",
       "source": "README.md"
     },
     {
@@ -422,7 +354,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "945a69d1a3f7629f31a3ee86146f843327fc8cff5dcf474becb2ee8e99079b15",
+      "sha256": "c39e632ec6afc1b70e61c10695e4210abf413b771bd6a66f7fc6878355957181",
       "source": "skills/audit-method-data-flow/SKILL.md"
     },
     {
@@ -452,7 +384,7 @@
     {
       "exists": true,
       "kind": "file",
-      "sha256": "02f8e8e71b11c9406608ddb60aa6a6b459aad0080ec449479818ba9743852d62",
+      "sha256": "998c945640da7e50fccd2e5e167e9b2cabe35406b132699896e65cbe7a1fbd8f",
       "source": "skills/audit-method-data-flow/references/package-manifest.json"
     },
     {
@@ -466,12 +398,6 @@
       "kind": "file",
       "sha256": "33839903fe028f9c220ec609f3ec2b805d3e461a34a36f6c287359f5d0818d4b",
       "source": "skills/audit-method-data-flow/references/paper-terminology-contract.md"
-    },
-    {
-      "exists": true,
-      "kind": "file",
-      "sha256": "b09803292166ef17a9a5bdcc1db1f2ca8663000616fa1cd8cb306f5ce9b508ca",
-      "source": "skills/audit-method-data-flow/references/review-learning.md"
     },
     {
       "exists": true,

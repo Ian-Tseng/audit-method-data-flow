@@ -1,7 +1,7 @@
-# Evidence-map candidate awaiting owner acceptance
+# Evidence-map review and owner acceptance
 
-This is a proposed structural map for the unreleased review-and-learning
-guidance. It has not replaced the accepted map or historical audit records.
+The candidate below was reviewed and explicitly accepted by the owner on
+September 9, 2026. Previous maps and audit records remain immutable history.
 
 - Candidate: [component-map-cbb849faebee](component-map/candidates/20260908T122731794418Z-9a2e5dd2-component-map-cbb849faebee.json)
 - Candidate file SHA-256: `6f3b8db391f73d6a5d4532418a21b45184fbc65b328fadd34f7876b050a3b18f`
@@ -15,12 +15,16 @@ inspected reusable-learning workflow elements. No existing component or element
 is removed. Structural presence is not evidence of workflow effectiveness.
 Existing evidence scope and source locations are preserved.
 
-The reconciler emitted this unaccepted candidate and left the accepted-map bytes
-unchanged. The embedded engine and candidate analyzer identity were verified.
-CI remains open until the exact reviewed candidate is owner-accepted and any
-affected current audit record and derived report are refreshed. No failed check
-has been disabled or reclassified as passing.
+[Owner acceptance](review-learning-owner-acceptance.json) records the exact
+reviewed candidate hash. The reconciler archived the previous accepted map,
+accepted `component-map-cbb849faebee`, and then reported `checked_unchanged`.
+Evidence preflight passed with accepted-map SHA-256 `a386f4b799ee7858428e8e1aca0c9f797248d592711aeb74ea2be5227d57174c`.
 
-After owner acceptance, rerun unchanged reconciliation, evidence preflight,
-required local checks, and all hosted PR checks before merging. Acceptance of
-this structural map does not approve scientific claims or publish a release.
+A new scoped [audit record](history/20260909T054837084150Z-f6a96e84.json) and
+[derived report](reports/20260909T054837084150Z-f6a96e84.md) inspect the guide and its entrypoint.
+The record is `PARTIAL`: source presence is supported; cross-project workflow
+effectiveness, a new guidance release, and fresh released-consumer activation
+remain unobserved. This does not revalidate unrelated historical project claims.
+
+Local and hosted checks are recorded in the PR. Exact-map acceptance does not
+by itself imply passing CI, merge, publication, or scientific validity.
