@@ -1,27 +1,32 @@
 # Validation Evidence
 
-This directory separates structural mapping, semantic claims, execution
-receipts, and derived reports for the v0.2.1 release candidate.
+This directory separates structural mapping, scoped semantic claims, execution
+receipts, and derived reports. The current review concerns unreleased
+review-and-learning guidance, not a new claim that the published v0.2.1 package
+has changed on consumers' machines.
 
-- [`component-map/accepted-map.json`](component-map/accepted-map.json) is the
-  exact owner-accepted map `component-map-38ac16028770` with SHA-256
-  `5f16cda3b1749b96e32ffe1f85b6394ae7fd384d607dae62ed779890a906e852`.
-- [`release-candidate-test-receipt.json`](release-candidate-test-receipt.json)
-  records the passing full 56-test local suite, package verification, and the
-  official skill validator. The earlier focused preacceptance receipt remains
-  immutable supporting history.
-- [`managed-workflow-pin-v083-receipt.json`](managed-workflow-pin-v083-receipt.json)
-  records the focused local pin checks and their hosted-lifecycle limits.
-- [`managed-workflow-pin-v083-final-input.json`](managed-workflow-pin-v083-final-input.json)
-  is the reviewed v2 pin claim/evidence/binding input.
-- [`history/20260828T162203269733Z-5a7a71ab.json`](history/20260828T162203269733Z-5a7a71ab.json)
-  is the current final append-only semantic authority with canonical digest
-  `8e6e3805d0c43786054a12b402ee4e6f0f57eac02d1bf43d5a5bd01025075a3a`.
-- [`reports/20260828T162203269733Z-5a7a71ab.md`](reports/20260828T162203269733Z-5a7a71ab.md)
-  is its deterministic human-readable view.
+- [Accepted component map](component-map/accepted-map.json):
+  `component-map-cbb849faebee`, SHA-256 `a386f4b799ee7858428e8e1aca0c9f797248d592711aeb74ea2be5227d57174c`.
+- [Current scoped record](history/20260909T054837084150Z-f6a96e84.json):
+  canonical digest `9fc072d07c84ef90b9210b899920c9ecbe818f7c92704a5de09e4619ad8489ad`.
+- [Current derived report](reports/20260909T054837084150Z-f6a96e84.md).
+- [Review and exact owner acceptance](review-learning-review.md).
+- [Current reviewed input](review-learning-scan-input.json).
 
-Earlier release records, inputs, and maps remain immutable historical states.
-The current v0.2.1 record is `PARTIAL`: the full local suite and package
-verification do not establish replacement PR/main CI, protected environments,
-hosted canary, agent execution, draft publication, merge, release, installed
-replacement, fresh activation, public issue submission, or scientific validity.
+The current record is `PARTIAL`: the inspected guide and entrypoint support
+source-presence claims only. Cross-project effectiveness, publication of this
+guidance and fresh released-consumer activation have not yet been observed.
+Tests and structural checks do not establish those outcomes.
+
+## Historical evidence
+
+- [Prior scoped record](history/20260828T162203269733Z-5a7a71ab.json)
+  and [report](reports/20260828T162203269733Z-5a7a71ab.md) retain their original
+  method/package and managed-workflow pin scope, identities and limitations.
+- [Release-candidate test receipt](release-candidate-test-receipt.json) records
+  the historical 56-test candidate suite, package verification and skill validation.
+- [Managed-workflow pin receipt](managed-workflow-pin-v083-receipt.json)
+  and [reviewed input](managed-workflow-pin-v083-final-input.json) remain history.
+
+The new record does not broaden or silently renew those historical claims.
+Existing records, inputs and archived maps remain immutable.

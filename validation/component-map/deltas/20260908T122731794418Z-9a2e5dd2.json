@@ -1,0 +1,79 @@
+{
+  "accepted_map_id": "component-map-38ac16028770",
+  "action": "drift_detected",
+  "candidate_map_id": "component-map-cbb849faebee",
+  "changes": {
+    "added_components": [
+      "reusable-audit-learning"
+    ],
+    "added_elements": [
+      {
+        "component_id": "reusable-audit-learning",
+        "element_id": "bounded-recheck"
+      },
+      {
+        "component_id": "reusable-audit-learning",
+        "element_id": "evidence-linked-lessons"
+      },
+      {
+        "component_id": "reusable-audit-learning",
+        "element_id": "future-use-and-reopening"
+      },
+      {
+        "component_id": "reusable-audit-learning",
+        "element_id": "validated-promotion"
+      }
+    ],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [
+      "objective",
+      "scope",
+      "authority",
+      "skill_sha256"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CHANGELOG.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/SKILL.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "exists",
+          "kind",
+          "sha256",
+          "source"
+        ],
+        "source": "skills/audit-method-data-flow/references/review-learning.md"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "f4cafa3b9358b0df4a57c421b4d34b6e39f056dd6e815b031fd3ed5811655c80"
+  },
+  "recorded_at_utc": "2026-09-08T12:27:31.794418Z",
+  "scan_id": "20260908T122731794418Z-9a2e5dd2",
+  "schema_version": "1.0"
+}

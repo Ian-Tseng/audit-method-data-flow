@@ -1,0 +1,88 @@
+{
+  "accepted_map_id": "component-map-38ac16028770",
+  "action": "drift_detected",
+  "artifacts": {
+    "accepted_map": "accepted-map.json",
+    "candidate": "candidates/20260908T122731794418Z-9a2e5dd2-component-map-cbb849faebee.json",
+    "delta": "deltas/20260908T122731794418Z-9a2e5dd2.json"
+  },
+  "candidate_map_id": "component-map-cbb849faebee",
+  "changes": {
+    "added_components": [
+      "reusable-audit-learning"
+    ],
+    "added_elements": [
+      {
+        "component_id": "reusable-audit-learning",
+        "element_id": "bounded-recheck"
+      },
+      {
+        "component_id": "reusable-audit-learning",
+        "element_id": "evidence-linked-lessons"
+      },
+      {
+        "component_id": "reusable-audit-learning",
+        "element_id": "future-use-and-reopening"
+      },
+      {
+        "component_id": "reusable-audit-learning",
+        "element_id": "validated-promotion"
+      }
+    ],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [
+      "objective",
+      "scope",
+      "authority",
+      "skill_sha256"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CHANGELOG.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/SKILL.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "exists",
+          "kind",
+          "sha256",
+          "source"
+        ],
+        "source": "skills/audit-method-data-flow/references/review-learning.md"
+      }
+    ]
+  },
+  "event_id": "20260908T122731794418Z-9a2e5dd2",
+  "integrity": {
+    "canonical_payload_sha256": "21ff8fe6959f707b2bcec20d1c19ea6fbdb914e672ba6c32c21712bb91a45a96"
+  },
+  "map_state_after": "drift_candidate",
+  "map_state_before": "accepted",
+  "mapper_version": "1.3.0",
+  "recorded_at_utc": "2026-09-08T12:27:31.794418Z",
+  "schema_version": "1.0",
+  "skill_sha256": "4d01ac355bdbe9d9fcb6f63f241fef547469d8b7f9666d2e272b030ddff9e03c"
+}
