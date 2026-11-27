@@ -6,6 +6,10 @@ All notable changes to this project are documented here.
 
 ### Added
 
+- Living architecture-figure profile in `references/figure-table-clarity.md`: build and update discipline for a
+  design figure of a running research system published as a web page (source kept in the project, four separate
+  surfaces, lane/branch topology with learned-state and exchange boxes, defined table numbers, label-to-settings
+  reconciliation after every change, honest visual status), routed from `SKILL.md`, with a contract test.
 - Add a portable review-and-learning guide for bounded inconsistency rechecks,
   evidence-linked lessons, and validated promotion into project Markdown,
   decision flows, or reusable workflows.

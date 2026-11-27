@@ -233,7 +233,7 @@ Keep central prose compact. Put checkpoint identifiers, exhaustive feature width
 
 ## Audit figures, tables, slides, and derivatives
 
-Read [references/figure-table-clarity.md](references/figure-table-clarity.md) completely whenever the user asks to create, simplify, repair, compare, or validate a scholarly figure, table, diagram, presentation workflow, caption/callout, or generated visual artifact. The reference separates direct venue requirements from cross-source synthesis and project-specific visual choices; it also defines paper-figure, table, slide-deck, staging, and native-render gates.
+Read [references/figure-table-clarity.md](references/figure-table-clarity.md) completely whenever the user asks to create, simplify, repair, compare, or validate a scholarly figure, table, diagram, presentation workflow, caption/callout, or generated visual artifact. The reference separates direct venue requirements from cross-source synthesis and project-specific visual choices; it also defines paper-figure, table, slide-deck, living architecture-figure (a design figure published as a web page and updated as the work runs), staging, and native-render gates.
 
 Require every figure branch to show, in reading order:
 

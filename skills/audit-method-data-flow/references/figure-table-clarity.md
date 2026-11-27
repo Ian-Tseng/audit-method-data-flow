@@ -158,6 +158,41 @@ An approximate `python-pptx`/Pillow preview is useful for geometry and gross-ove
 
 Do not call the deck submission-ready while this blocker remains.
 
+## Living architecture-figure profile
+
+Use this profile for a design figure of a running research system that is published as a web page and updated as
+the work changes, for example a search loop whose rounds, gates and build state move every day. It is a
+cross-source synthesis and a project choice, not a venue requirement.
+
+Build:
+
+1. Keep the page source in the project, under version control or a dated run folder, never only in a temporary
+   or scratch directory. Republish that one source to the same page address after every change, so readers keep
+   one link and earlier versions stay in the page history.
+2. Separate four surfaces on the page: a short lede with a dated status sentence; the topology figure (inline
+   SVG, theme tokens for light and dark, horizontal scroll instead of shrinking text at narrow width); a standalone
+   caption under it; and evidence tables below it (a rounds or results table, and a build-status table). Keep
+   numbers out of the topology figure.
+3. In the topology, give each branch or lane its own color and a text label, and follow the flow-figure contract
+   for each: named input, component, operation, named output. Show stored learned state (networks, checkpoints)
+   and the best-so-far store as their own boxes, and draw exchanges between branches as labeled arrows with the
+   rule that governs them. Draw gates with a non-color cue (for example dashed borders and the word gate or
+   confirm), and show the hold-out boundary as visible text.
+4. In tables, give every number its metric and direction, aggregation unit, subtraction order, absolute
+   endpoints and, for paired differences, the standard error. Put the definitions in a one-line table caption.
+   Use status tags with text (built, running, queued, skipped, not built), not color alone.
+
+Update, after every round, gate decision, setting change or override:
+
+1. Reconcile every figure label with the actual run settings and code, not with the earlier plan. A planned
+   setting that the runs do not use is a stale label (for example a planned simulation count shown while the
+   runs used a smaller one).
+2. Add the result rows with numbers and the decision; mark overrides of a declared rule as overrides, with the
+   rule they override; keep planned, built, running, executed and validated states distinct.
+3. Rerun the final checklist below on the page, record which items pass, and report the visual status honestly:
+   `STRUCTURALLY_VALIDATED` when the source was checked but the rendered page was not inspected, and
+   `VISUALLY_VERIFIED_NATIVE` only after looking at the rendered page.
+
 ## Caption and callout contract
 
 Place a content-based callout near every display: `Figure 1 shows...` or `Table 2 compares...`. Avoid `above`, `below`, or duplicate identifiers in the same lead-in.
