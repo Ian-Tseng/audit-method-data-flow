@@ -1,0 +1,90 @@
+{
+  "accepted_map_id": "component-map-cbb849faebee",
+  "action": "drift_detected",
+  "candidate_map_id": "component-map-6f7f031a4fc8",
+  "changes": {
+    "added_components": [],
+    "added_elements": [
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "living-architecture-figure"
+      }
+    ],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [
+      "objective",
+      "skill_sha256"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CHANGELOG.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "VERSION"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/SKILL.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/figure-table-clarity.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-version.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_skill_contract.py"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "f2b913e1cb920c45dc126393be10bd405c76b08a699367a00c012963104e442e"
+  },
+  "recorded_at_utc": "2026-11-27T07:51:02.927595Z",
+  "scan_id": "20261127T075102927595Z-15d2c900",
+  "schema_version": "1.0"
+}

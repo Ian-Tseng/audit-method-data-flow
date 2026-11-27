@@ -4,6 +4,8 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-11-27
+
 ### Added
 
 - Living architecture-figure profile in `references/figure-table-clarity.md`: build and update discipline for a

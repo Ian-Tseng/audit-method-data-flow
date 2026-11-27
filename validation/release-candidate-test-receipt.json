@@ -1,14 +1,15 @@
 {
   "schema_version": 1,
-  "recorded_at_utc": "2026-08-28T16:21:35Z",
-  "release_candidate": "0.2.1",
+  "recorded_at_utc": "2026-11-27T07:53:14Z",
+  "release_candidate": "0.2.2",
   "tests": {
     "command": "py -3 -X utf8 -m unittest discover -s tests -v",
     "status": "PASS",
-    "tests_run": 56,
+    "tests_run": 57,
     "failures": 0,
     "errors": 0,
-    "skipped": 0
+    "skipped": 0,
+    "platform": "Ubuntu server, python3 -X utf8 (57 run, 0 skipped). On the Windows development host the same suite passes with 2 symlink tests skipped (WinError 1314: symlink privilege not held)."
   },
   "pre_acceptance_product_tests": {
     "commands": [
@@ -16,16 +17,17 @@
       "py -3 -X utf8 -m unittest discover -s tests -p test_skill_contract.py -v"
     ],
     "status": "PASS",
-    "tests_run": 30,
+    "tests_run": 31,
     "failures": 0,
     "errors": 0,
-    "skipped": 0
+    "skipped": 1,
+    "platform": "Windows development host (the 1 skip is the symlink test above)"
   },
   "package_manifest": {
     "command": "py -3 -X utf8 skills/audit-method-data-flow/scripts/package_integrity.py verify",
     "status": "PACKAGE_VERIFIED",
-    "digest_sha256": "e0a05d33d398538e0e67905a98d6570aaebdd29819a762c466d1d3849a3e041a",
-    "files": 15
+    "digest_sha256": "81d22978e406cb642a156ef121b3f10aad590182902448447d08a05a3f85d379",
+    "files": 16
   },
   "official_validator": {
     "command": "py -3 -X utf8 <skill-creator-root>/scripts/quick_validate.py skills/audit-method-data-flow",
@@ -34,8 +36,8 @@
   },
   "boundaries": [
     "These local checks do not establish scientific validity.",
-    "The full 56-test suite passes against the exact accepted component map and current interim formal record; the package verifier and official validator also pass.",
-    "Public v0.2.1 PR/main CI, agent execution, draft publication, release immutability, pinned-install verification, deterministic host routing, and public issue submission are not covered by this local receipt.",
+    "The full 57-test suite passes against the exact accepted component map and current interim formal record; the package verifier and official validator also pass.",
+    "Public v0.2.2 PR/main CI, agent execution, draft publication, release immutability, pinned-install verification, deterministic host routing, and public issue submission are not covered by this local receipt.",
     "Protected managed-repair environments and dry-run canary evidence are hosted external state and are not established by this local receipt.",
     "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is recorded separately in validation/v0.1.3-public-consumer-receipt.json."
   ]

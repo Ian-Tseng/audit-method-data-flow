@@ -13,7 +13,9 @@ The skill keeps four surfaces distinct:
 - a versioned paper terminology contract;
 - reader-facing displays and generated-artifact evidence.
 
-Version 0.2.1 adds a recursive default paper-quality gate, an explicit
+Version 0.2.2 adds a living architecture-figure profile (building and updating a design figure of a running
+research system published as a web page) and a review-and-learning guide for bounded rechecks.
+Version 0.2.1 added a recursive default paper-quality gate, an explicit
 independent-artifact inventory, and fail-closed `PENDING` handling. It retains
 the bounded local JSON method/claim/evidence contract and confidentiality
 safeguards introduced in 0.2.0.
@@ -50,7 +52,7 @@ user installation, and checks through a 24-hour lease after substantive use:
 
 Pin a reproducible installation when needed:
 
-    gh skill install Ian-Tseng/audit-method-data-flow skills/audit-method-data-flow/SKILL.md --agent codex --scope user --pin v0.2.1
+    gh skill install Ian-Tseng/audit-method-data-flow skills/audit-method-data-flow/SKILL.md --agent codex --scope user --pin v0.2.2
 
 Create and validate a local evidence contract:
 

@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "CITATION.cff",
-      "sha256": "e0b9b64843a61555779705993baddd65bf7fbbec65cfc424e24368402c2ab6c9"
+      "sha256": "39e34db2de1ce28b0e7c8c40be51bf81e04185fc74c0190664912a9b0052ff9c"
     },
     {
       "path": "LICENSE",
@@ -34,7 +34,7 @@
     },
     {
       "path": "references/package-version.json",
-      "sha256": "0a1a53e0b85a26eacddc21098d6e2437db61d366136396eba2fb48734653f88f"
+      "sha256": "8a06d95e3147214ec30f98f6ded5f587d8aece7c767fccca3345b577b849c8fe"
     },
     {
       "path": "references/paper-terminology-contract.md",
@@ -58,7 +58,7 @@
     },
     {
       "path": "scripts/package_integrity.py",
-      "sha256": "f1e8e915c99cc5663c3c165c9a325808a74f54d41588877e3ba6fb6eab7c3750"
+      "sha256": "02eb74addfdd54bf13b5757ffcc02b5eabf04bccc356f47d8270921d337ae161"
     },
     {
       "path": "scripts/skill_outcome.py",

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-27T07:55:17.288749+00:00",
+  "authority": "Owner delegated the v0.2.2 release in the conversation (\"let you do it\") after reviewing PR #13; the exact delta (one added element, source-hash refreshes, objective and analyzer identity) was reviewed before this command. Second acceptance: the delta only refreshes the hashes of the four files whose release pins moved to 0.2.2 (package manifest, package_integrity.py, two tests). Later acceptances refresh only tests/test_package_contract.py (release date pins moved to 2026-11-27).",
+  "candidate_id": "component-map-556341431902",
+  "candidate_file_sha256": "d026573da5fcaf8e1c9c8a68ba6d6a27e1fde0dfbaa5be3aff878fa2a6750c0b",
+  "previous_map_id": "component-map-0f3ec233ede8",
+  "scope": "Structural map acceptance only; does not establish that figures built with the profile are clearer, nor publication or activation.",
+  "first_acceptance": {
+    "candidate_id": "component-map-6f7f031a4fc8",
+    "candidate_file_sha256": "9b1eff46de6187a1447e7cfc079c730c5cf5149f4bd7b65043744e02d8a66dc8"
+  },
+  "earlier_acceptances": [
+    {
+      "candidate_id": "component-map-e8e74937de2f",
+      "candidate_file_sha256": "fbc6bc18d351bddf002f2ad201306b8ec5b08eadb9bc42767dd9ff31a2ab47d9"
+    },
+    {
+      "candidate_id": "component-map-0f3ec233ede8",
+      "candidate_file_sha256": "de752457f17ac42644aad933825bfde9c66e894ec24323a0ff96c6f56e6044bf"
+    }
+  ]
+}

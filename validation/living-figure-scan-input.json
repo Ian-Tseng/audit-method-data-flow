@@ -1,0 +1,146 @@
+{
+  "schema_version": "2.0",
+  "objective": "Assess the presence and boundaries of the living architecture-figure profile added for audit-method-data-flow v0.2.2.",
+  "scope": [
+    "living architecture-figure source instructions",
+    "entrypoint route and contract test",
+    "unobserved display clarity and released activation"
+  ],
+  "authority": [
+    "skills/audit-method-data-flow/references/figure-table-clarity.md",
+    "skills/audit-method-data-flow/SKILL.md",
+    "tests/test_skill_contract.py",
+    "PUBLISHING.md"
+  ],
+  "claims": [
+    {
+      "claim_id": "claim:living-figure-build",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "living-architecture-figure"
+      },
+      "material": true,
+      "statement": "The source defines how to build a living architecture figure: project-kept source republished to one address, four separate surfaces, per-lane input/operation/output, learned-state and exchange boxes, non-color gate cues, a visible hold-out boundary and defined table numbers.",
+      "rationale": "Direct inspection of the reference section, its entrypoint route and its contract test establishes the presence of these instructions only.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "claim:living-figure-update",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "living-architecture-figure"
+      },
+      "material": true,
+      "statement": "The source requires reconciling every label with actual run settings after each change, marking overrides, rerunning the final checklist and reporting visual status honestly.",
+      "rationale": "Direct inspection of the reference section establishes the presence of these instructions only.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "claim:living-figure-effectiveness",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "living-architecture-figure"
+      },
+      "material": true,
+      "statement": "Figures built with the profile are measurably clearer to first readers, and the profile is active in freshly installed released copies.",
+      "rationale": "No reader study or released-consumer activation was observed in this scoped inspection.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:living-figure-reference",
+      "source": {
+        "kind": "file",
+        "path": "skills/audit-method-data-flow/references/figure-table-clarity.md"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The reference contains the Living architecture-figure profile with build and update steps; these are source instructions, not observed effectiveness."
+    },
+    {
+      "evidence_id": "evidence:living-figure-route",
+      "source": {
+        "kind": "file",
+        "path": "skills/audit-method-data-flow/SKILL.md"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The entrypoint names the living architecture-figure profile among the gates the figure reference defines."
+    },
+    {
+      "evidence_id": "evidence:living-figure-test",
+      "source": {
+        "kind": "file",
+        "path": "tests/test_skill_contract.py"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "A contract test checks that the profile is routed and contains its required build and update phrases."
+    },
+    {
+      "evidence_id": "evidence:publication-boundary",
+      "source": {
+        "kind": "file",
+        "path": "PUBLISHING.md"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "not_tested",
+      "observed_summary": "Publication and fresh consumer activation are separate lifecycle gates; this source inspection does not execute them."
+    }
+  ],
+  "bindings": [
+    {
+      "claim_id": "claim:living-figure-build",
+      "evidence_id": "evidence:living-figure-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-build",
+      "evidence_id": "evidence:living-figure-route",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-build",
+      "evidence_id": "evidence:living-figure-test",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-update",
+      "evidence_id": "evidence:living-figure-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-update",
+      "evidence_id": "evidence:living-figure-route",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-update",
+      "evidence_id": "evidence:living-figure-test",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-effectiveness",
+      "evidence_id": "evidence:publication-boundary",
+      "role": "context"
+    }
+  ],
+  "limitations": [],
+  "summary": {
+    "strongest_safe_claim_id": "claim:living-figure-build",
+    "claim_boundary_ids": [],
+    "no_supported_claim": false
+  },
+  "unresolved_uncertainties": [
+    "Display clarity for first readers, publication of v0.2.2 and fresh released-consumer activation have not yet been observed. Source and package tests do not establish those outcomes."
+  ]
+}
