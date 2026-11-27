@@ -1,0 +1,568 @@
+{
+  "accepted_at_utc": null,
+  "authority": [
+    "VERSION",
+    "CITATION.cff",
+    "SOURCE.md",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/references/package-version.json",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json",
+    "skills/audit-method-data-flow/scripts/skill_outcome.py",
+    "skills/audit-method-data-flow/scripts/update_policy.py",
+    "skills/audit-method-data-flow/references/method-evidence-contract.md",
+    "skills/audit-method-data-flow/scripts/method_evidence_contract.py",
+    "skills/audit-method-data-flow/references/review-learning.md"
+  ],
+  "components": [
+    {
+      "component_id": "public-distribution",
+      "component_type": "release-process",
+      "elements": [
+        {
+          "element_id": "install-update-claims",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": ".github/workflows/validate.yml"
+            },
+            {
+              "locator": "whole-file",
+              "source": "PUBLISHING.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "README.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_validation_contract.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "validation/v0.1.3-public-consumer-receipt.json"
+            }
+          ],
+          "relation_type": "bounds",
+          "target": "Bounded v0.1.3 public release, unpinned replacement, Codex activation, Claude placement, and pinned-install failure evidence is separated from pending v0.2.1 CI, immutable release, pinned verification, and activation evidence."
+        }
+      ]
+    },
+    {
+      "component_id": "release-package",
+      "component_type": "distribution-package",
+      "elements": [
+        {
+          "element_id": "managed-update-and-quality-handoff",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": ".github/managed-skill-policy.json"
+            },
+            {
+              "locator": "whole-file",
+              "source": ".github/workflows/managed-skill-repair.yml"
+            },
+            {
+              "locator": "managed repair release gates",
+              "source": "PUBLISHING.md"
+            },
+            {
+              "locator": "GitHub-managed repair boundary",
+              "source": "README.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/scripts/_internal/safe_process.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/scripts/skill_outcome.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/scripts/update_policy.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_managed_lifecycle.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_skill_contract.py"
+            }
+          ],
+          "relation_type": "bounds",
+          "target": "After substantive use, the skill runs consent-gated update maintenance and emits one tested content-free receipt. It documents an external analyze-project-claims handoff for an owner-bound local recommended-update preview and separate public approval, but this repository does not execute or verify that consumer behavior. Separately, one closed repository policy and thin full-SHA-pinned caller permit only owner-triaged, protected-environment-gated draft repair without authorizing telemetry, project-content transport, evidence acceptance, merge, release, or installed replacement."
+        },
+        {
+          "element_id": "package-integrity",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/package-manifest.json"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_package_contract.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_validation_contract.py"
+            },
+            {
+              "locator": "json-pointer:/checks/5",
+              "source": "validation/v0.1.3-public-consumer-receipt.json"
+            }
+          ],
+          "relation_type": "verifies",
+          "target": "The release-candidate package tree binds ordinary files while accepting only allowlisted GitHub-managed frontmatter metadata, including an optional github-pinned value that exactly matches an allowed release tag."
+        },
+        {
+          "element_id": "release-identity",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "CHANGELOG.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "CITATION.cff"
+            },
+            {
+              "locator": "line:1",
+              "source": "VERSION"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/package-version.json"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_package_contract.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_validation_contract.py"
+            }
+          ],
+          "relation_type": "synchronizes",
+          "target": "Version, citation, license, changelog, and packaged version identify one v0.2.1 MIT release candidate."
+        }
+      ]
+    },
+    {
+      "component_id": "reusable-audit-learning",
+      "component_type": "workflow-guidance",
+      "elements": [
+        {
+          "element_id": "bounded-recheck",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/review-learning.md"
+            }
+          ],
+          "relation_type": "defines",
+          "target": "Defines complete applicable rechecks, preserved scope, recurrence stopping, and a maximum three-cycle bound."
+        },
+        {
+          "element_id": "evidence-linked-lessons",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/review-learning.md"
+            }
+          ],
+          "relation_type": "defines",
+          "target": "Retains useful lessons with evidence, cause uncertainty, correction, verification, applicability, and reversal conditions."
+        },
+        {
+          "element_id": "future-use-and-reopening",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/review-learning.md"
+            }
+          ],
+          "relation_type": "defines",
+          "target": "Links promoted guidance into later relevant invocations and reopens it when its evidence or assumptions change."
+        },
+        {
+          "element_id": "validated-promotion",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/review-learning.md"
+            }
+          ],
+          "relation_type": "defines",
+          "target": "Routes validated lessons into project records, decision flows, or reusable guidance without duplicate authority or unsupported generalization."
+        }
+      ]
+    },
+    {
+      "component_id": "scholarly-audit-contract",
+      "component_type": "agent-skill-contract",
+      "elements": [
+        {
+          "element_id": "confidential-method-evidence-contract",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/method-evidence-contract.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_method_evidence_contract.py"
+            }
+          ],
+          "relation_type": "validated_by",
+          "target": "The skill provides a bounded local JSON contract for authorization, confidentiality, complete method branches, cross-section claims, and hash-bound evidence; reports identify gaps by stable ID without echoing claim prose or performing external processing."
+        },
+        {
+          "element_id": "living-architecture-figure",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "Living architecture-figure profile",
+              "source": "skills/audit-method-data-flow/references/figure-table-clarity.md"
+            },
+            {
+              "locator": "test_living_architecture_figure_profile_is_routed_and_complete",
+              "source": "tests/test_skill_contract.py"
+            }
+          ],
+          "relation_type": "defines",
+          "target": "The figure reference defines a living architecture-figure profile for a design figure of a running research system published as a web page: source kept in the project and republished to the same address, four separate surfaces (dated lede, topology SVG, standalone caption, evidence tables), per-lane input/component/operation/output, learned-state and exchange boxes, non-color gate cues, a visible hold-out boundary, defined table numbers, label-to-settings reconciliation and override marking after every change, and honest visual-status labels."
+        },
+        {
+          "element_id": "method-and-claim-flow",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/claim-chain-clarity.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_skill_contract.py"
+            }
+          ],
+          "relation_type": "defines",
+          "target": "The skill requires explicit dataset, label, component, transformation, output, evaluation, counterevidence, and claim-boundary relations. Its default paper-quality gate reruns all applicable checks after repair, keeps any PENDING item open, and treats three cycles as a safety bound rather than completion."
+        },
+        {
+          "element_id": "terminology-and-display-flow",
+          "evidence_locators": [
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/SKILL.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/figure-table-clarity.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "skills/audit-method-data-flow/references/paper-terminology-contract.md"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_package_contract.py"
+            },
+            {
+              "locator": "whole-file",
+              "source": "tests/test_skill_contract.py"
+            }
+          ],
+          "relation_type": "defines",
+          "target": "The skill defines source-backed semantic-universality, first-reader definition, counted-component membership, reader-facing citation closure, and matched-row numerical table contracts. It requires an active inventory and explicit terminology scope for independently readable manuscripts, technical appendices, supplement entry documents, release guides, upload copies, and generated archives."
+        }
+      ]
+    }
+  ],
+  "created_at_utc": "2026-11-27T07:55:16.694550Z",
+  "integrity": {
+    "canonical_payload_sha256": "93a52dbc6be39f1d6281fdaa9e14a121c78440e37c64d2c3972b0778530b717d"
+  },
+  "map_id": "component-map-556341431902",
+  "map_state": "drift_candidate",
+  "mapper_version": "1.3.0",
+  "objective": "Map the audit-method-data-flow v0.2.2 release candidate: the v0.2.1 identity, package integrity, method/claim/evidence contract, paper-quality and independent-artifact gates, managed maintenance and repair boundaries, the bounded recheck and reusable-learning workflow, and the new living architecture-figure profile. Structural presence only; no behavioral effectiveness claim.",
+  "origin_scan_id": "20261127T075516694550Z-288fe4e9",
+  "previous_map_id": "component-map-0f3ec233ede8",
+  "schema_version": "1.0",
+  "scope": [
+    "VERSION",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "README.md",
+    "PUBLISHING.md",
+    "SOURCE.md",
+    ".github/workflows/validate.yml",
+    ".github/workflows/managed-skill-repair.yml",
+    ".github/managed-skill-policy.json",
+    "skills/audit-method-data-flow/CITATION.cff",
+    "skills/audit-method-data-flow/LICENSE",
+    "skills/audit-method-data-flow/SKILL.md",
+    "skills/audit-method-data-flow/agents/openai.yaml",
+    "skills/audit-method-data-flow/references/claim-chain-clarity.md",
+    "skills/audit-method-data-flow/references/figure-table-clarity.md",
+    "skills/audit-method-data-flow/references/package-manifest.json",
+    "skills/audit-method-data-flow/references/package-version.json",
+    "skills/audit-method-data-flow/references/paper-terminology-contract.md",
+    "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json",
+    "skills/audit-method-data-flow/scripts/_internal/safe_process.py",
+    "skills/audit-method-data-flow/scripts/package_integrity.py",
+    "skills/audit-method-data-flow/scripts/skill_outcome.py",
+    "skills/audit-method-data-flow/scripts/update_policy.py",
+    "tests/test_managed_lifecycle.py",
+    "tests/test_package_contract.py",
+    "tests/test_skill_contract.py",
+    "tests/test_validation_contract.py",
+    "validation/v0.1.3-public-consumer-receipt.json",
+    "skills/audit-method-data-flow/references/method-evidence-contract.md",
+    "skills/audit-method-data-flow/scripts/method_evidence_contract.py",
+    "tests/test_method_evidence_contract.py",
+    "skills/audit-method-data-flow/references/review-learning.md"
+  ],
+  "skill_name": "analyze-project-claims",
+  "skill_sha256": "47088e4884438393619a7aa0d9787836426c8a6c77f4e32f7955858d6948733c",
+  "source_snapshot": [
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "7064c81719bb0a85eb5384dddcf2214dbbdfc1b81f0117abea08c2eed0f06b6e",
+      "source": ".github/managed-skill-policy.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "eb9fbe1df7f31d462ed7a9b874b290067ad6861c5075dd329a9b97cf7130faf3",
+      "source": ".github/workflows/managed-skill-repair.yml"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "f231836b7bf282833d11477e63044fe7ed1ee3e71d3dea5400cd2f2f22dc0cb5",
+      "source": ".github/workflows/validate.yml"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "5d6fdda702994f648f563a3a39daf83159291d929ebe5445bee6dec83badb7d6",
+      "source": "CHANGELOG.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "39e34db2de1ce28b0e7c8c40be51bf81e04185fc74c0190664912a9b0052ff9c",
+      "source": "CITATION.cff"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "f90b01190e2bcafe874c54389725f39c3c09dae2c677e8a50a5900ba29a1d1a0",
+      "source": "PUBLISHING.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "952c9e124e6ed7fb6dd27882ea7b42e62d8ed3133a762df312ca8d435941780b",
+      "source": "README.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "229d6241fcdbadcaeca4f00ab96c2679e25724814a8637d0397729b4ffbbda9d",
+      "source": "SOURCE.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "998f6b887ed7a6ef44e84210d0237b715bed42ea7254f48dc418afec0a484103",
+      "source": "VERSION"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "39e34db2de1ce28b0e7c8c40be51bf81e04185fc74c0190664912a9b0052ff9c",
+      "source": "skills/audit-method-data-flow/CITATION.cff"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "f36e4e8795a747e3fc05393800891a07d4d93487fb031dbe1b895e5a29c8eb04",
+      "source": "skills/audit-method-data-flow/LICENSE"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "2cde12343b2e2dfd226ba283a21a5167be106d6b7ffdd5c9365135bd56cffe03",
+      "source": "skills/audit-method-data-flow/SKILL.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "4987ed86e4a838f07de1f1902d59d18c7cf8f623d83642fde33c64a8a842f652",
+      "source": "skills/audit-method-data-flow/agents/openai.yaml"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "7a85a64e408596e52b5f3306b59abbc351ba0418453c4a28ea82e6b46f446a40",
+      "source": "skills/audit-method-data-flow/references/claim-chain-clarity.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "3655b714111931e065da2da9295d5599d52d43d687ed584d49bc9bd1b7390188",
+      "source": "skills/audit-method-data-flow/references/figure-table-clarity.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "bf3209d74833c3ca597522d66714737b1d34311aeb5f21730410dba48c01b73b",
+      "source": "skills/audit-method-data-flow/references/method-evidence-contract.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "6abccb08109a54ae059e6ee698e4b7d99d64d0f878009c2de633a7c063cab84a",
+      "source": "skills/audit-method-data-flow/references/package-manifest.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "8a06d95e3147214ec30f98f6ded5f587d8aece7c767fccca3345b577b849c8fe",
+      "source": "skills/audit-method-data-flow/references/package-version.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "33839903fe028f9c220ec609f3ec2b805d3e461a34a36f6c287359f5d0818d4b",
+      "source": "skills/audit-method-data-flow/references/paper-terminology-contract.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "b09803292166ef17a9a5bdcc1db1f2ca8663000616fa1cd8cb306f5ce9b508ca",
+      "source": "skills/audit-method-data-flow/references/review-learning.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "3e4a4e8187eb94472454558f4c57ead56d764ed9921cbad27e8bc66846b29d96",
+      "source": "skills/audit-method-data-flow/references/skill-outcome-receipt.schema.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "a2042ec7d6c52523ffe6f053c15660632697454c366bf0d709f4b00eb92a0a13",
+      "source": "skills/audit-method-data-flow/scripts/_internal/safe_process.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "7bb532a45c580c183ebc992d1d0384d68ebe7903b4188c5118665ddb3d53f01a",
+      "source": "skills/audit-method-data-flow/scripts/method_evidence_contract.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "02eb74addfdd54bf13b5757ffcc02b5eabf04bccc356f47d8270921d337ae161",
+      "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "950a47cd43bd25fbde5fd42203b947206df2b2113535818f2136b35ca9878e40",
+      "source": "skills/audit-method-data-flow/scripts/skill_outcome.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "f1a236faed2b8fe9deee1ff9fe9660a32562964974108bd202e050d1129ae022",
+      "source": "skills/audit-method-data-flow/scripts/update_policy.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "7779458e65ab2c204aaa509bf92904d58345f5143372232f2575b08be37f81e9",
+      "source": "tests/test_managed_lifecycle.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "b12342a55c574c021ce8d42699b30577b246f89f8408a284e49d02e958418ece",
+      "source": "tests/test_method_evidence_contract.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "661872cb76faf7507b68d81fec55ae4758d1c1764a08ef5122d3248e259776b7",
+      "source": "tests/test_package_contract.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "ea14308936a7595457f98f6d7d169eb8876bba05b69b879d6dd68a758a758744",
+      "source": "tests/test_skill_contract.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "d5a4c20cf520f38d08b0c316b7111b468f90b192c10371dfb0e75c122b2dca9e",
+      "source": "tests/test_validation_contract.py"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "sha256": "52fe3867f524696780513b8d6c65b39d7e9eb088b45a70d056c1245d485696c9",
+      "source": "validation/v0.1.3-public-consumer-receipt.json"
+    }
+  ]
+}

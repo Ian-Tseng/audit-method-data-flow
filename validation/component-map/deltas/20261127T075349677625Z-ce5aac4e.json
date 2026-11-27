@@ -1,0 +1,46 @@
+{
+  "accepted_map_id": "component-map-6f7f031a4fc8",
+  "action": "drift_detected",
+  "candidate_map_id": "component-map-e8e74937de2f",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_managed_lifecycle.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_package_contract.py"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "06f0d12b0fb94cb2722aa2649188349a3d3177feab03046eff88060e6e98c1f8"
+  },
+  "recorded_at_utc": "2026-11-27T07:53:49.677625Z",
+  "scan_id": "20261127T075349677625Z-ce5aac4e",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,211 @@
+{
+  "bindings": [
+    {
+      "claim_id": "claim:living-figure-build",
+      "evidence_id": "evidence:living-figure-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-build",
+      "evidence_id": "evidence:living-figure-route",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-build",
+      "evidence_id": "evidence:living-figure-test",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-update",
+      "evidence_id": "evidence:living-figure-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-update",
+      "evidence_id": "evidence:living-figure-route",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-update",
+      "evidence_id": "evidence:living-figure-test",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:living-figure-effectiveness",
+      "evidence_id": "evidence:publication-boundary",
+      "role": "context"
+    }
+  ],
+  "claims": [
+    {
+      "claim_digest": "762bc0cf5eb799d98a5d472da387f28e148ea7d5d8d39d1530fa903a3acbdead",
+      "claim_id": "claim:living-figure-build",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "living-architecture-figure"
+      },
+      "material": true,
+      "rationale": "Direct inspection of the reference section, its entrypoint route and its contract test establishes the presence of these instructions only.",
+      "statement": "The source defines how to build a living architecture figure: project-kept source republished to one address, four separate surfaces, per-lane input/operation/output, learned-state and exchange boxes, non-color gate cues, a visible hold-out boundary and defined table numbers.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "8c8f7365c7889ca271e651e5dbc9d141923ba172759c11617aabf0a8d47df318",
+      "claim_id": "claim:living-figure-update",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "living-architecture-figure"
+      },
+      "material": true,
+      "rationale": "Direct inspection of the reference section establishes the presence of these instructions only.",
+      "statement": "The source requires reconciling every label with actual run settings after each change, marking overrides, rerunning the final checklist and reporting visual status honestly.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "b1f942b559c616380a7e2764bd5537281aae2f3834ddc149dd6f847c7d683c42",
+      "claim_id": "claim:living-figure-effectiveness",
+      "element_ref": {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "living-architecture-figure"
+      },
+      "material": true,
+      "rationale": "No reader study or released-consumer activation was observed in this scoped inspection.",
+      "statement": "Figures built with the profile are measurably clearer to first readers, and the profile is active in freshly installed released copies.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:living-figure-reference",
+      "freshness": "current",
+      "identity_sha256": "c539c3d574000e3902de40ebf0946f2746ac828bcc9384da0270d2afed413be2",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The reference contains the Living architecture-figure profile with build and update steps; these are source instructions, not observed effectiveness.",
+      "selection_sha256": "3655b714111931e065da2da9295d5599d52d43d687ed584d49bc9bd1b7390188",
+      "source": {
+        "byte_size": 19240,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/references/figure-table-clarity.md",
+        "sha256": "3655b714111931e065da2da9295d5599d52d43d687ed584d49bc9bd1b7390188"
+      }
+    },
+    {
+      "evidence_id": "evidence:living-figure-route",
+      "freshness": "current",
+      "identity_sha256": "65523ac1fcb1d67037fb11c7aa73c8668311bb03bb48815e7c9cdd1b97da4f44",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The entrypoint names the living architecture-figure profile among the gates the figure reference defines.",
+      "selection_sha256": "2cde12343b2e2dfd226ba283a21a5167be106d6b7ffdd5c9365135bd56cffe03",
+      "source": {
+        "byte_size": 27638,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-method-data-flow/SKILL.md",
+        "sha256": "2cde12343b2e2dfd226ba283a21a5167be106d6b7ffdd5c9365135bd56cffe03"
+      }
+    },
+    {
+      "evidence_id": "evidence:living-figure-test",
+      "freshness": "current",
+      "identity_sha256": "e476e6515d67cb01178cf4b829a3b101787275fac1c5c6e95119cb9fac6815eb",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "A contract test checks that the profile is routed and contains its required build and update phrases.",
+      "selection_sha256": "ea14308936a7595457f98f6d7d169eb8876bba05b69b879d6dd68a758a758744",
+      "source": {
+        "byte_size": 12678,
+        "kind": "file",
+        "media_type": "text/x-python",
+        "path": "tests/test_skill_contract.py",
+        "sha256": "ea14308936a7595457f98f6d7d169eb8876bba05b69b879d6dd68a758a758744"
+      }
+    },
+    {
+      "evidence_id": "evidence:publication-boundary",
+      "freshness": "current",
+      "identity_sha256": "f4eb9e0d84eeb3f086aebf06d2748c86277a497c10715d410f257493972a2924",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "not_tested",
+      "observed_summary": "Publication and fresh consumer activation are separate lifecycle gates; this source inspection does not execute them.",
+      "selection_sha256": "f90b01190e2bcafe874c54389725f39c3c09dae2c677e8a50a5900ba29a1d1a0",
+      "source": {
+        "byte_size": 3587,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "PUBLISHING.md",
+        "sha256": "f90b01190e2bcafe874c54389725f39c3c09dae2c677e8a50a5900ba29a1d1a0"
+      }
+    }
+  ],
+  "integrity": {
+    "canonical_payload_sha256": "813d993159c7ff540b23f6334a206ef6595a8606d4747b321f2a2057744baa52",
+    "output_schema_sha256": "c381756b5c2dd32f6be29b48f4532d834546f381bb571daebfac87216aec4dd3",
+    "recorder_sha256": "513a7d481139de74df0e3ba6f504abf56466001150ff0f64c90fd9ad71b89a25",
+    "renderer_id": "evidence-bound-markdown-v1",
+    "renderer_sha256": "513a7d481139de74df0e3ba6f504abf56466001150ff0f64c90fd9ad71b89a25"
+  },
+  "limitations": [],
+  "record_kind": "evidence_bound_audit_record",
+  "scan": {
+    "accepted_map": {
+      "map_id": "component-map-556341431902",
+      "path": "validation/component-map/accepted-map.json",
+      "sha256": "bc235a6290a97fdd3ef17e81c603dbf21835fc4c02efa7415ba313f4aafc3a9f"
+    },
+    "authority": [
+      "skills/audit-method-data-flow/references/figure-table-clarity.md",
+      "skills/audit-method-data-flow/SKILL.md",
+      "tests/test_skill_contract.py",
+      "PUBLISHING.md"
+    ],
+    "engine_identity": {
+      "engine_digest": "8e13b7d894deefa840ce1b5dc68a547a68f14a902c68cc3fe76b37946e6cf540",
+      "engine_name": "component-evidence",
+      "engine_version": "1.3.0",
+      "map_schema_version": "1.0",
+      "provider_kind": "embedded",
+      "receipt_protocol_version": "2.0",
+      "status": "verified"
+    },
+    "objective": "Assess the presence and boundaries of the living architecture-figure profile added for audit-method-data-flow v0.2.2.",
+    "recorded_at_utc": "2026-11-27T07:55:18.264661Z",
+    "recorder_version": "2.1.0",
+    "scan_id": "20261127T075518264661Z-729b7760",
+    "scope": [
+      "living architecture-figure source instructions",
+      "entrypoint route and contract test",
+      "unobserved display clarity and released activation"
+    ],
+    "skill_name": "analyze-project-claims",
+    "skill_sha256": "47088e4884438393619a7aa0d9787836426c8a6c77f4e32f7955858d6948733c"
+  },
+  "schema_version": "2.0",
+  "summary": {
+    "claim_boundary_ids": [],
+    "claim_count": 3,
+    "claim_counts": {
+      "supported": 2,
+      "untested": 1
+    },
+    "evidence_count": 4,
+    "material_claim_count": 3,
+    "no_supported_claim": false,
+    "scan_status": "PARTIAL",
+    "strongest_safe_claim": "The source defines how to build a living architecture figure: project-kept source republished to one address, four separate surfaces, per-lane input/operation/output, learned-state and exchange boxes, non-color gate cues, a visible hold-out boundary and defined table numbers.",
+    "strongest_safe_claim_id": "claim:living-figure-build",
+    "unresolved_uncertainties": [
+      "Display clarity for first readers, publication of v0.2.2 and fresh released-consumer activation have not yet been observed. Source and package tests do not establish those outcomes."
+    ]
+  }
+}

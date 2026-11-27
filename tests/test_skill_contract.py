@@ -149,6 +149,26 @@ class SkillContractTests(unittest.TestCase):
         ):
             self.assertIn(anchor, display_folded)
 
+    def test_living_architecture_figure_profile_is_routed_and_complete(self):
+        display = (PACKAGE / "references" / "figure-table-clarity.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("## Living architecture-figure profile", display)
+        self.assertIn("living architecture-figure", SKILL)
+        for phrase in (
+            "never only in a temporary",
+            "same page address",
+            "caption under it",
+            "numbers out of the topology figure",
+            "hold-out boundary",
+            "subtraction order",
+            "Reconcile every figure label with the actual run settings",
+            "mark overrides of a declared rule as overrides",
+            "`STRUCTURALLY_VALIDATED`",
+            "`VISUALLY_VERIFIED_NATIVE`",
+        ):
+            self.assertIn(phrase, display)
+
     def test_validate_contract_requires_bounded_convergent_rechecks(self):
         skill_folded = " ".join(SKILL.casefold().split())
         for anchor in (

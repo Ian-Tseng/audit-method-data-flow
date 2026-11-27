@@ -1,0 +1,99 @@
+{
+  "accepted_map_id": "component-map-cbb849faebee",
+  "action": "drift_detected",
+  "artifacts": {
+    "accepted_map": "accepted-map.json",
+    "candidate": "candidates/20261127T075102927595Z-15d2c900-component-map-6f7f031a4fc8.json",
+    "delta": "deltas/20261127T075102927595Z-15d2c900.json"
+  },
+  "candidate_map_id": "component-map-6f7f031a4fc8",
+  "changes": {
+    "added_components": [],
+    "added_elements": [
+      {
+        "component_id": "scholarly-audit-contract",
+        "element_id": "living-architecture-figure"
+      }
+    ],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [
+      "objective",
+      "skill_sha256"
+    ],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CHANGELOG.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "VERSION"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/CITATION.cff"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/SKILL.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/figure-table-clarity.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-version.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_skill_contract.py"
+      }
+    ]
+  },
+  "event_id": "20261127T075102927595Z-15d2c900",
+  "integrity": {
+    "canonical_payload_sha256": "bcf048af913e3a59bfd3c5caecaa1f79112725953ea6d7b4575836438f177aa4"
+  },
+  "map_state_after": "drift_candidate",
+  "map_state_before": "accepted",
+  "mapper_version": "1.3.0",
+  "recorded_at_utc": "2026-11-27T07:51:02.927595Z",
+  "schema_version": "1.0",
+  "skill_sha256": "47088e4884438393619a7aa0d9787836426c8a6c77f4e32f7955858d6948733c"
+}

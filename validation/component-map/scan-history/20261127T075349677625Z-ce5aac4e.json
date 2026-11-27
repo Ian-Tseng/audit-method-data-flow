@@ -1,0 +1,55 @@
+{
+  "accepted_map_id": "component-map-6f7f031a4fc8",
+  "action": "drift_detected",
+  "artifacts": {
+    "accepted_map": "accepted-map.json",
+    "candidate": "candidates/20261127T075349677625Z-ce5aac4e-component-map-e8e74937de2f.json",
+    "delta": "deltas/20261127T075349677625Z-ce5aac4e.json"
+  },
+  "candidate_map_id": "component-map-e8e74937de2f",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-method-data-flow/scripts/package_integrity.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_managed_lifecycle.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_package_contract.py"
+      }
+    ]
+  },
+  "event_id": "20261127T075349677625Z-ce5aac4e",
+  "integrity": {
+    "canonical_payload_sha256": "061e86a5c7b7624429033a993ab49c43b12cd5e73661d85fa06224ba7bd37936"
+  },
+  "map_state_after": "drift_candidate",
+  "map_state_before": "accepted",
+  "mapper_version": "1.3.0",
+  "recorded_at_utc": "2026-11-27T07:53:49.677625Z",
+  "schema_version": "1.0",
+  "skill_sha256": "47088e4884438393619a7aa0d9787836426c8a6c77f4e32f7955858d6948733c"
+}
